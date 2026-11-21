@@ -1,0 +1,137 @@
+{
+ "schema": "candy.model_pins_mac/1",
+ "source": "runtime/mac_models_lock.json (sha256 and size verified 2026-11-06 on the m5_max machine)",
+ "note": "No 40-hex revision is recorded in any local source, so these rows are pinned by SHA256 and size over the downloader's own link; a different file is deleted. Add rev + commit url when looked up.",
+ "rows": [
+  {
+   "repo": "Comfy-Org/Lumina_Image_2.0_Repackaged",
+   "path": "split_files/vae/ae.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensors",
+   "folder": "vae",
+   "name": "ae.safetensors",
+   "size": 335304388,
+   "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+   "license": "Apache-2.0 (Chroma1-HD)",
+   "groups": [
+    "fast",
+    "image"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/z_image_turbo",
+   "path": "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+   "folder": "diffusion_models",
+   "name": "z_image_turbo_bf16.safetensors",
+   "size": 12309866400,
+   "sha256": "2407613050b809ffdff18a4ac99af83ea6b95443ecebdf80e064a79c825574a6",
+   "license": "Apache-2.0 (Z-Image Turbo)",
+   "groups": [
+    "fast"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/z_image_turbo",
+   "path": "split_files/text_encoders/qwen_3_4b.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/text_encoders/qwen_3_4b.safetensors",
+   "folder": "text_encoders",
+   "name": "qwen_3_4b.safetensors",
+   "size": 8044982048,
+   "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a",
+   "license": "Apache-2.0 (Z-Image Turbo)",
+   "groups": [
+    "fast"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/z_image_turbo",
+   "path": "split_files/vae/ae.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/ae.safetensors",
+   "folder": "vae",
+   "name": "ae.safetensors",
+   "size": 335304388,
+   "sha256": "afc8e28272cd15db3919bacdb6918ce9c1ed22e96cb12c4d5ed0fba823529e38",
+   "license": "Apache-2.0 (Z-Image Turbo)",
+   "groups": [
+    "fast",
+    "image"
+   ]
+  },
+  {
+   "repo": "alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union",
+   "path": "Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/alibaba-pai/Z-Image-Turbo-Fun-Controlnet-Union/resolve/main/Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+   "folder": "model_patches",
+   "name": "Z-Image-Turbo-Fun-Controlnet-Union.safetensors",
+   "size": 3101572408,
+   "sha256": "86c085c0d7853f12ce5183499934b54d08371c60f549c5a6b20615cd23989388",
+   "license": "Apache-2.0 (Z-Image Turbo)",
+   "groups": [
+    "fast"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+   "path": "split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/diffusion_models/wan2.2_ti2v_5B_fp16.safetensors",
+   "folder": "diffusion_models",
+   "name": "wan2.2_ti2v_5B_fp16.safetensors",
+   "size": 9999658848,
+   "sha256": "456f901338bd9eadbded3828b819109a9b68e8a525ca5cf8d0049a69fcfeca1e",
+   "license": "Apache-2.0 (Wan 2.2)",
+   "groups": [
+    "video-wan5b"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+   "path": "split_files/vae/wan2.2_vae.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged/resolve/main/split_files/vae/wan2.2_vae.safetensors",
+   "folder": "vae",
+   "name": "wan2.2_vae.safetensors",
+   "size": 1409400960,
+   "sha256": "e40321bd36b9709991dae2530eb4ac303dd168276980d3e9bc4b6e2b75fed156",
+   "license": "Apache-2.0 (Wan 2.2)",
+   "groups": [
+    "video-wan5b"
+   ]
+  },
+  {
+   "repo": "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+   "path": "split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+   "rev": null,
+   "url": "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+   "folder": "text_encoders",
+   "name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+   "size": 6735906897,
+   "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68",
+   "license": "Apache-2.0 (Wan 2.2)",
+   "groups": [
+    "video",
+    "video-t2v",
+    "video-wan5b"
+   ]
+  },
+  {
+   "repo": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+   "path": "v1-5-pruned-emaonly.safetensors",
+   "rev": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+   "url": "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/resolve/451f4fe16113bff5a5d2269ed5ad43b0592e9a14/v1-5-pruned-emaonly.safetensors",
+   "folder": "checkpoints",
+   "name": "v1-5-pruned-emaonly.safetensors",
+   "size": 4265146304,
+   "sha256": "6ce0161689b3853acaa03779ec93eafe75a02f4ced659bee03f50797806fa2fa",
+   "license": "creativeml-openrail-m",
+   "groups": [
+    "sd15"
+   ]
+  }
+ ]
+}

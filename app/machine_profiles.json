@@ -1,0 +1,78 @@
+{
+  "default": "m5_max",
+  "engines": {
+    "sd15": {
+      "label": "Photo (SD 1.5)",
+      "workflow": "image_sd15_api.json",
+      "checkpoint": "v1-5-pruned-emaonly.safetensors",
+      "lock_id": "sd15.v1_5_pruned_emaonly",
+      "base_pixels": 512,
+      "fits": ["m5_max", "rtx_4090", "rtx_pro_6000"],
+      "note": "Small and fast (about 4 GB). Everyday section only; the age check runs on every picture."
+    }
+  },
+  "profiles": {
+    "m5_max": {
+      "label": "M5 Max MacBook Pro",
+      "device": "mps",
+      "chip": "Apple Silicon",
+      "memory_gb": 128,
+      "memory_kind": "unified",
+      "os": "macOS",
+      "first_test": true,
+      "confirmed": true,
+      "stills_fast": "z_image_turbo",
+      "stills_keyframe": "chroma1hd",
+      "chroma_dtype": "fp16",
+      "forbid_fp8_chroma": true,
+      "video_proof": "wan22_ti2v_5b",
+      "video_workflow": "vm_wan22_5b_i2v_api.json",
+      "unet": "wan2.2_ti2v_5B_fp16.safetensors",
+      "offload": false,
+      "block_swap": 0,
+      "attention": "sdpa",
+      "note": "First real test machine. Slow is acceptable. 128 GB unified memory can hold fp16 stills and the 5B motion proof without offload.",
+      "model3d_engine": "hunyuan",
+      "model3d_note": "TRELLIS.2 needs CUDA, so 3D on the Mac is the Hunyuan3D 2.1 shape engine."
+    },
+    "rtx_4090": {
+      "label": "RTX 4090",
+      "device": "cuda",
+      "memory_gb": 24,
+      "first_test": false,
+      "confirmed": false,
+      "role": "upscale_keyframes_previews",
+      "stills_fast": "z_image_turbo",
+      "stills_keyframe": "chroma1hd",
+      "chroma_dtype": "fp16",
+      "forbid_fp8_chroma": false,
+      "video_proof": "wan22_ti2v_5b",
+      "video_workflow": "vm_wan22_5b_i2v_api.json",
+      "unet": "wan2.2_ti2v_5B_fp16.safetensors",
+      "offload": true,
+      "block_swap": 0,
+      "attention": "sdpa",
+      "fp8_ok": true,
+      "note": "Upscale, keyframes, and short previews. Not the main 14B video machine.",
+      "model3d_engine": "trellis"
+    },
+    "rtx_pro_6000": {
+      "label": "RTX PRO 6000",
+      "device": "cuda",
+      "first_test": false,
+      "confirmed": false,
+      "role": "main_video",
+      "stills_fast": "z_image_turbo",
+      "stills_keyframe": "chroma1hd",
+      "chroma_dtype": "bf16",
+      "forbid_fp8_chroma": false,
+      "video_proof": "wan22_14b_i2v",
+      "video_workflow": "video_wan22_i2v_fast_api.json",
+      "offload": false,
+      "block_swap": 0,
+      "fp8_ok": true,
+      "note": "Main video machine when it is actually installed. Specs are not confirmed. Not the first test.",
+      "model3d_engine": "trellis"
+    }
+  }
+}

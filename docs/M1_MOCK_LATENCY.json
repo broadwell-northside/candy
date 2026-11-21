@@ -1,0 +1,7 @@
+{
+ "measured": "portrait still recipe, submit to done, through /api/jobs",
+ "engine": "mock (tests/mock_comfy.py); no GPU, no weights",
+ "seconds": 0.423,
+ "date": "2026-11-05",
+ "note": "Mock timing only. No GPU timing is claimed."
+}

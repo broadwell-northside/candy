@@ -1,0 +1,50 @@
+{
+  "locations": [
+    {
+      "id": "beach",
+      "name": "Beach",
+      "unlocked": true,
+      "coming_soon": false,
+      "blurb": "Warm sand and a quiet sea.",
+      "map": { "x": 0.5, "y": 0.74 },
+      "present": {
+        "morning": "mira",
+        "midday": "nia",
+        "sunset": "leo",
+        "night": "mira"
+      }
+    },
+    {
+      "id": "lagoon",
+      "name": "Lagoon",
+      "unlocked": false,
+      "coming_soon": true,
+      "blurb": "Clear water, for later.",
+      "map": { "x": 0.63, "y": 0.48 }
+    },
+    {
+      "id": "cliffs",
+      "name": "Cliffs",
+      "unlocked": false,
+      "coming_soon": true,
+      "blurb": "High rock, for later.",
+      "map": { "x": 0.54, "y": 0.22 }
+    },
+    {
+      "id": "village",
+      "name": "Village",
+      "unlocked": false,
+      "coming_soon": true,
+      "blurb": "A few roofs, for later.",
+      "map": { "x": 0.3, "y": 0.48 }
+    },
+    {
+      "id": "hut",
+      "name": "Hut",
+      "unlocked": false,
+      "coming_soon": true,
+      "blurb": "A small roof, for later.",
+      "map": { "x": 0.79, "y": 0.38 }
+    }
+  ]
+}

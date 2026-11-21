@@ -1,0 +1,27 @@
+{
+  "id": "leo",
+  "name": "Leo Maren",
+  "stated_age": 41,
+  "personality": "Quiet, with a dry kindness. He mends nets and chairs and does not fill the air. He has lived on the island long enough to trust the weather.",
+  "look": {
+    "summary": "A fictional adult man of 41, with weathered tan skin, short salt-and-pepper hair, and a faded blue shirt.",
+    "lora_id": "easy_studio/leo_maren"
+  },
+  "portraits": {
+    "neutral": {
+      "covered": "res://assets/characters/leo/neutral_covered.png",
+      "adult": "res://assets/characters/leo/neutral_adult.png"
+    },
+    "smile": {
+      "covered": "res://assets/characters/leo/smile_covered.png",
+      "adult": "res://assets/characters/leo/smile_adult.png"
+    },
+    "thoughtful": {
+      "covered": "res://assets/characters/leo/thoughtful_covered.png",
+      "adult": "res://assets/characters/leo/thoughtful_adult.png"
+    }
+  },
+  "clips": {
+    "idle": { "covered": "", "adult": "" }
+  }
+}

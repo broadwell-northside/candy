@@ -1,0 +1,264 @@
+{
+ "schema": "stillwater.llm_models/1",
+ "verified_at": "2026-11-05T21:50-05:00 (live Hugging Face API, model repo metadata with ?blobs=true; Venice model page)",
+ "hardware": {
+  "gpus": "2 x NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition, 300 W each (600 W total)",
+  "usable_vram_gb_per_card": 94,
+  "planning_ceiling_gb_per_card": 88,
+  "total_usable_vram_gb": 188,
+  "system_ram_gb": 256,
+  "gpu0": "ComfyUI media engine :8188 (Chroma1-HD, Wan 2.2) - the LLM never lands here except in burst_tp2 mode",
+  "gpu1": "LLM lane + ComfyUI secondary :8189 (vlm_qa, zimage, qwen_edit, flux, sdxl)"
+ },
+ "default_profile": "qwen36_35b_a3b_abliterated_q8",
+ "selection": "env LLM_PROFILE overrides default_profile; the Studio settings page lists every profile whose enabled=true; benchmark winners are written back by hand, never automatically",
+ "roles": {
+  "dialogue": "fast lines, Chemistry Bar cues; target TTFT p95 < 500 ms",
+  "director": "Chroma1-HD still prompts and Wan 2.2 high/low motion prompts from a scene card",
+  "json": "PersonCard, chemistry_reaction, recipe_stages; strict schema"
+ },
+ "profiles": [
+  {
+   "id": "qwen36_35b_a3b_abliterated_q8",
+   "label": "Qwen3.6-35B-A3B abliterated (Q8_0) - fast lane",
+   "roles": [
+    "dialogue",
+    "json",
+    "director"
+   ],
+   "hf_repo": "huihui-ai/Huihui-Qwen3.6-35B-A3B-abliterated-MTP-GGUF",
+   "hf_sha": "acd5abe0c5",
+   "files": [
+    "Huihui-Qwen3.6-35B-A3B-abliterated-ggml-model-Q8_0.gguf (37.80 GB)"
+   ],
+   "params_total": "35.5B (GGUF metadata 35,505,251,456)",
+   "params_active": "3B per token (A3B, from model name)",
+   "weights_gb": 37.8,
+   "runtime": "llama-server (ggml-org/llama.cpp, latest release per model card)",
+   "placement": {
+    "gpu1_gb": 45.8,
+    "ram_gb": 0,
+    "note": "37.8 weights + 8 KV/compute reserve (estimate)"
+   },
+   "base_url": "http://127.0.0.1:8000/v1",
+   "served_model_name": "qwen36-35b-a3b-abliterated",
+   "launch": "CUDA_VISIBLE_DEVICES=1 llama-server -m <models>/Huihui-Qwen3.6-35B-A3B-abliterated-ggml-model-Q8_0.gguf -ngl 99 -c 32768 --host 127.0.0.1 --port 8000 --alias qwen36-35b-a3b-abliterated",
+   "enabled": true,
+   "remote": false,
+   "lock_ids": [
+    "director.huihui_qwen3_6_35b_a3b_abliterated_ggml_model_q8_0"
+   ]
+  },
+  {
+   "id": "qwen38_flash_next_abliterated_v2_iq3xxs",
+   "label": "Qwen3.8-Flash-Next abliterated v2 (Swift GSQ-RCO IQ3_XXS) - stronger contender, fits one card",
+   "roles": [
+    "director",
+    "json",
+    "dialogue"
+   ],
+   "hf_repo": "huihui-ai/Huihui-Qwen3.8-Flash-Next-abliterated-v2-GGUF",
+   "hf_sha": "411f1f7349",
+   "files": [
+    "swift-IQ3_XXS/Swift-Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00001-of-00002.gguf (39.79 GB)",
+    "swift-IQ3_XXS/Swift-Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00002-of-00002.gguf (36.18 GB)"
+   ],
+   "params_total": "176.9B GGUF metadata (base card: 125B + 51B n-gram embedding + 4B MTP)",
+   "params_active": "6B per token (base card Qwen/Qwen3.8-Flash-Next)",
+   "weights_gb": 76.0,
+   "runtime": "llama-server; card states testing on llama.cpp b11540 and Strata",
+   "placement": {
+    "gpu1_gb": 84.0,
+    "ram_gb": 0,
+    "note": "exclusive GPU1 lane: vlm_qa and secondary ComfyUI families unload while it is loaded"
+   },
+   "base_url": "http://127.0.0.1:8000/v1",
+   "served_model_name": "qwen38-flash-next-abliterated",
+   "launch": "CUDA_VISIBLE_DEVICES=1 llama-server -m <models>/Swift-Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00001-of-00002.gguf -ngl 99 -c 16384 --host 127.0.0.1 --port 8000 --alias qwen38-flash-next-abliterated",
+   "enabled": true,
+   "remote": false,
+   "lock_ids": [
+    "director.swift_qwen3_8_flash_next_gsq_rco_iq3_xxs_00001_of_00002",
+    "director.swift_qwen3_8_flash_next_gsq_rco_iq3_xxs_00002_of_00002"
+   ],
+   "runtime_status": "hardware_pending: Strata runtime set up on first boot; dropped only if its source fails verification"
+  },
+  {
+   "id": "deepseek_v41_flash_1017_uncensored_gsq_iq2xxs",
+   "label": "DeepSeek V4.1 Flash 1017 Uncensored (AtomicChat GSQ-RCO IQ2_XXS) - owner's preferred family, hybrid",
+   "roles": [
+    "director",
+    "dialogue",
+    "json"
+   ],
+   "hf_repo": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+   "hf_sha": "4f1d2f730c",
+   "extra_repo": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF (DeepSeek-V4.1-Flash-Engram-IQ4_NL, 110.6 GB, streamed from NVMe)",
+   "files": [
+    "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00001..00004-of-00004.gguf (39.08 + 39.39 + 39.25 + 20.53 = 138.24 GB)",
+    "ISTA-DASLab: DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf (110.60 GB, NVMe)"
+   ],
+   "params_total": "763B with Engram tables (card); 551.9B in the IQ2_XXS shards (GGUF metadata)",
+   "params_active": "UNVERIFIED (6 of 384 routed experts + 1 shared per config.json; Venice page says 8B/16B active)",
+   "weights_gb": 138.2,
+   "runtime": "Strata (card: separate-Engram DeepSeek-V4.1 is not yet in llama.cpp)",
+   "placement": {
+    "gpu1_gb": 86.0,
+    "ram_gb": 60.0,
+    "nvme_gb": 110.6,
+    "note": "~80 GB of shards on GPU1, ~58 GB in pinned host RAM, Engram mmap from SSD; exclusive GPU1 lane"
+   },
+   "base_url": "http://127.0.0.1:8001/v1",
+   "served_model_name": "deepseek-v41-flash-1017-uncensored",
+   "launch": "strata launch --model-path <models>/DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00001-of-00004.gguf (pin to GPU1; Strata flags for port/offload are UNVERIFIED - read `strata launch --help`)",
+   "enabled": true,
+   "remote": false,
+   "lock_ids": [
+    "director.deepseek_v4_1_flash_1017_gsq_rco_iq2_xxs_00001_of_00004",
+    "director.deepseek_v4_1_flash_1017_gsq_rco_iq2_xxs_00002_of_00004",
+    "director.deepseek_v4_1_flash_1017_gsq_rco_iq2_xxs_00003_of_00004",
+    "director.deepseek_v4_1_flash_1017_gsq_rco_iq2_xxs_00004_of_00004",
+    "director.deepseek_v4_1_flash_engram_iq4_nl"
+   ],
+   "runtime_status": "hardware_pending: Strata runtime set up on first boot; dropped only if its source fails verification"
+  },
+  {
+   "id": "deepseek_v41_flash_1017_abliterated_iq1s_lora",
+   "label": "DeepSeek V4.1 Flash 1017 Abliterated (unsloth UD-IQ1_S + mrfakename abliteration LoRA) - hybrid",
+   "roles": [
+    "director",
+    "dialogue",
+    "json"
+   ],
+   "hf_repo": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
+   "hf_sha": "2688c0c3c2",
+   "lora_repo": "mrfakename/DeepSeek-V4.1-Flash-1017-abliterated (abliteration-lora.gguf, rank-2; card example uses Q8_0)",
+   "lora_repo_sha": "517efab9cc",
+   "files": [
+    "UD-IQ1_S/DeepSeek-V4.1-Flash-1017-UD-IQ1_S-00001..00004-of-00005.gguf (backbone 122.38 GB)",
+    "UD-IQ1_S/...-00005-of-00005.gguf (110.60 GB; same size as the Engram table, UNVERIFIED that it is the Engram shard)",
+    "mrfakename abliteration-lora.gguf (5.2 MB)"
+   ],
+   "params_total": "748.5B (GGUF metadata 748,494,643,824)",
+   "params_active": "UNVERIFIED (see above)",
+   "weights_gb": 233.0,
+   "runtime": "llama-server --lora (LoRA on the IQ1_S rung is UNVERIFIED; the card demonstrates Q8_0)",
+   "placement": {
+    "gpu1_gb": 86.0,
+    "ram_gb": 42.0,
+    "page_cache_gb": 110.6,
+    "note": "~80 GB of the 122.4 GB backbone on GPU1 with routed experts overflowing to CPU; shard 5 mmap from NVMe/page cache; tight beside ComfyUI page cache"
+   },
+   "base_url": "http://127.0.0.1:8002/v1",
+   "served_model_name": "deepseek-v41-flash-1017-abliterated",
+   "launch": "CUDA_VISIBLE_DEVICES=1 llama-server -m <models>/DeepSeek-V4.1-Flash-1017-UD-IQ1_S-00001-of-*.gguf --lora <models>/abliteration-lora.gguf -ngl 99 -ot 'exps=CPU' -c 16384 --host 127.0.0.1 --port 8002 --alias deepseek-v41-flash-1017-abliterated",
+   "enabled": true,
+   "remote": false,
+   "lock_ids": [
+    "director.abliteration_lora",
+    "director.deepseek_v4_1_flash_1017_ud_iq1_s_00001_of_00005",
+    "director.deepseek_v4_1_flash_1017_ud_iq1_s_00002_of_00005",
+    "director.deepseek_v4_1_flash_1017_ud_iq1_s_00003_of_00005",
+    "director.deepseek_v4_1_flash_1017_ud_iq1_s_00004_of_00005",
+    "director.deepseek_v4_1_flash_1017_ud_iq1_s_00005_of_00005"
+   ]
+  },
+  {
+   "id": "gptoss_120b_abliterated_mxfp4",
+   "label": "gpt-oss-120b abliterated (MXFP4_MOE) - JSON specialist",
+   "roles": [
+    "json",
+    "dialogue"
+   ],
+   "hf_repo": "mradermacher/gpt-oss-120b-abliterated-GGUF",
+   "hf_sha": "ef5609f04b",
+   "files": [
+    "gpt-oss-120b-abliterated.MXFP4_MOE.gguf (63.39 GB)"
+   ],
+   "params_total": "116.8B (GGUF metadata)",
+   "params_active": "UNVERIFIED on HF card",
+   "weights_gb": 63.4,
+   "runtime": "llama-server",
+   "placement": {
+    "gpu1_gb": 71.0,
+    "ram_gb": 0,
+    "note": "fits beside nothing else large; vlm_qa unloads"
+   },
+   "base_url": "http://127.0.0.1:8003/v1",
+   "served_model_name": "gpt-oss-120b-abliterated",
+   "launch": "CUDA_VISIBLE_DEVICES=1 llama-server -m <models>/gpt-oss-120b-abliterated.MXFP4_MOE.gguf -ngl 99 -c 32768 --host 127.0.0.1 --port 8003 --alias gpt-oss-120b-abliterated",
+   "enabled": true,
+   "remote": false,
+   "lock_ids": [
+    "director.gpt_oss_120b_abliterated_mxfp4_moe"
+   ]
+  },
+  {
+   "id": "deepseek_v41_flash_1017_uncensored_tp2_burst",
+   "label": "DeepSeek V4.1 Flash 1017 Uncensored IQ2_XXS across both cards - authoring burst (ComfyUI paused)",
+   "roles": [
+    "director"
+   ],
+   "hf_repo": "AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF",
+   "hf_sha": "4f1d2f730c",
+   "weights_gb": 138.2,
+   "runtime": "Strata; multi-GPU split UNVERIFIED",
+   "placement": {
+    "gpu0_gb": 76.0,
+    "gpu1_gb": 76.0,
+    "ram_gb": 0,
+    "nvme_gb": 110.6,
+    "note": "69.1 GB shards per card + KV; only when no render job is queued"
+   },
+   "base_url": "http://127.0.0.1:8001/v1",
+   "served_model_name": "deepseek-v41-flash-1017-uncensored",
+   "enabled": false,
+   "remote": false,
+   "lock_ids": [],
+   "runtime_status": "hardware_pending: Strata runtime set up on first boot; dropped only if its source fails verification"
+  }
+ ],
+ "scorer": {
+  "id": "qwen25_vl_7b",
+  "hf_repo": "huihui-ai/Qwen2.5-VL-7B-Instruct-abliterated",
+  "weights_gb": 16.6,
+  "port": 8189,
+  "gpu": 1,
+  "lock_family": "scorer"
+ },
+ "not_selected": [
+  {
+   "hf_repo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "why": "510.3 GB FP8/FP4 safetensors; no fit in 188 GB VRAM + 256 GB RAM"
+  },
+  {
+   "hf_repo": "mrfakename/DeepSeek-V4.1-Flash-1017-abliterated",
+   "why": "510.3 GB FP8 safetensors; its GGUF Q2_K is 264.5 GB (would take ~185 GB RAM)"
+  },
+  {
+   "hf_repo": "dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
+   "why": "510.3 GB"
+  },
+  {
+   "hf_repo": "dealignai/DeepSeek-V4.1-Flash-1017-ABLITERATED-FP8",
+   "why": "repo exists but lists no weight files (0 bytes) on 2026-11-05"
+  },
+  {
+   "hf_repo": "nvidia/DeepSeek-V4.1-Flash-1017-NVFP4",
+   "why": "429.0 GB, censored base"
+  },
+  {
+   "hf_repo": "Infatoshi/DeepSeek-V4.1-Flash-1017-NVFP4-uncensored",
+   "why": "527.3 GB"
+  },
+  {
+   "hf_repo": "huihui-ai/Huihui-GLM-5.3-Flash-abliterated-GGUF",
+   "why": "320B/18B active; smallest listed UD-IQ4_XS 156.8 GB: TP=2 burst only"
+  },
+  {
+   "hf_repo": "null-space/Qwen3-235B-A22B-abliterated-FP8",
+   "why": "236.4 GB"
+  }
+ ],
+ "generated_from": "Grok Bot llm_models.json, remote profile removed, files tied to config/server_model_lock.json"
+}

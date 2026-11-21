@@ -1,0 +1,174 @@
+name,url,category,core_create_flow,standout_ui_patterns,pricing_model,what_to_copy_or_avoid,load_status
+Candy.ai,https://candy.ai/create-girlfriend,AI companion,Step-by-step builder: style (realistic/anime) > ethnicity > age range > eyes > hair style & colour > body > personality > voice > hobbies > done,Big picture cards for every choice; one choice per screen; live summary; image gen offers outfit/background/pose pickers,Free trial + subscription + tokens,Picture-card choices per trait; outfit/pose/background pickers in the photo generator,loaded
+Nomi.ai,https://nomi.ai,AI companion,Create a Nomi > pick look > chat; ask for selfies in chat,Memory of the character; selfies that respect current outfit/background; group chats,Free + subscription,Character keeps its look across every new picture ('character memory'),loaded
+Kindroid,https://kindroid.ai,AI companion,Build a character > chat/voice/video call,"Selfies, voice, live video (marketing page only)",not shown on the page we loaded,"Short, confident feature labels",loaded (very little content)
+OurDream.ai,https://ourdream.ai,AI companion / generator,"18+ gate > realistic or anime > face, body, hair, clothing, accessories > generate",Tag chips for traits; style toggle at top,$9.99-$19.99/mo + coins,Realistic/Anime toggle and trait chips. AVOID: it lists a 'Teen' tag despite banning minors,loaded
+DreamGF,https://dreamgf.ai,AI companion,6-step wizard: account > mix & match appearance > personality > extra content > chat > upgrade,Progress bar wizard; daily streak rewards,$12.99-$25.98/mo,A numbered wizard with a visible progress bar for first-time users,loaded
+Promptchan,https://promptchan.com,Adult image/video generator,Create (prompt + presets) > Tweak (describe a change) > Animate > Extend,Before/after drag slider for edits; Subject/Setting/Mood prompt helper; 'clone' community settings,Free + Gems / subscription,Before/after compare slider; Subject-Setting-Mood helper; Animate + Extend buttons right under a result,loaded
+SoulGen,https://soulgen.net,Adult image generator,Describe or pick tags > generate > inpaint/outpaint > lip-sync video,"Edit-by-brush, expand canvas",Subscription,Brush-to-edit and expand canvas. AVOID: 'make someone look like a photo' (real-person likeness),loaded
+Replika,https://replika.com,AI companion,Create avatar > customise look > chat,"3D avatar customisation, room, outfits shop",Free + Pro subscription,Outfit 'shop' style wardrobe browsing,loaded
+DarLink AI,https://www.darlink.ai,AI companion,Customise look and personality > chat > photos/video,not shown on the page we loaded,Tokens,Look + personality in one builder,loaded (very little content)
+SpicyChat,https://spicychat.ai,AI character chat,Browse community cards by tag > chat > create your own card,"Tag chips, community cards, filters",Free + subscription,Tag filtering. AVOID: tags such as 'Age Play' / 'Teen camp' -- never offer such chips,loaded
+Janitor AI,https://janitorai.com,AI character chat,Browse/create character cards > chat,"Card grid, tags, creator profiles",Free (own API key) / tokens,Character card grid with tags,loaded
+Muah AI,https://muah.ai,AI companion,"Customise character > chat, voice, photos",Single long page of options,Subscription,Customise in one place,loaded
+Lovescape,https://lovescape.com,Adult image/video/story generator,"Create a character profile > reuse it: change outfit, setting, camera, pose, lighting","Visual controls for appearance, clothing, body type, pose, background, lighting and composition; reusable character profiles",Subscription,"REUSABLE CHARACTER PROFILE: keep traits, change only outfit/scene/camera -- the core of our Saved Characters",loaded
+GirlfriendGPT,https://www.girlfriendgpt.com (redirects to gptgirlfriend.online),AI companion,Browse characters with tag filters > chat > create,Tag filter bar,Free + premium,Filter bar of tags,loaded
+JOI AI,https://www.joi.com,AI companion,Browse > customise > chat,Age-range filters. AVOID: a 'celebrities' category,not shown on the page we loaded,Nothing on safety; shows why we ban real-person likeness,loaded
+Secrets AI,https://secrets.ai,AI companion,Pick a 'fantasy' > chat,100+ fantasy scenario cards,not shown on the page we loaded,Scenario cards as starting points (our Photoshoot 'scenes'),loaded
+Seduced.ai,https://seduced.com,Adult image/video generator,Pick model (30+) > pick 'Series' preset of curated scenes > mix 'extensions' (LoRAs) > generate longer scenes,Presets that bundle scene+variables; mixable extensions at a default 80% strength,Subscription,'Series' = one click gives a consistent set of shots; extensions with sensible default strength (our LoRA drawer),loaded
+HeraHaven,https://herahaven.com,AI companion,Create girlfriend > chat > pictures > turn picture into video,Picture-to-video button on every image,not shown on the page we loaded,'Animate this' on every picture,loaded
+FantasyGF,https://fantasygf.ai,AI companion,"Filter by age, hair, body > pick or create > chat/pics/voice/video",Filter chips; duos,Free + premium,Chip filters for browsing your saved characters,loaded
+Kupid AI,https://kupid.ai,AI companion,Realistic/Anime toggle > pick > chat,Style toggle; categories. AVOID: 'Teen' category,not shown on the page we loaded,Style toggle at the very top,loaded
+SoulFun,https://soulfun.ai,AI companion,Pick personality tags > chat with text/images/voice/video,Personality tag chips,Subscription,Personality chips (for game writing notes),loaded
+Sakura.fm,https://www.sakura.fm,AI character chat,Browse/create characters > chat,Tags. AVOID: family-role bots (e.g. 'daughter'),Free + premium,Shows why role words like 'daughter' are blocked in our safety list,loaded
+FreeGF,https://freegf.ai,AI companion / generator,"Generator + chat, no sign-up",Minimal,Free,"No sign-up wall (we're local, so zero sign-up)",loaded
+CrushOn AI,https://crushon.ai,AI character chat,(title/description only),not shown on the page we loaded,not shown on the page we loaded,--,loaded (title/description only)
+Anima (myanima),https://myanima.ai,AI companion,(minimal content),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+EVA AI,https://www.evaapp.ai,AI companion,(minimal content),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+Virtual Girlfriend AI,https://www.virtualgirlfriend.ai,AI companion,(minimal content),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+PepHop,https://pephop.ai,AI character chat,(minimal content),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+Glambase,https://glambase.app,AI influencer creator,Create persona > generate content > monetise,Persona profile page,Revenue share,"A character 'profile card' with name, bio and portfolio",loaded
+VRoid Studio,https://vroid.com/en/studio,3D anime avatar maker,Pick preset items > adjust 10+ sliders > combine outfit templates > texture pen > export VRM,"Real-time 3D preview; presets first, sliders second; one-click accessories",Free,"PRESETS FIRST, SLIDERS SECOND, LIVE PREVIEW -- our Character Creator layout",loaded
+inZOI,https://playinzoi.com,Life-sim character creator,(minimal marketing content),not shown on the page we loaded,Paid game,--,loaded (very little content)
+Avaturn,https://avaturn.me,3D avatar maker,"Pick body type > hair > clothes > accessories > export (Blender/Unity), rigged with ARKit blendshapes",10k looks; export buttons,Free + paid SDK,Export to Blender/Unity. AVOID: selfie-to-avatar (real person),loaded
+MetaHuman,https://www.metahuman.com,3D digital human creator,Blend presets > sculpt face/body > hair & clothing > rigged export to Unreal,Blend between presets; region sculpting,Free with Unreal,Blend-between-presets idea for face shapes,loaded
+Daz 3D,https://www.daz3d.com,3D figure software + store,Load base figure > morph dials > add outfits/hair from store > pose > render,Morph dials; huge outfit library,Free app + paid assets,Pose presets library,loaded
+Reallusion Character Creator,https://www.reallusion.com/character-creator/,3D character design,Base > morph sliders > skin > hair > outfits > AccuRIG auto-rig > export,HD morph sliders; auto-rig,Paid + free trial,Auto-rig mention (future); grouped sliders,loaded
+Meshy,https://www.meshy.ai,AI 3D generator,Upload image or text > 3D in 20-30 s > PBR textures > rig > export GLB/FBX/OBJ/STL,Big drop-zone; 3D viewer; export menu,Free tier + credits,Drop picture > get 3D > spin it > Export button,loaded
+Tripo AI,https://www.tripo3d.ai,AI 3D generator,Text/image to 3D > rig & animate > PBR up to 8K > quad mesh,Viewer with lighting presets,Free tier + subscription,Low-poly / quad options for games,loaded
+Hyper3D Rodin,https://hyper3d.ai,AI 3D generator,"Image to 3D, near production-ready",Quality presets,"Credits, free to start",Quality presets (Fast / Detailed),loaded
+Kaedim,https://www.kaedim3d.com,AI + artist 3D service,Send image > studio returns game-ready asset,Studio pipeline,$470-$600 (plans),'Game-ready' polygon budgets,loaded
+Artbreeder,https://www.artbreeder.com,AI image mixer,(title only),not shown on the page we loaded,not shown on the page we loaded,--,loaded (title/description only)
+Tencent Hunyuan 3D (web),https://3d.hunyuan.tencent.com,AI 3D generator,"(JavaScript-only page, no readable content)",not shown on the page we loaded,not shown on the page we loaded,--,could not load (JavaScript only)
+Leonardo.ai,https://leonardo.ai,AI image/video suite,Generate > Motion > Edit keeping the character > Upscale,"Tool rail on the left, canvas in the middle",Free + subscription,Post-result action bar: Animate / Edit / Upscale,loaded
+Tensor.Art,https://tensor.art,Model hub + generator,Pick model/LoRA > generate; 'design original character',Model cards,Free + Pro,Model cards with sample images in the advanced drawer,loaded
+Civitai,https://civitai.com,Model hub + generator,Browse models/LoRAs > generate,"Model cards, filters",Free + Buzz currency,Where Andrew can find extra LoRAs (advanced),loaded
+getimg.ai,https://getimg.ai,AI creative suite,"Character creator, relight, background cleanup, upscale, product orbit",Workspace with tool tabs,From $15/mo (credits),Relight + background cleanup as one-click tools,loaded
+Krea,https://www.krea.ai,AI creative suite,Generate / edit / enhance images and video in real time,Real-time canvas,Tokens / subscription,"Live preview while dragging (future, needs fast model)",loaded
+Playground,https://playground.com,AI design tool,Pick template > edit with words; swap style; remove object; smart layers,Template gallery,Free to start,Remove-object and swap-style buttons,loaded
+Mage.space,https://www.mage.space,AI image/video,"'Apps': Character Builder, Outfit Swap, Scene Builder, Angles, Character Sheet, Relight, Inpaint, Skin Enhancer","One app per task, each a small form",Free + $10/mo,"ONE SMALL TOOL PER TASK (Outfit Swap, Angles, Character Sheet) -- our tab design. AVOID: their Face Swap app",loaded
+PixAI,https://pixai.art,Anime generator,Prompt or pick model/LoRA > generate,1.8M models; daily credits,Free + credits,Anime model presets,loaded
+NovelAI,https://novelai.net,Anime image + story,Prompt with tags > generate; story writer,Tag autocomplete,$10/mo+,Tag autocomplete for the anime model (future),loaded
+SeaArt,https://www.seaart.ai,AI creative community,Remix someone's image settings > generate,'Remix' button,Free + subscription,'Use these settings again' on every gallery item,loaded
+Yodayo,https://yodayo.com,Anime generator,Prompt > generate > share,Prompt gallery,not shown on the page we loaded,Prompt gallery as inspiration,loaded
+Moescape,https://moescape.ai,Anime generator,Prompt > generate > share,Prompt gallery,not shown on the page we loaded,--,loaded
+Higgsfield,https://higgsfield.ai,AI image/video suite,Text or reference > image/video > edit > upscale,Camera-move presets,not shown on the page we loaded,Camera-move presets for video (future),loaded
+Dzine,https://www.dzine.ai,AI creative suite,"Consistent character, image-to-3D, generative fill",Layers + tool rail,Credits,Consistent character + image-to-3D in one app (same idea as ours),loaded
+Recraft,https://www.recraft.ai,AI design platform,"Generate, vector, custom styles",Style library,not shown on the page we loaded,Saved custom styles,loaded
+Unstable Diffusion (unstability.ai),https://www.unstability.ai,Unfiltered image generator,Prompt > generate,Model picker,$30/mo,--,loaded
+Stable Diffusion Online,https://stablediffusionweb.com,Web generator,Prompt > generate,Single prompt box,Free + paid,Single prompt box first screen,loaded
+Lalaland (now Browzwear),https://lalaland.ai,Fashion AI models,Redirects to Browzwear 3D virtual showrooms,3D showroom,not shown on the page we loaded,--,loaded
+Botika,https://botika.io,Fashion AI models,Upload flat lay > pick AI model > on-model photos; one model across a whole collection,"Model picker, batch",not shown on the page we loaded,Same model across many outfits = our Wardrobe batch,loaded
+Photoroom,https://www.photoroom.com,Product photo editor,Upload > remove background > pick scene template > export,Instant cut-out; template scenes,Free trial + subscription,Instant background removal then scene templates,loaded
+Claid,https://claid.ai,Product/fashion photo AI,Upload > background/lifestyle scene/on-model > download,Before/after,Free trial + credits,Clean cut-outs + lifestyle scenes,loaded
+Pebblely,https://pebblely.com,Product photo AI,Upload > remove bg > pick from 100+ themes > bulk generate,Theme thumbnails,Free + paid,Theme thumbnails for backgrounds,loaded
+Aragon,https://www.aragon.ai,AI headshots,Upload selfies > pick styles > get headshots,Style packs,$250-$500 (team plans),--  (selfie-based; not applicable),loaded
+FASHN,https://fashn.ai,Fashion AI / try-on,Consistent AI models > virtual try-on > product visuals,Model library,Credits,Try-on: 'put this garment on this model',loaded
+Fotor AI Photoshoot,https://www.fotor.com/features/ai-photoshoot/,AI photoshoot,3 steps: upload > choose background and size > generate,Three numbered steps,Free + Pro,3-step Photoshoot flow,loaded
+Pixelcut Virtual Try-On,https://www.pixelcut.ai/virtual-try-on,Virtual try-on,Upload clothing > pick a library model > fit,Two drop-zones side by side,not shown on the page we loaded,Two drop-zones: 'the character' + 'the outfit',loaded
+Kolors Virtual Try-On (HF Space),https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On,Virtual try-on demo,Upload person + garment > seed > run,"Two images in, one out",Free,Same two-input layout,loaded (title/description only)
+Vmake,https://vmake.ai,Product video,Product > social video,Templates,Credits,--,loaded
+Kling AI,https://klingai.com,AI video,Text/image/reference to video,Multi-reference video,not shown on the page we loaded,First+last frame video (we use Wan FLF2V),loaded
+HeyGen,https://www.heygen.com,Avatar video,Personal avatar from your face/voice,Avatar picker,Free plan + paid,--  (real-person avatar; not applicable),loaded
+Genmo,https://www.genmo.ai,Video model lab,Research + video generation,not shown on the page we loaded,not shown on the page we loaded,--,loaded
+Digen AI,https://digen.ai,AI video,Image to video,Templates,$11.99,Image-to-video templates,loaded
+Nastia,https://www.nastia.ai,AI companion,Chat/roleplay companion,not shown on the page we loaded,Free tier + paid,--,loaded
+Picrew,https://picrew.me,Dress-up image maker,Open a maker > click part categories > pick items/colours > save,CATEGORY ICON ROW + SWATCH GRID + LIVE PREVIEW; colour swatches per part,Free,Category icons + swatch grid + instant preview -- the 'dress-up doll' feel Andrew wants,loaded
+Doll Divine,https://www.dolldivine.com,Dress-up games,Pick a game > category tabs > click items,Category tabs,Free (gems),Category tabs for Wardrobe,loaded
+Azalea's Dolls,https://www.azaleasdolls.com,Dress-up games,Pick a doll > click clothes,Click-to-wear,Free,Click-to-wear simplicity,loaded
+Fooocus,https://github.com/lllyasviel/Fooocus,Local image UI,"Type prompt > Generate; 'Advanced' checkbox reveals styles, seeds, inpaint, image prompt","SIMPLE BY DEFAULT, ADVANCED CHECKBOX; Upscale/Vary buttons; offline",Free (open source),Advanced drawer hidden by default,loaded
+SwarmUI,https://github.com/mcmonkeyprojects/SwarmUI,Local image UI on ComfyUI,Simple Generate tab; full ComfyUI tab for experts,Generate tab + Comfy workflow tab,Free (open source),"Simple front-end on top of ComfyUI, with raw workflow access",loaded
+Krita AI Diffusion,https://github.com/Acly/krita-ai-diffusion,Local painting + AI (ComfyUI),Select area > type > generate fill; live mode; pose vectors; upscale,Selection-based inpaint; live painting; region prompts,Free (open source),Select-area-then-describe for object insertion,loaded
+Krita AI Handbook,https://docs.interstice.cloud,Docs,Guides for the Krita plugin,Docs,not shown on the page we loaded,--,loaded
+Stable Diffusion WebUI Forge,https://github.com/lllyasviel/stable-diffusion-webui-forge,Local image UI,"Tabs: txt2img, img2img, extras",Tabbed layout,Free (open source),--,loaded
+InvokeAI,https://invoke.ai (docs),Local image UI (canvas),"Unified canvas: layers, inpaint, control layers, upscale",Canvas + layers; control layers,Free (open source); hosted $15-$50/mo,Control layers for pose/reference,loaded
+InvokeAI GitHub,https://github.com/invoke-ai/InvokeAI,Local image UI (repo),See above,--,--,--,loaded
+Comfy (comfy.org),https://comfy.org,Node-based engine (our backend),Node graph; templates; 'apps' mode,Templates gallery,Free local / paid cloud,Templates-first; Easy Studio hides the nodes,loaded
+Loras.dev,https://loras.dev,LoRA generator,(thin page),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+getsona.ai,https://getsona.ai,Persona AI,(thin page),not shown on the page we loaded,not shown on the page we loaded,--,loaded (very little content)
+SDXL Unstable / instantid.org,https://instantid.org,(parked domain),--,--,--,--,loaded but irrelevant (parked domain)
+Character.AI,https://character.ai,AI character chat,--,--,--,--,could not load (403 Cloudflare)
+Talkie,https://www.talkie-ai.com,AI character chat,--,--,--,--,could not load (403)
+PornPen,https://www.pornpen.ai,Adult generator,--,--,--,--,could not load (SSL error)
+Perchance,https://perchance.org/ai-character-generator,Generator,--,--,--,--,could not load (Cloudflare)
+NightCafe,https://creator.nightcafe.studio,Generator,--,--,--,--,could not load (Cloudflare)
+Ideogram,https://www.ideogram.ai,Generator,--,--,--,--,could not load (Cloudflare)
+ZMO.ai,https://www.zmo.ai,Generator,--,--,--,--,could not load (SSL error)
+Everskies,https://everskies.com,Dress-up community,--,--,--,--,could not load (521 server down)
+Ready Player Me,https://readyplayer.me,3D avatars,--,--,--,--,could not load (SSL; service reportedly ended)
+Illusion,https://www.illusion.jp,3D character games,--,--,--,--,could not load (SSL error)
+AI-Girlfriend.ai,https://ai-girlfriend.ai,AI companion,--,--,--,--,could not load (Cloudflare)
+Dollmaker games,https://www.dollmaker.games,Dress-up,--,--,--,--,could not load (SSL error)
+CSM.ai,https://www.csm.ai,AI 3D,--,--,--,--,could not load (SSL error)
+Hi-Anime,https://www.hi-anime.ai,Anime generator,--,--,--,--,could not load (SSL error)
+DreamPal,https://www.dreampal.ai,AI companion,--,--,--,--,could not load (503)
+Dittin,https://www.dittin.ai,AI character chat,--,--,--,--,could not load (SSL error)
+Fliki,https://www.fliki.ai,AI video,--,--,--,--,could not load (SSL error)
+Anytopia,https://www.anytopia.ai,AI companion,--,--,--,--,could not load (SSL error)
+OpenArt,https://www.openart.ai,Generator,--,--,--,--,could not load (404 on the page tried)
+Invoke.com,https://www.invoke.com,(domain for sale),--,--,--,--,wrong site (domain for sale)
+Chai (chai.com),https://www.chai.com,"(tea company, not the AI app)",--,--,--,--,wrong site (tea company)
+mua.ai,https://www.mua.ai,(domain for sale),--,--,--,--,wrong site (domain for sale)
+Pykaso,https://www.pykaso.ai,"(page now shows Pyksel, an ad generator)",--,--,--,--,loaded but irrelevant (now an ad generator)
+Candy.ai video builder (v3 visit),https://candy.ai/ai-video-generator,AI companion video,Home > 'Build your video': pick a girl from a photo grid > build scenes > video; sign-up wall before the scene step,"Hero banner with sample clip lengths (1:12, 1:47, 2:00); character grid with category tabs; sticky bottom bar 'Pick a character -> Create Video'",Subscription + tokens,Copy: pick-a-character-first then scenes; sticky action bar; long videos made of scenes. Avoid: '18-21' category and 19-year-old characters (our youngest is 21); licensed real-performer clones (we allow no real people); account wall,"loaded (home, create, video grid screenshots); create-character/shorts/my-ai = 404; collection/private = sign-in wall (not passed)"
+Candy.ai create flow (v3 visit),https://candy.ai/create-girlfriend,AI companion,Girls/Trans toggle > two big cards REALISTIC vs ANIME > Start > (later steps need an account),Two huge picture cards with a check badge; one decision per screen; pink primary button,Subscription,Copy: style choice as two big picture cards as the very first step (Easy Studio Create already starts with style; made cards bigger in plan),"loaded (step 1 only; rest behind sign-up, not attempted)"
+Nectar AI,https://nectar.ai,AI companion,Create > HD creator > character; 'Fantasies' = same characters in different scenarios,'Fantasies': unique storylines with the same characters; per-companion model/memory settings,Free + subscription,Copy: scenario packs that reuse one saved character (our Photoshoot packs + 18+ packs),loaded
+ComfyUI-Lora-Manager,https://github.com/willmiao/ComfyUI-Lora-Manager,LoRA manager (open source),"Scans LoRA folder > cards with previews, trigger words, base model > send to workflow","Preview cards, Civitai metadata fetch, trigger words copied in, recipes",Free (open source),"Copy: card grid with thumbnail, base model and trigger words; auto-insert triggers. We add a real-person/minor block",loaded
+Stable-Diffusion-Webui-Civitai-Helper,https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper,LoRA manager (Forge/A1111 extension),Scan models > fetch Civitai info + preview by file hash > download by URL,One-click 'download by Civitai URL'; preview images saved next to the file,Free (open source),Copy: paste a Civitai link to install; preview saved as <name>.preview.png (we use the same convention),loaded
+Civitai content levels,https://education.civitai.com/civitais-guide-to-content-levels/,Content policy,Five-level rating system for models and images (PG to XXX),Browsing levels the user opts into; adult levels hidden by default,n/a,Copy: adult content hidden unless opted in; we route Civitai NSFW LoRAs to the 18+ section only,loaded
+Civitai LoRA trainer guide,https://education.civitai.com/using-civitai-the-on-site-lora-trainer/,LoRA training (web),Choose model type > add + caption training data > review settings > submit > wait > test,Wizard with auto-captioning and sensible defaults; sample images per epoch,Buzz credits,Copy: 4-step wizard with auto-captions and defaults. Our dataset is generated from the saved character instead of uploaded photos,loaded
+Civitai REST API wiki,https://github.com/civitai/civitai/wiki/REST-API-Reference,API docs,"/api/v1/models/{id}, /model-versions/{id}, download URLs with token","Public JSON incl. nsfw flag, baseModel, trainedWords, poi (person of interest) flag",Free,"Used for the Civitai import: name, base model, trigger words, nsfw and poi flags",loaded
+Civitai developer docs,https://developer.civitai.com/docs/api/public-rest,API docs,-,-,-,Used the GitHub wiki instead,failed (404)
+ai-toolkit (ostris),https://github.com/ostris/ai-toolkit,"LoRA trainer (open source, MIT)",YAML/JSON config > run.py > LoRA; UI optional,"Supports Chroma, Z-Image, SDXL, Wan 2.2 (incl. high/low split), LTX; low-VRAM options",Free,Picked as Easy Studio's trainer (one tool for picture and video LoRAs),"loaded (README rate-limited once, main page loaded)"
+musubi-tuner,https://github.com/kohya-ss/musubi-tuner,LoRA trainer (open source),"Cache latents/text > train video LoRAs (Wan, HunyuanVideo)",Strong for video LoRAs; command-line only,Free,Runner-up trainer for video; not picked to keep one trainer,loaded
+diffusion-pipe,https://github.com/tdrussell/diffusion-pipe,LoRA trainer (open source),TOML config > deepspeed pipeline training,Multi-GPU; many video models,Free,"Not picked (Linux/deepspeed only, harder setup)",loaded
+OneTrainer,https://github.com/Nerogar/OneTrainer,LoRA trainer (open source),Desktop GUI > presets > train,Presets per model; built-in captioning; sample previews,Free,Copy: presets per base model (our 'What is the LoRA for?' choice),loaded
+FluxGym,https://github.com/cocktailpeanut/fluxgym,LoRA trainer UI (open source),Name + trigger > drop images > auto-caption > train,3-step single page; low-VRAM,Free,"Copy: one page, trigger word up front, auto captions",loaded
+kohya_ss,https://github.com/bmaltais/kohya_ss,LoRA trainer GUI (open source),Many tabs of settings > train,"Very powerful, very many knobs",Free,Avoid: settings overload for a non-developer,"failed first try, loaded on retry"
+fal.ai FLUX LoRA training,https://fal.ai/models/fal-ai/flux-lora-fast-training,LoRA training (cloud API),Upload zip > trigger word > train in minutes,Minimal form; style/character/object modes,Pay per run,Copy: few inputs. Not used (cloud upload; we stay local),loaded
+Replicate FLUX fine-tune,https://replicate.com/blog/fine-tune-flux,LoRA training (cloud),Upload images > trigger word > train > run,One-line training; trigger word naming tips,Pay per run,Copy: unique trigger word made from the name (our make_trigger),loaded
+Astria,https://www.astria.ai/,Fine-tune / photoshoots (web),"Upload > tune > templates (headshots, ecommerce)",Keyboard-driven composer; template packs,Subscription,Avoid: photo-of-real-person tuning (we deliberately don't train on photos),loaded (app shell)
+SwarmUI video model docs,https://github.com/mcmonkeyprojects/SwarmUI/blob/master/docs/Video%20Model%20Support.md,Local UI docs,"Per-model notes: frames, fps, resolutions for Wan, LTX, Hunyuan, Kandinsky","Model-specific frame rules (4n+1, 8n+1) documented",Free,Used to check frame-count rules per video model,loaded
+SwarmUI prompt syntax (LoRAs),https://github.com/mcmonkeyprojects/SwarmUI/blob/master/docs/Features/Prompt%20Syntax.md,Local UI docs,<lora:name:weight> in prompt,LoRAs by name in the prompt,Free,Avoid for non-developers: we use pickers + auto trigger words instead of syntax,loaded
+Wan2GP (WanGP),https://github.com/deepbeepmeep/Wan2GP,Local video app (open source),Pick model > prompt/picture > generate; sliding-window long videos,"One app, many video models (Wan, LTX, Hunyuan, MiniMax H3), LoRA folder per model",Free,Copy: model picker for every video model with per-model LoRA lists; we add BYO ComfyUI workflows,loaded
+ComfyUI workflow templates,https://github.com/Comfy-Org/workflow_templates,Workflows,Official template workflows per model,"Reference graphs for Wan 2.2, LTX-2, HunyuanVideo 1.5, Kandinsky 5",Free,Used as the base for the built-in video workflows,loaded
+HunyuanVideo 1.5,https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5,Video model,"t2v / i2v, 480p/720p, step-distilled",Lightweight (8.3B),Tencent Hunyuan Community licence (not valid in EU/UK/South Korea),Included as optional; licence territory note in README,loaded
+LTX-2,https://github.com/Lightricks/LTX-2,Video model,Audio+video model; LoRA trainer included,Fast distilled variants; built-in trainer,LTX-2 Community licence (free under $10M revenue; HF gated),Included as optional download; gated: needs your own HF login,loaded
+LTX Studio,https://ltx.studio/,Video (web),Story > storyboard > shots > video,Storyboard of shots with consistent characters,Subscription,Copy: scene-by-scene thinking (our Extend parts),loaded
+Krea Video,https://www.krea.ai/video,"Video (web, multi-model)","Pick a model from a list (Seedance, Veo, Kling, Wan, Runway...) > prompt/picture","Model picker as the first choice, same form for all",Subscription,Copy: one form for every model; model picker first (our Video studio),loaded
+Pollo AI,https://pollo.ai/,"Video (web, multi-model)","Tool list (image-to-video, extender, ...) + model list",Separate 'Video Extender' tool; dozens of models,Credits,Copy: Extend as its own mode. Avoid: face-swap tools (we never add them),loaded
+Higgsfield,https://higgsfield.ai/,Video/image suite (web),"Apps per task (Genjutsu, Mangaka, Cinema Studio)",Camera-move presets,Subscription,Copy: camera-move presets (our motion chips),loaded
+OpenArt Characters,https://openart.ai/characters,Character consistency (web),Create a character from presets/prompt (or photo) > reuse the same face in every image and video,Saved character used everywhere,Credits,Copy: saved character reused everywhere. Avoid: 'from a photo' (real people),loaded
+OpenArt video,https://openart.ai/video,Video (web),Model list + Director mode (long video),Director mode for full films,Credits,Copy: long-video mode idea,loaded (partial)
+OpenArt training,https://openart.ai/training,LoRA training (web),-,-,-,-,failed (404)
+Lovescape (v3 visit),https://lovescape.com/,Adult AI studio,"Fictional adult profile > style > images, chat, story, video in one workspace","'One consistent profile, several tools' (image > story > video)",Subscription,Copy: one character drives every tool. Avoid: 'Teen 18+' category (our youngest is 21),loaded
+Seduced.ai (v3 visit),https://seduced.ai/,Adult AI image/video,Pick model style (realistic/semi/hentai) > layer fetish presets > images > videos > extend into longer scenes,30+ models; extend scenes instead of one short clip,Subscription,"Copy: extend scenes, style first; separate adult area",loaded
+Promptchan (v3 visit),https://promptchan.com/,Adult AI image/video,Create > prompt > Tweak > video; community 'Clone' and 'Extend' buttons,Extend button on every video; Clone settings from a post,Freemium,"Copy: Extend button on results (we have it), 'reuse settings'",loaded
+HeraHaven (v3 visit),https://herahaven.com/,AI companion,Age gate (enter) > create girlfriend > chat/pictures/videos,Simple one-click age-confirm gate,Subscription,Copy: one-time confirm gate. Avoid: 18- and 19-year-old characters,loaded
+OurDream.ai (v3 visit),https://www.ourdream.ai/,AI roleplay,Age verification + interest pick > explore/create/generate,Interest picker in the age gate,Subscription + coins,Copy: separate adult area behind a gate,loaded
+Kupid AI (v3 visit),https://kupid.ai/,AI companion,Style realistic/anime > category > model,Category chips,Subscription,Avoid: 'Teen' category; we refuse teen words entirely,loaded
+Mage.space (v3 visit),https://www.mage.space/,Image/video (web),"Apps: Character Builder, Inpaint, Refine, Face Swap...",'Private by default',Freemium,Copy: private-by-default. Avoid: face swap / video face swap,loaded
+SeaArt training,https://www.seaart.ai/train,LoRA training (web),-,Page loaded only the generic shell,-,-,"loaded (empty shell, no training details)"
+Pinokio,https://pinokio.co/,1-click local AI app launcher,Browse apps > 1-click install > run,1-click installers for local AI apps (incl. trainers),Free,Copy: one-command installers (our install_trainer scripts),loaded
+MiVOLO,https://github.com/WildChlamydia/MiVOLO,Age estimation model,Face+body age/gender estimation,Good accuracy,Research licence (non-commercial),"Considered for the age check; not picked (licence, heavier)",loaded
+vit-age-classifier,https://huggingface.co/nateraw/vit-age-classifier,Age classifier,ViT trained on FairFace age buckets,"Small, simple pipeline",Model card: no licence stated clearly,Considered; we used a SigLIP2 age classifier + YuNet face finder instead (see PRD),loaded
+Bluesky stackable moderation,https://bsky.social/about/blog/03-12-2024-stackable-moderation,Content policy,Labelers add labels; users choose to hide/warn/show per label,Blur-with-warning instead of delete,n/a,Copy: blur + warning badge for flagged items (our age check),loaded
+Tumblr content labels,https://help.tumblr.com/community-labels/,Content policy,"Creators label posts (mature, sexual themes...); viewers choose show/blur/hide",Blurred labelled content behind a tap,n/a,"Copy: separate adult content, blurred by default where needed",loaded
+Steam adult content FAQ,https://help.steampowered.com/en/faqs/view/2E99-6E80-0C2E-6E13,Content policy (games),-,Page shell only,n/a,Godot export stays private; no store publishing planned,"loaded (page shell only, no FAQ text)"
+Spicychat (v3 visit),https://spicychat.ai/,AI companion,-,-,-,-,"failed (JS app, only 'Loading...')"
+Joyland,https://www.joyland.ai/,AI companion,-,-,-,-,"failed (JS app, empty page)"
+Kindroid (v3 visit),https://kindroid.ai/,AI companion,-,Only title/meta loaded,-,-,loaded (title only)
+Leonardo.ai (v3 visit),https://leonardo.ai/,Image/video (web),-,-,-,-,failed (403 bot check)
+Tensor.Art (v3 visit),https://tensor.art/lora-training,LoRA training (web),-,-,-,-,failed (403 bot check)
+NightCafe (v3 visit),https://creator.nightcafe.studio/,Image (web),-,-,-,-,failed (403 bot check)
+Freepik video,https://www.freepik.com/ai/video-generator,Video (web),-,-,-,-,failed (403 security filter)
+PornPen (v3 visit),https://pornpen.ai/,Adult image,-,-,-,-,failed (no response)
+getimg.ai DreamBooth,https://getimg.ai/features/dreambooth,LoRA training (web),-,-,-,-,failed (404); home page loaded
+InvokeAI model docs,https://invoke-ai.github.io/InvokeAI/concepts/models/,Docs,-,-,-,-,failed (500)
+itch.io content rating docs,https://itch.io/docs/creators/content-rating,Content policy (games),-,-,-,-,failed (404)
+Discord age-restricted help,https://support.discord.com/hc/en-us/articles/115000084051,Content policy,-,-,-,-,failed (403 bot check)
+Patreon adult content help,https://support.patreon.com/hc/en-us/articles/203950825,Content policy,-,-,-,-,failed (403 bot check)
+Reddit NSFW help,https://support.reddithelp.com/hc/en-us/articles/360060418952,Content policy,-,-,-,-,failed (403 bot check)
+X sensitive media help,https://help.x.com/en/safety-and-security/sensitive-media,Content policy,-,-,-,-,failed (403 bot check)
+DeviantArt mature filter,https://www.deviantart.com/team/journal/Mature-Content-Filter-Update-817495578,Content policy,-,-,-,-,failed (no response)
+pixiv R-18 help,https://www.pixiv.help/hc/en-us/articles/235646387,Content policy,-,-,-,-,failed (no response)

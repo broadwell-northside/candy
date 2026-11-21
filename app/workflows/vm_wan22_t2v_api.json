@@ -1,0 +1,473 @@
+{
+ "80": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "filename_prefix": "easy_studio/video",
+   "format": "auto",
+   "format.codec": "auto",
+   "video": [
+    "100011",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SaveVideo"
+  }
+ },
+ "100001": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+   "type": "wan",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "CLIPLoader"
+  }
+ },
+ "100002": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "wan_2.1_vae.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "100003": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ },
+ "100004": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ },
+ "100005": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "lora_name": "wan2.2_t2v_lightx2v_4steps_lora_v1.1_high_noise.safetensors",
+   "strength_model": 1.0000000000000002,
+   "model": [
+    "100004",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LoraLoaderModelOnly"
+  }
+ },
+ "100006": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "lora_name": "wan2.2_t2v_lightx2v_4steps_lora_v1.1_low_noise.safetensors",
+   "strength_model": 1.0000000000000002,
+   "model": [
+    "100003",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LoraLoaderModelOnly"
+  }
+ },
+ "100007": {
+  "class_type": "ModelSamplingSD3",
+  "inputs": {
+   "shift": 5.000000000000001,
+   "model": [
+    "100023",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ModelSamplingSD3"
+  }
+ },
+ "100008": {
+  "class_type": "ModelSamplingSD3",
+  "inputs": {
+   "shift": 5.000000000000001,
+   "model": [
+    "100022",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ModelSamplingSD3"
+  }
+ },
+ "100009": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "an adult woman turns toward the camera and smiles, natural motion, cinematic lighting",
+   "clip": [
+    "100001",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Positive Prompt)"
+  }
+ },
+ "100010": {
+  "class_type": "KSamplerAdvanced",
+  "inputs": {
+   "add_noise": "enable",
+   "noise_seed": 923510416338945,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "start_at_step": 0,
+   "return_with_leftover_noise": "enable",
+   "model": [
+    "100008",
+    0
+   ],
+   "positive": [
+    "100009",
+    0
+   ],
+   "negative": [
+    "100013",
+    0
+   ],
+   "latent_image": [
+    "100014",
+    0
+   ],
+   "steps": [
+    "100024",
+    0
+   ],
+   "cfg": [
+    "100026",
+    0
+   ],
+   "end_at_step": [
+    "100025",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "KSamplerAdvanced"
+  }
+ },
+ "100011": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "bit_depth": "auto",
+   "color_space": "sRGB",
+   "chroma_subsampling": "auto",
+   "codec": "none",
+   "images": [
+    "100012",
+    0
+   ],
+   "fps": [
+    "100027",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CreateVideo"
+  }
+ },
+ "100012": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "100015",
+    0
+   ],
+   "vae": [
+    "100002",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecode"
+  }
+ },
+ "100013": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "\u8272\u8c03\u8273\u4e3d\uff0c\u8fc7\u66dd\uff0c\u9759\u6001\uff0c\u7ec6\u8282\u6a21\u7cca\u4e0d\u6e05\uff0c\u5b57\u5e55\uff0c\u98ce\u683c\uff0c\u4f5c\u54c1\uff0c\u753b\u4f5c\uff0c\u753b\u9762\uff0c\u9759\u6b62\uff0c\u6574\u4f53\u53d1\u7070\uff0c\u6700\u5dee\u8d28\u91cf\uff0c\u4f4e\u8d28\u91cf\uff0cJPEG\u538b\u7f29\u6b8b\u7559\uff0c\u4e11\u964b\u7684\uff0c\u6b8b\u7f3a\u7684\uff0c\u591a\u4f59\u7684\u624b\u6307\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u624b\u90e8\uff0c\u753b\u5f97\u4e0d\u597d\u7684\u8138\u90e8\uff0c\u7578\u5f62\u7684\uff0c\u6bc1\u5bb9\u7684\uff0c\u5f62\u6001\u7578\u5f62\u7684\u80a2\u4f53\uff0c\u624b\u6307\u878d\u5408\uff0c\u9759\u6b62\u4e0d\u52a8\u7684\u753b\u9762\uff0c\u6742\u4e71\u7684\u80cc\u666f\uff0c\u4e09\u6761\u817f\uff0c\u80cc\u666f\u4eba\u5f88\u591a\uff0c\u5012\u7740\u8d70\uff0c\u88f8\u9732\uff0cNSFW",
+   "clip": [
+    "100001",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Negative Prompt)"
+  }
+ },
+ "100014": {
+  "class_type": "EmptyHunyuanLatentVideo",
+  "inputs": {
+   "width": 640,
+   "height": 640,
+   "batch_size": 1,
+   "length": [
+    "100030",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "EmptyHunyuanLatentVideo"
+  }
+ },
+ "100015": {
+  "class_type": "KSamplerAdvanced",
+  "inputs": {
+   "add_noise": "disable",
+   "noise_seed": 0,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "return_with_leftover_noise": "disable",
+   "model": [
+    "100007",
+    0
+   ],
+   "positive": [
+    "100009",
+    0
+   ],
+   "negative": [
+    "100013",
+    0
+   ],
+   "latent_image": [
+    "100010",
+    0
+   ],
+   "steps": [
+    "100024",
+    0
+   ],
+   "cfg": [
+    "100026",
+    0
+   ],
+   "start_at_step": [
+    "100025",
+    0
+   ],
+   "end_at_step": [
+    "100024",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "KSamplerAdvanced"
+  }
+ },
+ "100016": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 20
+  },
+  "_meta": {
+   "title": "Int (Steps)"
+  }
+ },
+ "100017": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 10
+  },
+  "_meta": {
+   "title": "Int (Split Steps)"
+  }
+ },
+ "100018": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 4
+  },
+  "_meta": {
+   "title": "Int (Steps)"
+  }
+ },
+ "100019": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 2
+  },
+  "_meta": {
+   "title": "Int (Split Steps)"
+  }
+ },
+ "100020": {
+  "class_type": "PrimitiveFloat",
+  "inputs": {
+   "value": 1
+  },
+  "_meta": {
+   "title": "Float(CFG)"
+  }
+ },
+ "100021": {
+  "class_type": "PrimitiveFloat",
+  "inputs": {
+   "value": 3.5
+  },
+  "_meta": {
+   "title": "Float(CFG)"
+  }
+ },
+ "100022": {
+  "class_type": "ComfySwitchNode",
+  "inputs": {
+   "on_false": [
+    "100004",
+    0
+   ],
+   "on_true": [
+    "100005",
+    0
+   ],
+   "switch": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Switch(high noise model)"
+  }
+ },
+ "100023": {
+  "class_type": "ComfySwitchNode",
+  "inputs": {
+   "on_false": [
+    "100003",
+    0
+   ],
+   "on_true": [
+    "100006",
+    0
+   ],
+   "switch": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Switch(low noise model)"
+  }
+ },
+ "100024": {
+  "class_type": "ComfySwitchNode",
+  "inputs": {
+   "on_false": [
+    "100016",
+    0
+   ],
+   "on_true": [
+    "100018",
+    0
+   ],
+   "switch": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Switch(steps)"
+  }
+ },
+ "100025": {
+  "class_type": "ComfySwitchNode",
+  "inputs": {
+   "on_false": [
+    "100017",
+    0
+   ],
+   "on_true": [
+    "100019",
+    0
+   ],
+   "switch": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Switch(split steps)"
+  }
+ },
+ "100026": {
+  "class_type": "ComfySwitchNode",
+  "inputs": {
+   "on_false": [
+    "100021",
+    0
+   ],
+   "on_true": [
+    "100020",
+    0
+   ],
+   "switch": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Switch(CFG)"
+  }
+ },
+ "100027": {
+  "class_type": "PrimitiveFloat",
+  "inputs": {
+   "value": 16
+  },
+  "_meta": {
+   "title": "Float (FPS)"
+  }
+ },
+ "100028": {
+  "class_type": "PrimitiveFloat",
+  "inputs": {
+   "value": 5
+  },
+  "_meta": {
+   "title": "Float (Duration)"
+  }
+ },
+ "100029": {
+  "class_type": "PrimitiveBoolean",
+  "inputs": {
+   "value": false
+  },
+  "_meta": {
+   "title": "Enable Lightning LoRA"
+  }
+ },
+ "100030": {
+  "class_type": "ComfyMathExpression",
+  "inputs": {
+   "expression": "floor(a * b) + 1",
+   "values.a": [
+    "100028",
+    0
+   ],
+   "values.b": [
+    "100027",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ComfyMathExpression"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# Tools for checks and the UI smoke test.
+# The desktop installer does not install this file. It only installs requirements.txt.
+ruff>=0.8
+playwright>=1.48

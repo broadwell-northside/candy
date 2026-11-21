@@ -1,0 +1,858 @@
+{
+ "prompts": [
+  {
+   "id": "f_front_standing",
+   "sex": "female",
+   "age": 27,
+   "angle": "front",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, front view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_front_seated",
+   "sex": "female",
+   "age": 27,
+   "angle": "front",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, front view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_front_lying",
+   "sex": "female",
+   "age": 27,
+   "angle": "front",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, front view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_front_kneeling",
+   "sex": "female",
+   "age": 27,
+   "angle": "front",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, front view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_front_pair",
+   "sex": "female",
+   "age": 27,
+   "angle": "front",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, front view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_side_standing",
+   "sex": "female",
+   "age": 27,
+   "angle": "side",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, side view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_side_seated",
+   "sex": "female",
+   "age": 27,
+   "angle": "side",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, side view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_side_lying",
+   "sex": "female",
+   "age": 27,
+   "angle": "side",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, side view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_side_kneeling",
+   "sex": "female",
+   "age": 27,
+   "angle": "side",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, side view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_side_pair",
+   "sex": "female",
+   "age": 27,
+   "angle": "side",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, side view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_back_standing",
+   "sex": "female",
+   "age": 27,
+   "angle": "back",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, back view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_back_seated",
+   "sex": "female",
+   "age": 27,
+   "angle": "back",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, back view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_back_lying",
+   "sex": "female",
+   "age": 27,
+   "angle": "back",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, back view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_back_kneeling",
+   "sex": "female",
+   "age": 27,
+   "angle": "back",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, back view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_back_pair",
+   "sex": "female",
+   "age": 27,
+   "angle": "back",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, back view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_overhead_standing",
+   "sex": "female",
+   "age": 27,
+   "angle": "overhead",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, overhead view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_overhead_seated",
+   "sex": "female",
+   "age": 27,
+   "angle": "overhead",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, overhead view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_overhead_lying",
+   "sex": "female",
+   "age": 27,
+   "angle": "overhead",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, overhead view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_overhead_kneeling",
+   "sex": "female",
+   "age": 27,
+   "angle": "overhead",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, overhead view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_overhead_pair",
+   "sex": "female",
+   "age": 27,
+   "angle": "overhead",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, overhead view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_low_standing",
+   "sex": "female",
+   "age": 27,
+   "angle": "low",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, low angle view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_low_seated",
+   "sex": "female",
+   "age": 27,
+   "angle": "low",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, low angle view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_low_lying",
+   "sex": "female",
+   "age": 27,
+   "angle": "low",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, low angle view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_low_kneeling",
+   "sex": "female",
+   "age": 27,
+   "angle": "low",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, low angle view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "f_low_pair",
+   "sex": "female",
+   "age": 27,
+   "angle": "low",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 27-year-old fictional adult woman, nude, low angle view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_front_standing",
+   "sex": "male",
+   "age": 34,
+   "angle": "front",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, front view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_front_seated",
+   "sex": "male",
+   "age": 34,
+   "angle": "front",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, front view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_front_lying",
+   "sex": "male",
+   "age": 34,
+   "angle": "front",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, front view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_front_kneeling",
+   "sex": "male",
+   "age": 34,
+   "angle": "front",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, front view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_front_pair",
+   "sex": "male",
+   "age": 34,
+   "angle": "front",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, front view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_side_standing",
+   "sex": "male",
+   "age": 34,
+   "angle": "side",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, side view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_side_seated",
+   "sex": "male",
+   "age": 34,
+   "angle": "side",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, side view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_side_lying",
+   "sex": "male",
+   "age": 34,
+   "angle": "side",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, side view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_side_kneeling",
+   "sex": "male",
+   "age": 34,
+   "angle": "side",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, side view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_side_pair",
+   "sex": "male",
+   "age": 34,
+   "angle": "side",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, side view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_back_standing",
+   "sex": "male",
+   "age": 34,
+   "angle": "back",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, back view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_back_seated",
+   "sex": "male",
+   "age": 34,
+   "angle": "back",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, back view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_back_lying",
+   "sex": "male",
+   "age": 34,
+   "angle": "back",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, back view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_back_kneeling",
+   "sex": "male",
+   "age": 34,
+   "angle": "back",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, back view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_back_pair",
+   "sex": "male",
+   "age": 34,
+   "angle": "back",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, back view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_overhead_standing",
+   "sex": "male",
+   "age": 34,
+   "angle": "overhead",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, overhead view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_overhead_seated",
+   "sex": "male",
+   "age": 34,
+   "angle": "overhead",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, overhead view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_overhead_lying",
+   "sex": "male",
+   "age": 34,
+   "angle": "overhead",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, overhead view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_overhead_kneeling",
+   "sex": "male",
+   "age": 34,
+   "angle": "overhead",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, overhead view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_overhead_pair",
+   "sex": "male",
+   "age": 34,
+   "angle": "overhead",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, overhead view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_low_standing",
+   "sex": "male",
+   "age": 34,
+   "angle": "low",
+   "pose": "standing",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, low angle view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_low_seated",
+   "sex": "male",
+   "age": 34,
+   "angle": "low",
+   "pose": "seated",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, low angle view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_low_lying",
+   "sex": "male",
+   "age": 34,
+   "angle": "low",
+   "pose": "lying",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, low angle view, lying down, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_low_kneeling",
+   "sex": "male",
+   "age": 34,
+   "angle": "low",
+   "pose": "kneeling",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, low angle view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "m_low_pair",
+   "sex": "male",
+   "age": 34,
+   "angle": "low",
+   "pose": "pair",
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "score": [
+    "anatomical_correctness",
+    "consistency_across_angles"
+   ],
+   "prompt": "a 34-year-old fictional adult man, nude, low angle view, with one other fictional adult, standing close, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  }
+ ],
+ "score": [
+  "anatomical_correctness",
+  "consistency_across_angles"
+ ]
+}

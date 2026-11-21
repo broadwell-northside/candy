@@ -1,0 +1,16 @@
+{
+  "stage": 1,
+  "finished_look": false,
+  "label": "Stand-in",
+  "content_rating": "sfw",
+  "mesh": "res://assets/plates/plate.gltf",
+  "still": "res://assets/plates/stand_in.png",
+  "clip": "",
+  "depth": "res://assets/plates/stand_in_depth.png",
+  "sfw_still": "",
+  "sfw_clip": "",
+  "eye_level": 1.55,
+  "height": 1.8,
+  "width": 0.72,
+  "note": "The main still and clip are rated by content_rating; the shipped stand-in is a covered drawing (sfw). The game's one SFW switch lives in Settings. In SFW mode a full_21 main slot without sfw_still or sfw_clip is held, never shown. The shipped picture is a stand-in, not the finished look."
+}

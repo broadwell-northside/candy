@@ -1,0 +1,28 @@
+{
+  "scenes": [
+    {
+      "id": "covered_swim",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "swim",
+      "min_affection": 0,
+      "caption": "Covered swim.",
+      "variants": {
+        "covered": { "still": "res://assets/scenes/swim_covered.png", "video": "" }
+      }
+    },
+    {
+      "id": "adult_only_swim",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "swim",
+      "min_affection": 0,
+      "caption": "Adult only.",
+      "variants": {
+        "adult": { "still": "res://assets/scenes/swim_adult.png", "video": "" }
+      }
+    }
+  ]
+}

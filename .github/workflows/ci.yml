@@ -1,0 +1,66 @@
+# Checks that run on every pull request.
+#
+# CodeQL is not included. This private repository does not have code scanning
+# turned on (the GitHub API returns 403, "Code scanning is not enabled").
+# Code scanning on a private personal repo is a paid GitHub feature, so this
+# workflow skips it instead of adding a check that would fail.
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+          playwright install --with-deps chromium
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Setup script checks
+        run: |
+          python setup/preflight.py --self-test
+          python setup/gpu_smoke.py --self-test
+          bash -n setup/firewall_linux.sh
+          bash -n setup/mac_reach_check.sh
+
+      - name: Secret scan
+        run: |
+          version=8.30.1
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 4 \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${version}/gitleaks_${version}_linux_x64.tar.gz" \
+            -o /tmp/gitleaks.tar.gz
+          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
+          /tmp/gitleaks detect --source . --redact --no-banner --exit-code 1
+
+      - name: Mock test suite
+        run: python tests/run_tests.py
+
+      - name: UI smoke test
+        run: python tests/ui_smoke.py
+
+      - name: Browser end-to-end tests
+        run: python tests/e2e_browser.py
+
+      - name: Evidence run tool tests
+        run: python tests/evidence_tests.py

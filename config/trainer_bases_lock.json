@@ -1,0 +1,417 @@
+{
+ "schema": 1,
+ "note": "Pinned by revision. Large files by SHA-256, small files by git blob SHA-1. Built from public metadata by tools/build_trainer_bases_lock.py; nothing was downloaded.",
+ "licences": {
+  "Tongyi-MAI/Z-Image-Turbo": "apache-2.0",
+  "ostris/zimage_turbo_training_adapter": "apache-2.0",
+  "lodestones/Chroma1-HD": "apache-2.0"
+ },
+ "bases": {
+  "fast": {
+   "label": "Trainer base: Fast pictures (Z-Image Turbo)",
+   "total_bytes": 33188500021
+  },
+  "photo": {
+   "label": "Trainer base: Realistic pictures (Chroma1-HD)",
+   "total_bytes": 27493350519
+  }
+ },
+ "rows": [
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "model_index.json",
+   "size": 467,
+   "folder": "easy_studio/trainer/fast",
+   "name": "model_index.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/model_index.json",
+   "git_blob_sha1": "570c63a7c5580f63d0a8ed622324f50015dcf914"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "scheduler/scheduler_config.json",
+   "size": 173,
+   "folder": "easy_studio/trainer/fast/scheduler",
+   "name": "scheduler_config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/scheduler/scheduler_config.json",
+   "git_blob_sha1": "2349bc43351afa730341d07dd44fce4ace1c4257"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/config.json",
+   "size": 726,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/config.json",
+   "git_blob_sha1": "e49eccdc32f36da9c09cfa0e737084f9e0105e5e"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/generation_config.json",
+   "size": 239,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "generation_config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/generation_config.json",
+   "git_blob_sha1": "20a8a9156fc8c3f25295ca067f61fdf120d517c5"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/model-00001-of-00003.safetensors",
+   "size": 3957900840,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "model-00001-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/model-00001-of-00003.safetensors",
+   "sha256": "328a91d3122359d5547f9d79521205bc0a46e1f79a792dfe650e99fc2d651223"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/model-00002-of-00003.safetensors",
+   "size": 3987450520,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "model-00002-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/model-00002-of-00003.safetensors",
+   "sha256": "6cd087b316306a68c562436b5492edbcf6e16c6dba3a1308279caa5a58e21ca5"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/model-00003-of-00003.safetensors",
+   "size": 99630640,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "model-00003-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/model-00003-of-00003.safetensors",
+   "sha256": "7ca841ee75b9c61267c0c6148fd8d096d3d21b6d3e161256a9b878154f91fc52"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "text_encoder/model.safetensors.index.json",
+   "size": 32819,
+   "folder": "easy_studio/trainer/fast/text_encoder",
+   "name": "model.safetensors.index.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/text_encoder/model.safetensors.index.json",
+   "git_blob_sha1": "95c0a0059df040d75dc6c396b174382cf61d2f91"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "tokenizer/merges.txt",
+   "size": 1671853,
+   "folder": "easy_studio/trainer/fast/tokenizer",
+   "name": "merges.txt",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/tokenizer/merges.txt",
+   "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "tokenizer/tokenizer.json",
+   "size": 11422654,
+   "folder": "easy_studio/trainer/fast/tokenizer",
+   "name": "tokenizer.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/tokenizer/tokenizer.json",
+   "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "tokenizer/tokenizer_config.json",
+   "size": 9732,
+   "folder": "easy_studio/trainer/fast/tokenizer",
+   "name": "tokenizer_config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/tokenizer/tokenizer_config.json",
+   "git_blob_sha1": "417d038a63fa3de29cfde265caedae14d1a58d92"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "tokenizer/vocab.json",
+   "size": 2776833,
+   "folder": "easy_studio/trainer/fast/tokenizer",
+   "name": "vocab.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/tokenizer/vocab.json",
+   "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "transformer/config.json",
+   "size": 473,
+   "folder": "easy_studio/trainer/fast/transformer",
+   "name": "config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/transformer/config.json",
+   "git_blob_sha1": "c579190a5e03d602a2fd9647221c9d0d9441f150"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+   "size": 9973693184,
+   "folder": "easy_studio/trainer/fast/transformer",
+   "name": "diffusion_pytorch_model-00001-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+   "sha256": "95facd593e2549e8252acb571c653d57f7ddb7f1060d4e81712f152555a88804"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+   "size": 9973714824,
+   "folder": "easy_studio/trainer/fast/transformer",
+   "name": "diffusion_pytorch_model-00002-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+   "sha256": "a4bbe43ee184a1fb5af4b412d27555f532893bdc3165b1149e304ed82b5d7015"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+   "size": 4672282880,
+   "folder": "easy_studio/trainer/fast/transformer",
+   "name": "diffusion_pytorch_model-00003-of-00003.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+   "sha256": "aba4e37a590e63210878160a718d916d80398f4e1f78ab6c9b2b2a00d92769fa"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "size": 48969,
+   "folder": "easy_studio/trainer/fast/transformer",
+   "name": "diffusion_pytorch_model.safetensors.index.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/transformer/diffusion_pytorch_model.safetensors.index.json",
+   "git_blob_sha1": "a3cadc1ed28e334ef58d4e6bbda107e25168ef47"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "vae/config.json",
+   "size": 805,
+   "folder": "easy_studio/trainer/fast/vae",
+   "name": "config.json",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/vae/config.json",
+   "git_blob_sha1": "894fa30ac1950cef422189d2d4cef11043c62875"
+  },
+  {
+   "base": "fast",
+   "repo": "Tongyi-MAI/Z-Image-Turbo",
+   "rev": "f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "path": "vae/diffusion_pytorch_model.safetensors",
+   "size": 167666902,
+   "folder": "easy_studio/trainer/fast/vae",
+   "name": "diffusion_pytorch_model.safetensors",
+   "url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/f332072aa78be7aecdf3ee76d5c247082da564a6/vae/diffusion_pytorch_model.safetensors",
+   "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+  },
+  {
+   "base": "fast",
+   "repo": "ostris/zimage_turbo_training_adapter",
+   "rev": "654cd1bf8b3589d9442cb1c5e35221879e1af4f3",
+   "path": "zimage_turbo_training_adapter_v2.safetensors",
+   "size": 340194488,
+   "folder": "easy_studio/trainer/fast/adapter",
+   "name": "zimage_turbo_training_adapter_v2.safetensors",
+   "url": "https://huggingface.co/ostris/zimage_turbo_training_adapter/resolve/654cd1bf8b3589d9442cb1c5e35221879e1af4f3/zimage_turbo_training_adapter_v2.safetensors",
+   "sha256": "20a541d3e016ab8de0da076321b48b6cd9b3ffd072d9df830a068220ab2265f6"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "model_index.json",
+   "size": 494,
+   "folder": "easy_studio/trainer/photo",
+   "name": "model_index.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/model_index.json",
+   "git_blob_sha1": "3766e2b9c9921bc3dbee32dd137f29ddb0cbaa85"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "scheduler/scheduler_config.json",
+   "size": 482,
+   "folder": "easy_studio/trainer/photo/scheduler",
+   "name": "scheduler_config.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/scheduler/scheduler_config.json",
+   "git_blob_sha1": "1876155ecfc2ff4f1d03d9d51136dae67e294904"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "text_encoder/config.json",
+   "size": 741,
+   "folder": "easy_studio/trainer/photo/text_encoder",
+   "name": "config.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/text_encoder/config.json",
+   "git_blob_sha1": "7b49ed844ac688510aeda1d22e4975f4477c4f36"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "text_encoder/model-00001-of-00002.safetensors",
+   "size": 4994582224,
+   "folder": "easy_studio/trainer/photo/text_encoder",
+   "name": "model-00001-of-00002.safetensors",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/text_encoder/model-00001-of-00002.safetensors",
+   "sha256": "ec87bffd1923e8b2774a6d240c922a41f6143081d52cf83b8fe39e9d838c893e"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "text_encoder/model-00002-of-00002.safetensors",
+   "size": 4530066360,
+   "folder": "easy_studio/trainer/photo/text_encoder",
+   "name": "model-00002-of-00002.safetensors",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/text_encoder/model-00002-of-00002.safetensors",
+   "sha256": "a5640855b301fcdbceddfa90ae8066cd9414aff020552a201a255ecf2059da00"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "text_encoder/model.safetensors.index.json",
+   "size": 19921,
+   "folder": "easy_studio/trainer/photo/text_encoder",
+   "name": "model.safetensors.index.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/text_encoder/model.safetensors.index.json",
+   "git_blob_sha1": "2ec5af72751ce5482cdc10d7c2ea353f791c8bb7"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "tokenizer/added_tokens.json",
+   "size": 2593,
+   "folder": "easy_studio/trainer/photo/tokenizer",
+   "name": "added_tokens.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/tokenizer/added_tokens.json",
+   "git_blob_sha1": "3f5132007c4fcf42b75b65c8b6aa49c7098bcdf4"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "tokenizer/special_tokens_map.json",
+   "size": 2543,
+   "folder": "easy_studio/trainer/photo/tokenizer",
+   "name": "special_tokens_map.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/tokenizer/special_tokens_map.json",
+   "git_blob_sha1": "17ade346a1042cbe0c1436f5bedcbd85c099d582"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "tokenizer/spiece.model",
+   "size": 791656,
+   "folder": "easy_studio/trainer/photo/tokenizer",
+   "name": "spiece.model",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/tokenizer/spiece.model",
+   "sha256": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "tokenizer/tokenizer_config.json",
+   "size": 20847,
+   "folder": "easy_studio/trainer/photo/tokenizer",
+   "name": "tokenizer_config.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/tokenizer/tokenizer_config.json",
+   "git_blob_sha1": "ab25e5b781898f1326d306c8313c0f7562280db4"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "transformer/config.json",
+   "size": 490,
+   "folder": "easy_studio/trainer/photo/transformer",
+   "name": "config.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/transformer/config.json",
+   "git_blob_sha1": "7f1a47d431e695bd9096c3cf41ae86addcb21ae3"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+   "size": 9946193392,
+   "folder": "easy_studio/trainer/photo/transformer",
+   "name": "diffusion_pytorch_model-00001-of-00002.safetensors",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/transformer/diffusion_pytorch_model-00001-of-00002.safetensors",
+   "sha256": "59f0b26eccaabb8301e4166e653f1bcdebd7c46a4a07b02fe33d7a2c46d78eba"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+   "size": 7853894360,
+   "folder": "easy_studio/trainer/photo/transformer",
+   "name": "diffusion_pytorch_model-00002-of-00002.safetensors",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/transformer/diffusion_pytorch_model-00002-of-00002.safetensors",
+   "sha256": "65e6541afdabbb96568a3f8975eeef929f0a7e0eef3d2c4741b1bf911ac3a6d5"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+   "size": 106695,
+   "folder": "easy_studio/trainer/photo/transformer",
+   "name": "diffusion_pytorch_model.safetensors.index.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/transformer/diffusion_pytorch_model.safetensors.index.json",
+   "git_blob_sha1": "8a52f5e7b146f0943820c68eebee361dc4d9c22a"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "vae/config.json",
+   "size": 819,
+   "folder": "easy_studio/trainer/photo/vae",
+   "name": "config.json",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/vae/config.json",
+   "git_blob_sha1": "61d8c2c328b253952fc10cf77afd955fdde2675f"
+  },
+  {
+   "base": "photo",
+   "repo": "lodestones/Chroma1-HD",
+   "rev": "0e0c60ece1e82b17cb7f77342d765ba5024c40c0",
+   "path": "vae/diffusion_pytorch_model.safetensors",
+   "size": 167666902,
+   "folder": "easy_studio/trainer/photo/vae",
+   "name": "diffusion_pytorch_model.safetensors",
+   "url": "https://huggingface.co/lodestones/Chroma1-HD/resolve/0e0c60ece1e82b17cb7f77342d765ba5024c40c0/vae/diffusion_pytorch_model.safetensors",
+   "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+  }
+ ]
+}

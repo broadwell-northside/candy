@@ -1,0 +1,80 @@
+{
+  "conversations": [
+    {
+      "id": "mira_shore",
+      "character": "mira",
+      "title": "A kind morning",
+      "min_affection": 0,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "smile",
+          "text": "Morning. I'm Mira. The water's already warm if you go in slowly.",
+          "choices": [
+            {
+              "label": "I'm glad I came down.",
+              "to": "welcome",
+              "affection": 1,
+              "flag": "mira_shore_warm"
+            },
+            {
+              "label": "I'll just walk the shore.",
+              "to": "quiet",
+              "affection": 0
+            },
+            {
+              "label": "Say something of your own",
+              "free_talk": true
+            }
+          ]
+        },
+        "welcome": {
+          "mood": "smile",
+          "text": "Then stay. I'll be here until the sun climbs. No schedule.",
+          "end": true
+        },
+        "quiet": {
+          "mood": "neutral",
+          "text": "That's a good walk. The sand firms up where the tide went out.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "mira_sunspot",
+      "character": "mira",
+      "title": "A place in the sun",
+      "min_affection": 2,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "smile",
+          "text": "You keep finding the quiet part of the morning. I kept a place in the sun for you, if you want it.",
+          "choices": [
+            {
+              "label": "I'll lie there a while.",
+              "to": "rest",
+              "affection": 1,
+              "flag": "mira_sunspot_yes"
+            },
+            {
+              "label": "Not yet.",
+              "to": "later",
+              "affection": 0
+            }
+          ]
+        },
+        "rest": {
+          "mood": "smile",
+          "text": "Good. Close your eyes. I'll wake you if the tide gets ambitious.",
+          "end": true
+        },
+        "later": {
+          "mood": "thoughtful",
+          "text": "It'll keep. The sun isn't going anywhere important.",
+          "end": true
+        }
+      }
+    }
+  ]
+}

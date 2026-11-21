@@ -1,0 +1,184 @@
+{
+  "actors": [
+    {
+      "consent": "mutual",
+      "id": "player",
+      "role": "player"
+    },
+    {
+      "character": "mira",
+      "consent": "mutual",
+      "id": "mira",
+      "role": "companion"
+    }
+  ],
+  "bounds": {
+    "max_x": 14.0,
+    "max_z": 21.0,
+    "min_x": -14.0,
+    "min_z": 7.5
+  },
+  "hints": {
+    "far": "Ask Mira to hold the far pad",
+    "give": "Give Mira the key",
+    "key": "Pick up the brass key",
+    "near": "Stand on the near pad",
+    "open": "The door is open"
+  },
+  "id": "beach_door",
+  "nodes": [
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "pad_near",
+      "kind": "pressure_pad",
+      "label": "Near pad",
+      "position": {
+        "x": -3.5,
+        "y": 0.672,
+        "z": 11.0
+      },
+      "requires_full_21_mode": false,
+      "sfw_safe": true
+    },
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "pad_far",
+      "kind": "pressure_pad",
+      "label": "Far pad",
+      "position": {
+        "x": 3.5,
+        "y": 0.774,
+        "z": 9.5
+      },
+      "requires_full_21_mode": false,
+      "sfw_safe": true
+    },
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "key",
+      "kind": "prop",
+      "label": "Brass key",
+      "position": {
+        "x": -1.8,
+        "y": 0.693,
+        "z": 10.2
+      },
+      "requires_full_21_mode": false,
+      "sfw_safe": true
+    },
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "door",
+      "kind": "door",
+      "label": "Sea-cave door",
+      "position": {
+        "x": 5.8,
+        "y": 0.776,
+        "z": 8.4
+      },
+      "requires_full_21_mode": false,
+      "sfw_safe": true,
+      "socket": "keyhole"
+    },
+    {
+      "actor": "mira",
+      "actors": [
+        "mira"
+      ],
+      "hitboxes": [
+        {
+          "action": "take_key",
+          "id": "hand",
+          "rect": {
+            "u0": 0.55,
+            "u1": 0.9,
+            "v0": 0.4,
+            "v1": 0.62
+          }
+        },
+        {
+          "action": "stand_on_far_pad",
+          "id": "body",
+          "rect": {
+            "u0": 0.15,
+            "u1": 0.85,
+            "v0": 0.1,
+            "v1": 0.98
+          }
+        }
+      ],
+      "id": "companion",
+      "kind": "plate",
+      "label": "Mira",
+      "plate": {
+        "height": 1.8,
+        "spec": "res://data/plate.json",
+        "width": 0.72
+      },
+      "position": {
+        "x": 2.0,
+        "y": 0.779,
+        "z": 12.0
+      },
+      "requires_full_21_mode": false,
+      "sfw_safe": true,
+      "sockets": [
+        {
+          "depth": 0.06,
+          "id": "hand_r",
+          "kind": "hand",
+          "u": 0.7,
+          "v": 0.5
+        }
+      ]
+    },
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "stand_on_far_pad",
+      "kind": "action",
+      "label": "Stand on the far pad",
+      "requires_full_21_mode": false,
+      "sfw_safe": true
+    },
+    {
+      "actors": [
+        "player",
+        "mira"
+      ],
+      "id": "take_key",
+      "kind": "action",
+      "label": "Take the key",
+      "requires_full_21_mode": false,
+      "sfw_safe": true
+    }
+  ],
+  "notice": "PRIVATE BUILD — NOT FOR DISTRIBUTION",
+  "place": "beach",
+  "rules": {
+    "companion": "companion",
+    "door": "door",
+    "far_pad": "pad_far",
+    "key": "key",
+    "near_pad": "pad_near",
+    "pad_radius": 0.9,
+    "pads_needed": 2,
+    "reach": 1.8
+  },
+  "schema": "stillwater-level/1",
+  "title": "The sea-cave door"
+}

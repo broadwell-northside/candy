@@ -1,0 +1,264 @@
+{
+ "11": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "crystal_flower.png"
+  },
+  "_meta": {
+   "title": "LoadImage"
+  }
+ },
+ "10": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "filename_prefix": "easy_studio/video",
+   "format": "mp4",
+   "format.codec": "h264",
+   "video": [
+    "100015",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SaveVideo"
+  }
+ },
+ "100001": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "kandinsky5lite_i2v_5s.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ },
+ "100002": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "hunyuan_video_vae_bf16.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "100003": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "",
+   "clip": [
+    "100008",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Negative Prompt)"
+  }
+ },
+ "100004": {
+  "class_type": "ImageScale",
+  "inputs": {
+   "upscale_method": "lanczos",
+   "crop": "center",
+   "image": [
+    "11",
+    0
+   ],
+   "width": [
+    "100009",
+    0
+   ],
+   "height": [
+    "100010",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ImageScale"
+  }
+ },
+ "100005": {
+  "class_type": "ModelSamplingSD3",
+  "inputs": {
+   "shift": 5,
+   "model": [
+    "100001",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ModelSamplingSD3"
+  }
+ },
+ "100006": {
+  "class_type": "Kandinsky5ImageToVideo",
+  "inputs": {
+   "length": 121,
+   "batch_size": 1,
+   "positive": [
+    "100011",
+    0
+   ],
+   "negative": [
+    "100003",
+    0
+   ],
+   "vae": [
+    "100002",
+    0
+   ],
+   "start_image": [
+    "100004",
+    0
+   ],
+   "width": [
+    "100009",
+    0
+   ],
+   "height": [
+    "100010",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Kandinsky5ImageToVideo"
+  }
+ },
+ "100007": {
+  "class_type": "KSampler",
+  "inputs": {
+   "seed": 611409204875324,
+   "steps": 50,
+   "cfg": 5,
+   "sampler_name": "euler_ancestral",
+   "scheduler": "beta",
+   "denoise": 1,
+   "model": [
+    "100005",
+    0
+   ],
+   "positive": [
+    "100006",
+    0
+   ],
+   "negative": [
+    "100006",
+    1
+   ],
+   "latent_image": [
+    "100006",
+    2
+   ]
+  },
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "100008": {
+  "class_type": "DualCLIPLoader",
+  "inputs": {
+   "clip_name1": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+   "clip_name2": "clip_l.safetensors",
+   "type": "kandinsky5",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "DualCLIPLoader"
+  }
+ },
+ "100009": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 768
+  },
+  "_meta": {
+   "title": "Width"
+  }
+ },
+ "100010": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 512
+  },
+  "_meta": {
+   "title": "Height"
+  }
+ },
+ "100011": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "an adult woman turns toward the camera and smiles, natural motion, cinematic lighting",
+   "clip": [
+    "100008",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Positive Prompt)"
+  }
+ },
+ "100012": {
+  "class_type": "ReplaceVideoLatentFrames",
+  "inputs": {
+   "index": 0,
+   "destination": [
+    "100007",
+    0
+   ],
+   "source": [
+    "100006",
+    3
+   ]
+  },
+  "_meta": {
+   "title": "ReplaceVideoLatentFrames"
+  }
+ },
+ "100013": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "100014",
+    0
+   ],
+   "vae": [
+    "100002",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecode"
+  }
+ },
+ "100014": {
+  "class_type": "NormalizeVideoLatentStart",
+  "inputs": {
+   "start_frame_count": 4,
+   "reference_frame_count": 5,
+   "latent": [
+    "100012",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "NormalizeVideoLatentStart"
+  }
+ },
+ "100015": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "fps": 24,
+   "bit_depth": "auto",
+   "color_space": "sRGB",
+   "chroma_subsampling": "auto",
+   "codec": "none",
+   "images": [
+    "100013",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CreateVideo"
+  }
+ }
+}

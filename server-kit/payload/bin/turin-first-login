@@ -1,0 +1,25 @@
+#!/bin/bash
+# One-time setup over SSH from the Mac (server-kit/mac/candy_link.py desktop --apply runs it):
+#   ssh -t epyc-studio turin-first-login
+# 1) the account password (full sudo asks for it; the account is locked until now), 2) the remote-desktop (VNC)
+# password, then starts the desktop on 127.0.0.1:5900. Both are typed here over SSH: never shipped, never on a web
+# page. Joining Tailscale is NOT done here: that is Ak's separate step (server-kit/mac/tailscale_server.sh).
+set -euo pipefail
+vnc_ok() { [[ -s "$HOME/.vnc/passwd" ]]; }
+pw_ok() { [[ "$(passwd -S "$USER" 2>/dev/null | awk '{print $2}')" == P ]]; }
+if [[ ${1:-} == --check ]]; then if vnc_ok && pw_ok; then exit 0; else exit 10; fi; fi
+if ! pw_ok; then sudo /usr/local/bin/turin-set-password; fi
+if ! vnc_ok; then
+  echo 'Remote desktop: choose a password (6-8 characters; VNC uses only the first 8).'
+  echo 'macOS Screen Sharing asks for it once and can keep it in your Keychain.'
+  install -d -m 0700 "$HOME/.vnc"
+  until tigervncpasswd "$HOME/.vnc/passwd"; do echo 'Try again.'; done
+  chmod 0600 "$HOME/.vnc/passwd"
+fi
+sudo /usr/local/bin/turin-desktop-restart
+sleep 2
+if systemctl is-active --quiet turin-desktop; then
+  echo 'Remote desktop is running on 127.0.0.1:5900 (the Mac reaches it through the SSH tunnel on 127.0.0.1:15900).'
+else
+  echo 'Remote desktop did not start: sudo journalctl -u turin-desktop -n 50'; exit 1
+fi

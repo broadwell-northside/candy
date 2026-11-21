@@ -1,0 +1,14 @@
+#!/bin/bash
+# Opt in to Wave 4: giant hybrid Director contenders (~558 GB): Qwen3.8-Flash-Next (76 GB),
+# AtomicChat DeepSeek-V4.1-Flash IQ2_XXS (138 GB) + Engram (110.6 GB, Strata runtime), unsloth UD-IQ1_S (233 GB) + LoRA.
+set -euo pipefail
+[[ ${EUID:-$(id -u)} -eq 0 ]] || exec sudo "$0" "$@"
+FLAG=/etc/turin-ai/heavy-llms.enabled
+if [[ ${1:-} == --disable ]]; then rm -f "$FLAG"; echo 'Wave 4 disabled (files already downloaded are kept).'; exit 0; fi
+FREE=$(df -B1 --output=avail /srv/ai/models | tail -n1)
+echo "Wave 4 needs about 558 GB plus a 20 GiB reserve. Free on /srv/ai/models: $((FREE/1000000000)) GB."
+if [[ ${1:-} != --yes ]]; then read -r -p 'Enable Wave 4 downloads now? [y/N] ' A; [[ $A =~ ^[Yy]$ ]] || { echo 'Nothing changed.'; exit 0; }; fi
+install -d -m 0755 /etc/turin-ai; touch "$FLAG"
+systemctl restart --no-block turin-models.service
+echo 'Wave 4 enabled. Files that do not fit are reported as blocked on the dashboard, never half-promoted.'
+echo 'Switch Director later with: sudo turin-llm-profile qwen38_flash_next_abliterated_v2_iq3xxs'

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Restart the remote desktop (127.0.0.1:5900). Allowed without a password: it only restarts this one service.
+set -euo pipefail
+[[ ${EUID:-$(id -u)} -eq 0 ]] || exec sudo "$0" "$@"
+systemctl restart turin-desktop

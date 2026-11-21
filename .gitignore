@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Runtime data and secrets. The app creates these on the desktop.
+outputs/
+
+# Local copies the island importer writes. Generated packs are not committed.
+game/assets/imports/
+password.txt
+.env
+.env.*
+*.log
+
+# Engines and model weights. The installer downloads these. Never commit them.
+ComfyUI/
+trainer/
+models/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.gguf
+*.onnx
+*.bin
+
+# OS and editor clutter
+.DS_Store
+Thumbs.db
+*.tmp
+.idea/
+.vscode/
+
+# Browser test leftovers
+.playwright/
+playwright-report/
+test-results/
+
+# Godot
+.godot/
+game/build/
+
+# Browser test output (regenerated on every run)
+docs/screenshots/e2e/
+docs/e2e_last_run.json
+
+# Server kit build output (ISO, boot overlay, plans). Never committed.
+server-kit/build/
+server-kit/config/install.json

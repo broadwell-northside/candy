@@ -1,0 +1,21 @@
+{
+ "schema": "candy.lora_allowlist/1",
+ "notice": "PRIVATE BUILD — NOT FOR DISTRIBUTION",
+ "approved_by": "Andrew Klein (Ak), 2026-11-06: the first eight entries, D-C-18 (AK-CANDY-IMPORTER-ALLOWLIST-20261106); the four Wan 2.2 14B sibling halves marked sibling_of, D-C-20 (AK-CANDY-WAN-SIBLINGS-20261106)",
+ "rule": "An entry is waived from the description check only. Flags (POI, minor, Archived/TakenDown, scans), type, title, tags and trigger words must pass first; a minor-coded word or an age under 21 in the description still refuses. Match is the exact version id and the SHA256 of its .safetensors file.",
+ "audit": "First eight: reviews/AUDIT-GROK-KITS-20261106.md section D, refused by the importer on description text only; SHA256 as listed on civitai.com. The four sibling halves: the reviewer's and the lead's live checks on 2026-11-06 (flags clear, Published, LORA, .safetensors, SHA256 as listed on civitai.com, title, tags and trigger words pass); each is another version of a model that already has an allowlisted version (sibling_of), so the waived description is the same model-level text Ak already waived.",
+ "entries": [
+  {"model_id": 1662740, "version_id": 2299345, "sha256": "df934b1a366206daa3b5dcfef7c84efd9e75ca19d00867d7fe24fa2bb233fdc9"},
+  {"model_id": 2247663, "version_id": 2536215, "sha256": "1d3699930f3a2e04e182d2a64bcb2db0a5b712138f75d3d82a31753030905ee0"},
+  {"model_id": 1836104, "version_id": 2077824, "sha256": "c1fbbdbf5aa4a3a88b82804365a8114fa0556c3d0c3e41a20c0b2c5b855de09c"},
+  {"model_id": 1331682, "version_id": 2091870, "sha256": "96658ced2dd88d0966e9e86c1265aa413c1aaca7b543db905959179d5b6b4800"},
+  {"model_id": 1331682, "version_id": 2098405, "sha256": "58cb4a22b10c5dfcb43d631b97d36d6f9162f2fe6b1f5db141c7931e828527a4"},
+  {"model_id": 1874811, "version_id": 2325788, "sha256": "78f890e148b539caf61b89d83f411031ea0f1e34cf6807c61d39b5b28b6406f8"},
+  {"model_id": 1922973, "version_id": 2178869, "sha256": "683d6a84430b7f1c7aa1d24a7b74981fe4bdb233a06006f0f0f613e61ccd483e"},
+  {"model_id": 2004155, "version_id": 3061098, "sha256": "f292a3a036e902a814da577743daa77fcd63233ee12e0fafb71ab726e11769b1"},
+  {"model_id": 1331682, "version_id": 2091879, "sha256": "4d4352959390eacfa4a5bfa883d7f5fd34f95aaf05d3236fd66ef614876fdc7c", "sibling_of": 2091870, "decision": "AK-CANDY-WAN-SIBLINGS-20261106"},
+  {"model_id": 1331682, "version_id": 2098396, "sha256": "7adf32374c7b04724638155a274d38924bbab9386a134d466f034cb4af638540", "sibling_of": 2098405, "decision": "AK-CANDY-WAN-SIBLINGS-20261106"},
+  {"model_id": 1874811, "version_id": 2191446, "sha256": "fe91142668b2f09d429e86f5018001304202c491e79411f059e5bf59b03a36e0", "sibling_of": 2325788, "decision": "AK-CANDY-WAN-SIBLINGS-20261106"},
+  {"model_id": 1922973, "version_id": 2176450, "sha256": "a68ee10bb0f3162bf947a892591dfc65a111d7e85c3f73ff6db24887b79a0b05", "sibling_of": 2178869, "decision": "AK-CANDY-WAN-SIBLINGS-20261106"}
+ ]
+}

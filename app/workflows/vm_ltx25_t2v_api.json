@@ -1,0 +1,564 @@
+{
+ "75": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "filename_prefix": "easy_studio/video",
+   "format": "auto",
+   "format.codec": "auto",
+   "video": [
+    "100001",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SaveVideo"
+  }
+ },
+ "409": {
+  "class_type": "ResolutionSelector",
+  "inputs": {
+   "aspect_ratio": "16:9 (Widescreen)",
+   "megapixels": 0.9,
+   "multiple": 32
+  },
+  "_meta": {
+   "title": "ResolutionSelector"
+  }
+ },
+ "100001": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "bit_depth": 8,
+   "color_space": "sRGB",
+   "chroma_subsampling": "auto",
+   "codec": "none",
+   "images": [
+    "100012",
+    0
+   ],
+   "audio": [
+    "100005",
+    0
+   ],
+   "fps": [
+    "100035",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CreateVideo"
+  }
+ },
+ "100002": {
+  "class_type": "LTXVConcatAVLatent",
+  "inputs": {
+   "video_latent": [
+    "100004",
+    0
+   ],
+   "audio_latent": [
+    "100010",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "LTXVConcatAVLatent"
+  }
+ },
+ "100003": {
+  "class_type": "ManualSigmas",
+  "inputs": {
+   "sigmas": "0.85, 0.7250, 0.4219, 0.0"
+  },
+  "_meta": {
+   "title": "ManualSigmas"
+  }
+ },
+ "100004": {
+  "class_type": "LTXVLatentUpsampler",
+  "inputs": {
+   "samples": [
+    "100010",
+    0
+   ],
+   "upscale_model": [
+    "100026",
+    0
+   ],
+   "vae": [
+    "100028",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVLatentUpsampler"
+  }
+ },
+ "100005": {
+  "class_type": "LTXVAudioVAEDecode",
+  "inputs": {
+   "samples": [
+    "100011",
+    1
+   ],
+   "audio_vae": [
+    "100029",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVAudioVAEDecode"
+  }
+ },
+ "100006": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler_ancestral"
+  },
+  "_meta": {
+   "title": "KSamplerSelect"
+  }
+ },
+ "100007": {
+  "class_type": "LTXVDualCFGGuider",
+  "inputs": {
+   "video_cfg": 1,
+   "audio_cfg": 1,
+   "model": [
+    "100027",
+    0
+   ],
+   "positive": [
+    "100018",
+    0
+   ],
+   "negative": [
+    "100018",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "LTXVDualCFGGuider"
+  }
+ },
+ "100008": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "100009",
+    0
+   ],
+   "guider": [
+    "100007",
+    0
+   ],
+   "sampler": [
+    "100006",
+    0
+   ],
+   "sigmas": [
+    "100003",
+    0
+   ],
+   "latent_image": [
+    "100002",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "100009": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 42
+  },
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "100010": {
+  "class_type": "LTXVSeparateAVLatent",
+  "inputs": {
+   "av_latent": [
+    "100013",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVSeparateAVLatent"
+  }
+ },
+ "100011": {
+  "class_type": "LTXVSeparateAVLatent",
+  "inputs": {
+   "av_latent": [
+    "100008",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVSeparateAVLatent"
+  }
+ },
+ "100012": {
+  "class_type": "VAEDecodeTiled",
+  "inputs": {
+   "tile_size": 512,
+   "overlap": 64,
+   "temporal_size": 64,
+   "temporal_overlap": 16,
+   "samples": [
+    "100011",
+    0
+   ],
+   "vae": [
+    "100028",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecodeTiled"
+  }
+ },
+ "100013": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "100017",
+    0
+   ],
+   "guider": [
+    "100015",
+    0
+   ],
+   "sampler": [
+    "100016",
+    0
+   ],
+   "sigmas": [
+    "100014",
+    0
+   ],
+   "latent_image": [
+    "100019",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "100014": {
+  "class_type": "ManualSigmas",
+  "inputs": {
+   "sigmas": "1.0, 0.99375, 0.9875, 0.98125, 0.975, 0.909375, 0.725, 0.421875, 0.0"
+  },
+  "_meta": {
+   "title": "ManualSigmas"
+  }
+ },
+ "100015": {
+  "class_type": "LTXVDualCFGGuider",
+  "inputs": {
+   "video_cfg": 1,
+   "audio_cfg": 1,
+   "model": [
+    "100027",
+    0
+   ],
+   "positive": [
+    "100018",
+    0
+   ],
+   "negative": [
+    "100018",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "LTXVDualCFGGuider"
+  }
+ },
+ "100016": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "euler_ancestral"
+  },
+  "_meta": {
+   "title": "KSamplerSelect"
+  }
+ },
+ "100017": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 926314962774309
+  },
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "100018": {
+  "class_type": "LTXVConditioning",
+  "inputs": {
+   "positive": [
+    "100020",
+    0
+   ],
+   "negative": [
+    "100021",
+    0
+   ],
+   "frame_rate": [
+    "100035",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVConditioning"
+  }
+ },
+ "100019": {
+  "class_type": "LTXVConcatAVLatent",
+  "inputs": {
+   "video_latent": [
+    "100022",
+    0
+   ],
+   "audio_latent": [
+    "100023",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "LTXVConcatAVLatent"
+  }
+ },
+ "100020": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "clip": [
+    "100030",
+    0
+   ],
+   "text": [
+    "100040",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIPTextEncode"
+  }
+ },
+ "100021": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "pc game, console game, video game, cartoon, childish, ugly",
+   "clip": [
+    "100030",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIPTextEncode"
+  }
+ },
+ "100022": {
+  "class_type": "EmptyLTXVLatentVideo",
+  "inputs": {
+   "batch_size": 1,
+   "width": [
+    "100033",
+    1
+   ],
+   "height": [
+    "100034",
+    1
+   ],
+   "length": [
+    "100032",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "EmptyLTXVLatentVideo"
+  }
+ },
+ "100023": {
+  "class_type": "LTXVEmptyLatentAudio",
+  "inputs": {
+   "batch_size": 25,
+   "audio_vae": [
+    "100029",
+    0
+   ],
+   "frames_number": [
+    "100032",
+    1
+   ],
+   "frame_rate": [
+    "100035",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "LTXVEmptyLatentAudio"
+  }
+ },
+ "100026": {
+  "class_type": "LatentUpscaleModelLoader",
+  "inputs": {
+   "model_name": "ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+  },
+  "_meta": {
+   "title": "LatentUpscaleModelLoader"
+  }
+ },
+ "100027": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ },
+ "100028": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "ltx-2.5-video-vae-bf16.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "100029": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "ltx-2.5-audio-vae-bf16.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "100030": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+   "type": "ltxv",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "CLIPLoader"
+  }
+ },
+ "100032": {
+  "class_type": "ComfyMathExpression",
+  "inputs": {
+   "expression": "a * b + 1",
+   "values.a": [
+    "100038",
+    0
+   ],
+   "values.b": [
+    "100037",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Math Expression (length)"
+  }
+ },
+ "100033": {
+  "class_type": "ComfyMathExpression",
+  "inputs": {
+   "expression": "a/2",
+   "values.a": [
+    "100039",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ComfyMathExpression"
+  }
+ },
+ "100034": {
+  "class_type": "ComfyMathExpression",
+  "inputs": {
+   "expression": "a/2",
+   "values.a": [
+    "100036",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ComfyMathExpression"
+  }
+ },
+ "100035": {
+  "class_type": "ComfyMathExpression",
+  "inputs": {
+   "expression": "a",
+   "values.a": [
+    "100037",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Math Expression (fps)"
+  }
+ },
+ "100036": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": [
+    "409",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "Height"
+  }
+ },
+ "100037": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 24
+  },
+  "_meta": {
+   "title": "Frame Rate"
+  }
+ },
+ "100038": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": 5
+  },
+  "_meta": {
+   "title": "Duration"
+  }
+ },
+ "100039": {
+  "class_type": "PrimitiveInt",
+  "inputs": {
+   "value": [
+    "409",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Width"
+  }
+ },
+ "100040": {
+  "class_type": "PrimitiveStringMultiline",
+  "inputs": {
+   "value": "an adult woman turns toward the camera and smiles, natural motion, cinematic lighting"
+  },
+  "_meta": {
+   "title": "Prompt"
+  }
+ }
+}

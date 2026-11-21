@@ -1,0 +1,608 @@
+{
+ "source_commit": "fe3525af370cbb983c0ff23b704033ee406f8ea0",
+ "source_message": "ES-RESEARCH-20261103-004",
+ "source_file": "evidence/research/track01/published-workflow-settings.json",
+ "license": "Published widget values from Comfy-Org workflow templates (MIT for the templates; model-weight licenses stay separate). Reference only.",
+ "selected": null,
+ "machines": {
+  "upscale_keyframes_previews": "4090-class cards. Not confirmed reachable.",
+  "main_video": "RTX PRO 6000. Setup deferred. Not assumed reachable."
+ },
+ "candidates": [
+  {
+   "id": "seedvr2_7b_int8_image",
+   "label": "SeedVR2 native",
+   "kind": "upscale",
+   "tested_locally": false,
+   "status": "NOT_RUN",
+   "source_url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_seedvr2_7b_int8_upscale_image.json",
+   "source_git_blob_sha": "892664915d42e1ac7b4433af9805d32910ed749b",
+   "settings_kind": "Published JSON values; connected/promoted inputs can override inner widget defaults",
+   "nodes": [
+    {
+     "id": 1,
+     "type": "LoadImage",
+     "widgets_values": [
+      "indoor_portrait.png",
+      "image"
+     ]
+    },
+    {
+     "id": 9,
+     "type": "SaveImage",
+     "widgets_values": [
+      "seedvr2_after/image"
+     ]
+    },
+    {
+     "id": 65,
+     "type": "ImageCompare",
+     "widgets_values": []
+    },
+    {
+     "id": 66,
+     "type": "1970dcb4-982a-4c01-a373-4d239a3041e4",
+     "widgets_values": []
+    },
+    {
+     "id": 48,
+     "type": "VAEEncodeTiled",
+     "widgets_values": [
+      512,
+      128,
+      4096,
+      8
+     ]
+    },
+    {
+     "id": 50,
+     "type": "JoinImageWithAlpha",
+     "widgets_values": []
+    },
+    {
+     "id": 51,
+     "type": "VAELoader",
+     "widgets_values": [
+      "seedvr2_ema_vae_fp16.safetensors"
+     ]
+    },
+    {
+     "id": 52,
+     "type": "UNETLoader",
+     "widgets_values": [
+      "seedvr2_7b_int8_convrot.safetensors",
+      "default"
+     ]
+    },
+    {
+     "id": 54,
+     "type": "KSampler",
+     "widgets_values": [
+      959948902156062,
+      "fixed",
+      1,
+      1,
+      "euler",
+      "simple",
+      1
+     ]
+    },
+    {
+     "id": 55,
+     "type": "VAEDecodeTiled",
+     "widgets_values": [
+      512,
+      128,
+      4096,
+      8
+     ]
+    },
+    {
+     "id": 57,
+     "type": "ResizeImageMaskNode",
+     "widgets_values": [
+      "scale by multiplier",
+      4,
+      "lanczos"
+     ]
+    },
+    {
+     "id": 58,
+     "type": "SeedVR2Preprocess",
+     "widgets_values": []
+    },
+    {
+     "id": 59,
+     "type": "SeedVR2PostProcessing",
+     "widgets_values": [
+      "none"
+     ]
+    },
+    {
+     "id": 61,
+     "type": "SeedVR2Conditioning",
+     "widgets_values": []
+    }
+   ]
+  },
+  {
+   "id": "supir_upscale",
+   "label": "SUPIR native",
+   "kind": "upscale",
+   "tested_locally": false,
+   "status": "NOT_RUN",
+   "source_url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_image_upscale_supir.json",
+   "source_git_blob_sha": "62635d9b4c5f2e1447a779718f0bd8c10d71857c",
+   "settings_kind": "Published JSON values; connected/promoted inputs can override inner widget defaults",
+   "nodes": [
+    {
+     "id": 85,
+     "type": "87b54408-f2d8-4783-bad3-67bd0641ad66",
+     "widgets_values": []
+    },
+    {
+     "id": 92,
+     "type": "LoadImage",
+     "widgets_values": [
+      "blurry_city_horses.png",
+      "image"
+     ]
+    },
+    {
+     "id": 96,
+     "type": "ImageCompare",
+     "widgets_values": []
+    },
+    {
+     "id": 97,
+     "type": "SaveImage",
+     "widgets_values": [
+      "upscaled_by_supir"
+     ]
+    },
+    {
+     "id": 62,
+     "type": "SUPIRApply",
+     "widgets_values": [
+      1,
+      0.9,
+      4,
+      0.05
+     ]
+    },
+    {
+     "id": 20,
+     "type": "SamplerCustom",
+     "widgets_values": [
+      true,
+      402244474214267,
+      "fixed",
+      1.5
+     ]
+    },
+    {
+     "id": 11,
+     "type": "VAEDecode",
+     "widgets_values": []
+    },
+    {
+     "id": 1,
+     "type": "CheckpointLoaderSimple",
+     "widgets_values": [
+      "juggernautXL_v9Rdphoto2Lightning.safetensors"
+     ]
+    },
+    {
+     "id": 59,
+     "type": "CLIPTextEncodeSDXL",
+     "widgets_values": [
+      1024,
+      1024,
+      0,
+      0,
+      1024,
+      1024,
+      "[long text omitted; see source]",
+      "[long text omitted; see source]"
+     ]
+    },
+    {
+     "id": 60,
+     "type": "CLIPTextEncodeSDXL",
+     "widgets_values": [
+      1024,
+      1024,
+      0,
+      0,
+      1024,
+      1024,
+      "[long text omitted; see source]",
+      "[long text omitted; see source]"
+     ]
+    },
+    {
+     "id": 57,
+     "type": "EmptyLatentImage",
+     "widgets_values": [
+      512,
+      512,
+      1
+     ]
+    },
+    {
+     "id": 73,
+     "type": "PrimitiveStringMultiline",
+     "widgets_values": [
+      "[long text omitted; see source]"
+     ]
+    },
+    {
+     "id": 39,
+     "type": "ColorTransfer",
+     "widgets_values": [
+      "mkl_lab",
+      "per_frame",
+      1
+     ]
+    },
+    {
+     "id": 71,
+     "type": "PrimitiveStringMultiline",
+     "widgets_values": [
+      "[long text omitted; see source]"
+     ]
+    },
+    {
+     "id": 3,
+     "type": "ModelPatchLoader",
+     "widgets_values": [
+      "SUPIR-v0Q_fp16.safetensors"
+     ]
+    },
+    {
+     "id": 58,
+     "type": "GetImageSize",
+     "widgets_values": []
+    },
+    {
+     "id": 76,
+     "type": "KSamplerSelect",
+     "widgets_values": [
+      "dpmpp_2m_sde"
+     ]
+    },
+    {
+     "id": 29,
+     "type": "BasicScheduler",
+     "widgets_values": [
+      "sgm_uniform",
+      10,
+      1
+     ]
+    },
+    {
+     "id": 86,
+     "type": "CLIPLoader",
+     "widgets_values": [
+      "qwen3.5_4b_bf16.safetensors",
+      "stable_diffusion",
+      "default"
+     ]
+    },
+    {
+     "id": 87,
+     "type": "TextGenerate",
+     "widgets_values": [
+      "Describe this scene using only English without any other description",
+      2048,
+      "on",
+      0.7,
+      64,
+      0.95,
+      0.05,
+      1.05,
+      0,
+      0,
+      false,
+      true
+     ]
+    },
+    {
+     "id": 88,
+     "type": "ComfySwitchNode",
+     "widgets_values": [
+      false
+     ]
+    },
+    {
+     "id": 89,
+     "type": "PreviewAny",
+     "widgets_values": [
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "id": 90,
+     "type": "BOOLConstant",
+     "widgets_values": [
+      true
+     ]
+    },
+    {
+     "id": 91,
+     "type": "StringConcatenate",
+     "widgets_values": [
+      "[long text omitted; see source]",
+      "",
+      ""
+     ]
+    },
+    {
+     "id": 94,
+     "type": "ResizeImageMaskNode",
+     "widgets_values": [
+      "scale total pixels",
+      2.25,
+      "lanczos"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "z_image_turbo_template",
+   "label": "Z-Image Turbo native",
+   "kind": "still",
+   "tested_locally": false,
+   "status": "NOT_RUN",
+   "source_url": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image_turbo.json",
+   "source_git_blob_sha": "222ad65430548b141f485f5111aa6f691b7ca611",
+   "settings_kind": "Published JSON values; connected/promoted inputs can override inner widget defaults",
+   "nodes": [
+    {
+     "id": 9,
+     "type": "SaveImage",
+     "widgets_values": [
+      "z-image-turbo"
+     ]
+    },
+    {
+     "id": 57,
+     "type": "f2fdebf6-dfaf-43b6-9eb2-7f70613cfdc1",
+     "widgets_values": []
+    },
+    {
+     "id": 30,
+     "type": "CLIPLoader",
+     "widgets_values": [
+      "qwen_3_4b.safetensors",
+      "lumina2",
+      "default"
+     ]
+    },
+    {
+     "id": 29,
+     "type": "VAELoader",
+     "widgets_values": [
+      "ae.safetensors"
+     ]
+    },
+    {
+     "id": 33,
+     "type": "ConditioningZeroOut",
+     "widgets_values": []
+    },
+    {
+     "id": 8,
+     "type": "VAEDecode",
+     "widgets_values": []
+    },
+    {
+     "id": 28,
+     "type": "UNETLoader",
+     "widgets_values": [
+      "z_image_turbo_bf16.safetensors",
+      "default"
+     ]
+    },
+    {
+     "id": 27,
+     "type": "CLIPTextEncode",
+     "widgets_values": [
+      "[long text omitted; see source]"
+     ]
+    },
+    {
+     "id": 13,
+     "type": "EmptySD3LatentImage",
+     "widgets_values": [
+      1024,
+      1024,
+      1
+     ]
+    },
+    {
+     "id": 11,
+     "type": "ModelSamplingAuraFlow",
+     "widgets_values": [
+      3
+     ]
+    },
+    {
+     "id": 3,
+     "type": "KSampler",
+     "widgets_values": [
+      0,
+      "randomize",
+      8,
+      1,
+      "res_multistep",
+      "simple",
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "id": "z_image_refine_h2logs",
+   "label": "H2logs Z-Image refinement",
+   "kind": "still_refine",
+   "tested_locally": false,
+   "status": "NOT_RUN",
+   "source_url": "https://github.com/H2logs/Fix-plastic-skin-improve-realism/blob/main/I2I_Z_image_turbo_realism.json",
+   "source_git_blob_sha": "43908df4953024bee29e993320a0cd766451b5b1",
+   "settings_kind": "Published JSON values; connected/promoted inputs can override inner widget defaults",
+   "nodes": [
+    {
+     "id": 96,
+     "type": "ImageCompare",
+     "widgets_values": [],
+     "widgets_values_named": {}
+    },
+    {
+     "id": 97,
+     "type": "SaveImage",
+     "widgets_values": [
+      "z-image-realism"
+     ],
+     "widgets_values_named": {
+      "filename_prefix": "z-image-realism"
+     }
+    },
+    {
+     "id": 100,
+     "type": "LoadImage",
+     "widgets_values": [
+      "Qwen_Edit_2511_00032.png",
+      "image"
+     ],
+     "widgets_values_named": {
+      "image": "Qwen_Edit_2511_00032.png",
+      "upload": "image"
+     }
+    },
+    {
+     "id": 101,
+     "type": "3c7a5ee6-6c88-4f2d-8951-4e8f863f0b63",
+     "widgets_values": [
+      "z_image_turbo_int8_convrot.safetensors",
+      "qwen_3_4b.safetensors",
+      "ae.safetensors",
+      "realism",
+      0.3300000000000001,
+      663859469517806
+     ],
+     "widgets_values_named": {
+      "unet_name": "z_image_turbo_int8_convrot.safetensors",
+      "clip_name": "qwen_3_4b.safetensors",
+      "vae_name": "ae.safetensors",
+      "text": "realism",
+      "denoise": 0.3300000000000001,
+      "seed": 663859469517806
+     }
+    },
+    {
+     "id": 71,
+     "type": "CLIPTextEncode",
+     "widgets_values": [
+      ""
+     ],
+     "widgets_values_named": {
+      "text": ""
+     }
+    },
+    {
+     "id": 80,
+     "type": "VAEEncode",
+     "widgets_values": null
+    },
+    {
+     "id": 69,
+     "type": "KSampler",
+     "widgets_values": [
+      824287194145573,
+      "randomize",
+      5,
+      1,
+      "dpmpp_2m_sde",
+      "beta",
+      0.33
+     ],
+     "widgets_values_named": {
+      "seed": 824287194145573,
+      "control_after_generate": "randomize",
+      "steps": 5,
+      "cfg": 1,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "beta",
+      "denoise": 0.33
+     }
+    },
+    {
+     "id": 66,
+     "type": "UNETLoader",
+     "widgets_values": [
+      "z_image_turbo_bf16.safetensors",
+      "default"
+     ],
+     "widgets_values_named": {
+      "unet_name": "z_image_turbo_bf16.safetensors",
+      "weight_dtype": "default"
+     }
+    },
+    {
+     "id": 62,
+     "type": "CLIPLoader",
+     "widgets_values": [
+      "qwen_3_4b.safetensors",
+      "lumina2",
+      "default"
+     ],
+     "widgets_values_named": {
+      "clip_name": "qwen_3_4b.safetensors",
+      "type": "lumina2",
+      "device": "default"
+     }
+    },
+    {
+     "id": 67,
+     "type": "CLIPTextEncode",
+     "widgets_values": [
+      "masterpiece, 8k"
+     ],
+     "widgets_values_named": {
+      "text": "masterpiece, 8k"
+     }
+    },
+    {
+     "id": 63,
+     "type": "VAELoader",
+     "widgets_values": [
+      "ae.safetensors"
+     ],
+     "widgets_values_named": {
+      "vae_name": "ae.safetensors"
+     }
+    },
+    {
+     "id": 70,
+     "type": "ModelSamplingAuraFlow",
+     "widgets_values": [
+      3,
+      "flow"
+     ],
+     "widgets_values_named": {
+      "shift": 3,
+      "sampling": "flow"
+     }
+    },
+    {
+     "id": 65,
+     "type": "VAEDecode",
+     "widgets_values": null
+    }
+   ]
+  }
+ ]
+}

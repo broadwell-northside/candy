@@ -1,0 +1,44 @@
+; Engine configuration file.
+; Godot 4.3 or newer. Headless tests stay on GL Compatibility and do not need
+; a GPU. A desktop run can use Forward+ with:
+;   godot --path game --rendering-method forward_plus
+; or Settings → Graphics. stillwater/desktop_rendering_method names that choice.
+
+config_version=5
+
+[application]
+
+config/name="Stillwater"
+config/description="A quiet private island for one player. Fictional adults only."
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.png"
+
+[autoload]
+
+Settings="*res://scripts/settings.gd"
+CharacterDB="*res://scripts/character_db.gd"
+LocationDB="*res://scripts/location_db.gd"
+DialogueDB="*res://scripts/dialogue_db.gd"
+SceneCatalog="*res://scripts/scene_catalog.gd"
+SaveGame="*res://scripts/save_game.gd"
+ChatBrain="*res://scripts/chat_brain.gd"
+RendererBoot="*res://scripts/renderer_boot.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/canvas_textures/default_texture_filter=1
+textures/vram_compression/import_etc2_astc=true
+
+[stillwater]
+
+desktop_rendering_method="forward_plus"
+use_desktop_renderer=false

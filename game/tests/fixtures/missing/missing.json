@@ -1,0 +1,8 @@
+{
+  "id": "bad_missing",
+  "name": "No Age",
+  "personality": "The age was left out on purpose.",
+  "look": { "summary": "", "lora_id": "" },
+  "portraits": {},
+  "clips": {}
+}

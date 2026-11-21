@@ -1,0 +1,66 @@
+{
+  "format": "candy-server-kit.config/1",
+  "pins_fetched": "2026-11-06 (live reads of releases.ubuntu.com, snapshot.ubuntu.com, developer.download.nvidia.com, pkgs.tailscale.com)",
+  "iso": {
+    "base_url": "https://releases.ubuntu.com/24.04",
+    "filename": "ubuntu-24.04.5-live-server-amd64.iso",
+    "sha256": "97f3d7ffb032c3eb3b23d2c8be9cc76e60c2c1f2c0146ba5ba9fe01cafae0fd8",
+    "note": "Ubuntu-Server 24.04.5 LTS (20260909). Its pool carries HWE kernel 7.0.0-31 (exFAT module included) and openssh-server; avahi-daemon is not on the ISO."
+  },
+  "usb": {
+    "boot_size": "12G",
+    "boot_bytes": 12000000000,
+    "fat32_max_file_bytes": 4294967295
+  },
+  "apt": {
+    "ubuntu_snapshot": "20261105T000000Z",
+    "sources": [
+      {"id": "ubuntu", "uri": "https://snapshot.ubuntu.com/ubuntu/20261105T000000Z",
+       "suites": ["noble", "noble-updates", "noble-security"], "components": ["main", "restricted", "universe", "multiverse"],
+       "keyring": "/usr/share/keyrings/ubuntu-archive-keyring.gpg", "flat": false},
+      {"id": "nvidia", "uri": "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64",
+       "flat": true, "keyring": "/usr/share/keyrings/cuda-archive-keyring.gpg",
+       "keyring_deb": {"file": "cuda-keyring_1.1-1_all.deb", "sha256": "d2a6b11c096396d868758b86dab1823b25e14d70333f1dfa74da5ddaf6a06dba", "size": 4328},
+       "only_packages_matching": "^(cuda-|libcublas|libcufft|libcufile|libcurand|libcusolver|libcusparse|libnpp|libnvjitlink|libnvjpeg|libnvfatbin|libnvptxcompiler|nsight-|gds-tools)"},
+      {"id": "tailscale", "uri": "https://pkgs.tailscale.com/stable/ubuntu", "suites": ["noble"], "components": ["main"],
+       "flat": false, "keyring": "/usr/share/keyrings/tailscale-archive-keyring.gpg",
+       "keyring_file": {"url": "https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg", "sha256": "3e03dacf222698c60b8e2f990b809ca1b3e104de127767864284e6c228f1fb39"}}
+    ],
+    "install": [
+      "linux-generic-hwe-24.04=7.0.0-42.42~24.04.1",
+      "linux-headers-generic-hwe-24.04=7.0.0-42.42~24.04.1",
+      "nvidia-headless-no-dkms-580-open=580.178.04-0ubuntu0.24.04.1",
+      "nvidia-utils-580=580.178.04-0ubuntu0.24.04.1",
+      "libnvidia-encode-580=580.178.04-0ubuntu0.24.04.1",
+      "libnvidia-decode-580=580.178.04-0ubuntu0.24.04.1",
+      "linux-modules-nvidia-580-open-generic-hwe-24.04=7.0.0-42.42~24.04.1",
+      "cuda-toolkit-12-8=12.8.2-1",
+      "tailscale=1.104.5",
+      "avahi-daemon", "build-essential", "cmake", "ninja-build", "pkg-config", "python3-venv", "python3-dev", "git",
+      "ffmpeg", "lm-sensors", "nvme-cli", "smartmontools", "ipmitool", "pciutils", "dmidecode", "stress-ng", "memtester",
+      "fio", "jq", "aria2", "xfce4", "tigervnc-standalone-server", "tigervnc-tools", "dbus-x11"
+    ],
+    "nvidia_driver_note": "Ubuntu's own 580 production branch, headless and WITHOUT dkms (nvidia-headless-no-dkms-580-open + nvidia-utils-580 + NVENC/NVDEC libs) with Canonical-signed prebuilt modules for the HWE kernel (linux-modules-nvidia-580-open-generic-hwe-24.04): no module build, works with Secure Boot on. nvidia-driver-580-open is NOT used: it hard-depends on nvidia-dkms-580-open (checked in the 20261105 index). NVIDIA's CUDA repo also carries 580 driver builds; an apt preference keeps the driver on Ubuntu's packages and takes only CUDA packages from NVIDIA."
+  },
+  "software": {
+    "python": "3.12",
+    "torch_index": "https://download.pytorch.org/whl/cu128",
+    "torch_packages": ["torch", "torchvision", "torchaudio"],
+    "git_pins": [
+      {"id": "comfyui", "url": "https://github.com/Comfy-Org/ComfyUI.git", "commit": "426f5eea52a7ece1dd599fff4cb6cd1f352ddd24", "tag": "v0.43.0", "dest": "/srv/ai/ComfyUI"},
+      {"id": "llama.cpp", "url": "https://github.com/ggml-org/llama.cpp.git", "commit": "4b77dee0524c64b8471869232e2958bd9589607d", "dest": "/srv/ai/llama.cpp"}
+    ],
+    "git_pins_note": "ComfyUI = tag v0.43.0 (the version the app's contract tests target, lead finding L-06; read from api.github.com 2026-11-06). llama.cpp commit carried over from Grok Bot's kit. Runtimes such as Strata come from the lead's lock (runtimes). The stager fetches exactly these commits; git checks the commit hash."
+  },
+  "models": {
+    "lock": "../config/server_model_lock.json",
+    "llm_registry": "../config/llm_models.json", "placement": "../app/placement.json",
+    "usb_waves": [1, 2, 3],
+    "optional_waves": [4],
+    "root_on_server": "/srv/ai/models"
+  },
+  "server": {
+    "ports": {"dashboard": 8099, "easy_studio": 7860, "comfy_gpu0": 8188, "comfy_gpu1": 8189, "director_llm": 8000, "vnc": 5900},
+    "mac_forwards": [[8099, 8099], [7860, 7860], [8188, 8188], [8189, 8189], [8000, 8000], [15900, 5900]]
+  }
+}

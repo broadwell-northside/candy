@@ -1,0 +1,16 @@
+# Ruff settings for Easy Studio.
+# The imported prototype is not mass-reformatted. CI only fails on
+# syntax errors and undefined names, so a style-only diff does not hide the import.
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["app/static/vendor"]
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

@@ -1,0 +1,16 @@
+# Editor defaults for new files. This does not reformat the imported prototype.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+[*.bat]
+end_of_line = crlf
+
+[*.{png,jpg,jpeg,gif,webp,pdf,gz,min.js}]
+trim_trailing_whitespace = false
+insert_final_newline = false

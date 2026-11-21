@@ -1,0 +1,122 @@
+# Famous real people that are commonly targeted by deepfake / likeness LoRAs. A partial list:
+# it can't cover everyone, so the tick box and the "looks like <name>" rules still matter.
+# One name per line, lower case. Matched with any (or no) space, underscore or hyphen between parts.
+taylor swift
+emma watson
+scarlett johansson
+margot robbie
+ariana grande
+billie eilish
+selena gomez
+jennifer lawrence
+gal gadot
+emma stone
+anne hathaway
+natalie portman
+angelina jolie
+jennifer aniston
+kim kardashian
+khloe kardashian
+kylie jenner
+kendall jenner
+beyonce
+rihanna
+lady gaga
+katy perry
+miley cyrus
+dua lipa
+sabrina carpenter
+olivia rodrigo
+megan fox
+zendaya
+sydney sweeney
+jenna ortega
+millie bobby brown
+emilia clarke
+sophie turner
+maisie williams
+elizabeth olsen
+brie larson
+anya taylor joy
+ana de armas
+florence pugh
+alexandra daddario
+salma hayek
+sofia vergara
+jessica alba
+megan thee stallion
+nicki minaj
+cardi b
+doja cat
+shakira
+jennifer lopez
+britney spears
+christina aguilera
+pokimane
+amouranth
+belle delphine
+addison rae
+charli damelio
+bella poarch
+emma chamberlain
+ice spice
+lisa manoban
+hailee steinfeld
+kristen stewart
+blake lively
+keira knightley
+emma roberts
+lily collins
+chloe grace moretz
+kaley cuoco
+hayley williams
+avril lavigne
+jenna coleman
+karen gillan
+daisy ridley
+jessica chastain
+amber heard
+cara delevingne
+gigi hadid
+bella hadid
+irina shayk
+adriana lima
+alessandra ambrosio
+candice swanepoel
+heidi klum
+tyra banks
+michelle obama
+kamala harris
+hillary clinton
+alexandria ocasio cortez
+greta thunberg
+melania trump
+ivanka trump
+princess diana
+kate middleton
+meghan markle
+marilyn monroe
+audrey hepburn
+mia khalifa
+sasha grey
+riley reid
+lana rhoades
+brad pitt
+tom cruise
+leonardo dicaprio
+chris hemsworth
+henry cavill
+timothee chalamet
+harry styles
+justin bieber
+keanu reeves
+ryan gosling
+zac efron
+tom holland
+jacob elordi
+pedro pascal
+elon musk
+donald trump
+joe biden
+barack obama
+mark zuckerberg

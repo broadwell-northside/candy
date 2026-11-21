@@ -1,0 +1,26 @@
+{
+  "note": "One sfw_mode mapping. app/content_mode.py and game/scripts/settings.gd both run these cases, so the two sides cannot drift. PRIVATE BUILD - NOT FOR DISTRIBUTION.",
+  "game_settings": [
+    {"name": "fresh install", "file": {}, "sfw_mode": true},
+    {"name": "old file, adult pictures on, no gate", "file": {"adult_content": true}, "sfw_mode": true},
+    {"name": "old 18 gate flag only", "file": {"adult_content": true, "age_confirmed": true}, "sfw_mode": true},
+    {"name": "gate 18 is not the 21 gate", "file": {"adult_content": true, "age_gate_version": 18}, "sfw_mode": true},
+    {"name": "gate as text is refused", "file": {"adult_content": true, "age_gate_version": "21"}, "sfw_mode": true},
+    {"name": "gate 21.5 is refused", "file": {"adult_content": true, "age_gate_version": 21.5}, "sfw_mode": true},
+    {"name": "gate passed, nothing else stored", "file": {"age_gate_version": 21}, "sfw_mode": false},
+    {"name": "gate passed as a float 21.0", "file": {"age_gate_version": 21.0}, "sfw_mode": false},
+    {"name": "gate passed, old adult pictures off", "file": {"age_gate_version": 21, "adult_content": false}, "sfw_mode": true},
+    {"name": "gate passed, old adult pictures on", "file": {"age_gate_version": 21, "adult_content": true}, "sfw_mode": false},
+    {"name": "gate passed, SFW switched on", "file": {"age_gate_version": 21, "sfw_mode": true, "adult_content": true}, "sfw_mode": true},
+    {"name": "gate passed, SFW off", "file": {"age_gate_version": 21, "sfw_mode": false}, "sfw_mode": false},
+    {"name": "SFW off without the gate stays on", "file": {"sfw_mode": false}, "sfw_mode": true},
+    {"name": "SFW as text is not a switch", "file": {"age_gate_version": 21, "sfw_mode": "false", "adult_content": false}, "sfw_mode": true}
+  ],
+  "studio": [
+    {"name": "fresh install, not attested", "settings": {}, "attested": false, "sfw_mode": true, "area": "default"},
+    {"name": "attested, nothing stored", "settings": {}, "attested": true, "sfw_mode": false, "area": "adult"},
+    {"name": "attested, SFW switched on", "settings": {"sfw_mode": true}, "attested": true, "sfw_mode": true, "area": "default"},
+    {"name": "stored off but this device is not attested", "settings": {"sfw_mode": false}, "attested": false, "sfw_mode": true, "area": "default"},
+    {"name": "attested, SFW off", "settings": {"sfw_mode": false}, "attested": true, "sfw_mode": false, "area": "adult"}
+  ]
+}

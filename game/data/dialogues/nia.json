@@ -1,0 +1,80 @@
+{
+  "conversations": [
+    {
+      "id": "nia_paint",
+      "character": "nia",
+      "title": "Midday light",
+      "min_affection": 0,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "smile",
+          "text": "I'm Nia. Don't mind the mess of brushes. Midday light is rude, and I love it.",
+          "choices": [
+            {
+              "label": "What are you painting?",
+              "to": "water",
+              "affection": 1,
+              "flag": "nia_paint_ask"
+            },
+            {
+              "label": "I'll leave you the view.",
+              "to": "share",
+              "affection": 0
+            },
+            {
+              "label": "Say something of your own",
+              "free_talk": true
+            }
+          ]
+        },
+        "water": {
+          "mood": "thoughtful",
+          "text": "The place where the sea turns pale. I never get it on the first try. That's the good part.",
+          "end": true
+        },
+        "share": {
+          "mood": "smile",
+          "text": "You can share it. Views don't run out.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "nia_rest",
+      "character": "nia",
+      "title": "Someone resting",
+      "min_affection": 2,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "smile",
+          "text": "If you lie in the sun, don't freeze for my sake. I can paint a person who is actually resting.",
+          "choices": [
+            {
+              "label": "I'll rest, then.",
+              "to": "rest",
+              "affection": 1,
+              "flag": "nia_rest_yes"
+            },
+            {
+              "label": "Keep the shade. I'll walk.",
+              "to": "walk",
+              "affection": 0
+            }
+          ]
+        },
+        "rest": {
+          "mood": "smile",
+          "text": "Good. The island looks better when nobody is performing for it.",
+          "end": true
+        },
+        "walk": {
+          "mood": "neutral",
+          "text": "Then walk. I'll still be here when the light moves.",
+          "end": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+ "prompts": [
+  {
+   "id": "p01",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 25,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 25-year-old fictional adult, very fair skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p02",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 26,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 26-year-old fictional adult, very fair skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p03",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 27,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 27-year-old fictional adult, very fair skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p04",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 28-year-old fictional adult, fair skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p05",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 29,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 29-year-old fictional adult, fair skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p06",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 30,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 30-year-old fictional adult, fair skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p07",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 31,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 31-year-old fictional adult, olive skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p08",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 32-year-old fictional adult, olive skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p09",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 33,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 33-year-old fictional adult, olive skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p10",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 34-year-old fictional adult, tan skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p11",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 35,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 35-year-old fictional adult, tan skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p12",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 36,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 36-year-old fictional adult, tan skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p13",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 37,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 37-year-old fictional adult, brown skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p14",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 38,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 38-year-old fictional adult, brown skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p15",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 39,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 39-year-old fictional adult, brown skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p16",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 40,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 40-year-old fictional adult, deep brown skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p17",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 41,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 41-year-old fictional adult, deep brown skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p18",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 42,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 42-year-old fictional adult, deep brown skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p19",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 43,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 43-year-old fictional adult, dark skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p20",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 24,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 24-year-old fictional adult, dark skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p21",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 25,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 25-year-old fictional adult, dark skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p22",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 26,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 26-year-old fictional adult, deep dark skin, hard noon sunlight, natural skin texture, visible pores"
+  },
+  {
+   "id": "p23",
+   "bucket": "portrait",
+   "sex": "female",
+   "age": 27,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 27-year-old fictional adult, deep dark skin, soft studio softbox lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "p24",
+   "bucket": "portrait",
+   "sex": "male",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close-up portrait of a 28-year-old fictional adult, deep dark skin, pink and blue neon lighting, natural skin texture, visible pores"
+  },
+  {
+   "id": "h0f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing jeans and a white t-shirt, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h0m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing jeans and a white t-shirt, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h1f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing a summer dress, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h1m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing a summer dress, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h2f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing black lace lingerie, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h2m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing black lace lingerie, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h3f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing a bikini, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h3m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing a bikini, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h4f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing yoga clothes, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h4m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing yoga clothes, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h5f",
+   "bucket": "half",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 28-year-old fictional adult woman wearing a club outfit, soft studio light, natural skin texture"
+  },
+  {
+   "id": "h5m",
+   "bucket": "half",
+   "sex": "male",
+   "age": 34,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "waist-up photograph of a 34-year-old fictional adult man wearing a club outfit, soft studio light, natural skin texture"
+  },
+  {
+   "id": "f00",
+   "bucket": "full",
+   "sex": "female",
+   "age": 30,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 30-year-old fictional adult woman, standing, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f01",
+   "bucket": "full",
+   "sex": "female",
+   "age": 30,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 30-year-old fictional adult woman, walking, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f02",
+   "bucket": "full",
+   "sex": "female",
+   "age": 30,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 30-year-old fictional adult woman, sitting, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f03",
+   "bucket": "full",
+   "sex": "female",
+   "age": 30,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 30-year-old fictional adult woman, a pole-dance stance, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f04",
+   "bucket": "full",
+   "sex": "male",
+   "age": 36,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 36-year-old fictional adult man, standing, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f05",
+   "bucket": "full",
+   "sex": "male",
+   "age": 36,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 36-year-old fictional adult man, walking, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f06",
+   "bucket": "full",
+   "sex": "male",
+   "age": 36,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 36-year-old fictional adult man, sitting, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "f07",
+   "bucket": "full",
+   "sex": "male",
+   "age": 36,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "full-body photograph of a 36-year-old fictional adult man, standing, jeans and a t-shirt, natural skin"
+  },
+  {
+   "id": "n00",
+   "bucket": "hands",
+   "sex": "female",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, holding a wine glass, natural skin texture, five fingers"
+  },
+  {
+   "id": "n01",
+   "bucket": "hands",
+   "sex": "female",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, one hand on the cheek, natural skin texture, five fingers"
+  },
+  {
+   "id": "n02",
+   "bucket": "hands",
+   "sex": "female",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, holding a phone, natural skin texture, five fingers"
+  },
+  {
+   "id": "n03",
+   "bucket": "hands",
+   "sex": "female",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, hands folded, natural skin texture, five fingers"
+  },
+  {
+   "id": "n04",
+   "bucket": "hands",
+   "sex": "male",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, holding a wine glass, natural skin texture, five fingers"
+  },
+  {
+   "id": "n05",
+   "bucket": "hands",
+   "sex": "male",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, one hand on the cheek, natural skin texture, five fingers"
+  },
+  {
+   "id": "n06",
+   "bucket": "hands",
+   "sex": "male",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, holding a phone, natural skin texture, five fingers"
+  },
+  {
+   "id": "n07",
+   "bucket": "hands",
+   "sex": "male",
+   "age": 32,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "close photograph of a 32-year-old fictional adult's hands, hands folded, natural skin texture, five fingers"
+  },
+  {
+   "id": "g0",
+   "bucket": "group",
+   "sex": "mixed",
+   "age": 29,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "two fictional adults in their thirties, both clearly 21 or older, standing together, outfit 1, natural skin, photograph"
+  },
+  {
+   "id": "g1",
+   "bucket": "group",
+   "sex": "mixed",
+   "age": 29,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "two fictional adults in their thirties, both clearly 21 or older, standing together, outfit 2, natural skin, photograph"
+  },
+  {
+   "id": "g2",
+   "bucket": "group",
+   "sex": "mixed",
+   "age": 29,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "two fictional adults in their thirties, both clearly 21 or older, standing together, outfit 3, natural skin, photograph"
+  },
+  {
+   "id": "g3",
+   "bucket": "group",
+   "sex": "mixed",
+   "age": 29,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": false,
+   "prompt": "two fictional adults in their thirties, both clearly 21 or older, standing together, outfit 4, natural skin, photograph"
+  },
+  {
+   "id": "a28",
+   "bucket": "adult",
+   "sex": "female",
+   "age": 28,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "angle": "front",
+   "pose": "standing",
+   "prompt": "a 28-year-old fictional adult woman, nude, front view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "a29",
+   "bucket": "adult",
+   "sex": "female",
+   "age": 31,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "angle": "side",
+   "pose": "seated",
+   "prompt": "a 31-year-old fictional adult woman, nude, side view, seated on a chair, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "a30",
+   "bucket": "adult",
+   "sex": "male",
+   "age": 35,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "angle": "back",
+   "pose": "standing",
+   "prompt": "a 35-year-old fictional adult man, nude, back view, standing, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  },
+  {
+   "id": "a31",
+   "bucket": "adult",
+   "sex": "male",
+   "age": 40,
+   "seeds": [
+    101,
+    202
+   ],
+   "adult": true,
+   "angle": "low",
+   "pose": "kneeling",
+   "prompt": "a 40-year-old fictional adult man, nude, low angle view, kneeling, anatomically realistic adult body, natural skin texture, unretouched photograph"
+  }
+ ],
+ "targets": {
+  "looks_real_photo_rate": 0.35,
+  "rated_realism_median": 4,
+  "skin_in_stock_midrange": 0.8,
+  "iqa_better_than_chroma": 0.1,
+  "bad_hands_max": 2,
+  "sticker_faces_max": 0,
+  "age_false_alarms_max": 2,
+  "video_arcface_min": 0.6,
+  "video_andrew_at_least_4": 7,
+  "still_seconds_max": 45,
+  "clip_seconds_max": 360,
+  "adult_anatomy_median": 4
+ }
+}

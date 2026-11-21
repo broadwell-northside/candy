@@ -1,0 +1,18 @@
+#!/bin/bash
+# Switch the Director LLM profile (ids from llm_models.json). The card comes from placement.json; a profile above
+# 70 GB takes GPU 1 whole and pauses ComfyUI GPU 1 (the video lane).
+set -euo pipefail
+[[ ${EUID:-$(id -u)} -eq 0 ]] || exec sudo "$0" "$@"
+P=/opt/turin/payload
+if [[ $# -ne 1 ]]; then
+  python3 - <<'PY'
+import json,sys;sys.path.insert(0,'/opt/turin/payload');import gpu_policy as g
+r=g.registry();a=g.active_profile_id(r)
+for p in r['profiles']:print(('* ' if p['id']==a else '  ')+p['id'],'-',p['label'])
+PY
+  echo 'Usage: sudo turin-llm-profile <profile-id>'; exit 2; fi
+python3 -c "import sys;sys.path.insert(0,'$P');import run_director as r;r.argv_for(sys.argv[1])" "$1"
+install -d -m 0755 /etc/turin-ai; printf '%s\n' "$1" > /etc/turin-ai/llm-profile.tmp; mv -f /etc/turin-ai/llm-profile.tmp /etc/turin-ai/llm-profile
+if python3 "$P/gpu_policy.py" --allow-comfy1; then systemctl start turin-comfy1 || true; else systemctl stop turin-comfy1 || true; fi
+systemctl restart turin-director
+echo "Director profile is now $1 (it starts when its SHA256-verified files are present)."

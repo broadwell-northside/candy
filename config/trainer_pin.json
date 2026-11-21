@@ -1,0 +1,13 @@
+{
+ "schema": 1,
+ "what": "The character trainer (ostris/ai-toolkit, MIT): the exact version the install scripts take and check.",
+ "repo": "https://github.com/ostris/ai-toolkit.git",
+ "commit": "73c84b091dd0f5647fc6a4b59122a2efc1c8147b",
+ "commit_date": "2026-11-18T19:26:49Z",
+ "requirements_txt_sha256": "6264997796f6a6da55a3b815481cc3cea63a169b01ca55c8b6ee417367b3f5ea",
+ "requirements_base_txt_sha256": "9e99c8c5dbe8a8b45dd847efbf504db4b8d409e49b291c32ce23835b04471367",
+ "torch": {"torch": "2.15.0", "torchvision": "0.29.2", "torchaudio": "2.11.1",
+           "why": "the versions already installed from PyPI in the picture engine's Python on this Mac"},
+ "checked": "2026-11-20 from the public repository metadata; nothing was installed or run",
+ "limits": "The commit and the two requirements files are pinned by hash. Most packages inside them are not pinned to a version or hash by the repository itself (it pins a few, and diffusers by commit); pip takes those from PyPI when the owner runs the install. The trainer has never run on this Mac: the trainer test is the go or no-go."
+}

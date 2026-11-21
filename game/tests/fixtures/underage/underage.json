@@ -1,0 +1,9 @@
+{
+  "id": "bad_young",
+  "name": "Rejected Example",
+  "stated_age": 16,
+  "personality": "This file is only a test. The game must refuse it.",
+  "look": { "summary": "Not used.", "lora_id": "easy_studio/rejected" },
+  "portraits": {},
+  "clips": {}
+}

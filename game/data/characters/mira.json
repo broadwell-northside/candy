@@ -1,0 +1,33 @@
+{
+  "id": "mira",
+  "name": "Mira Costa",
+  "stated_age": 32,
+  "personality": "Warm and unhurried. She swims in the morning and lets the rest of the day arrive on its own. She likes company that can share a silence.",
+  "look": {
+    "summary": "A fictional adult woman of 32, with olive skin, long dark wavy hair, and a loose sand-coloured linen shirt.",
+    "lora_id": "easy_studio/mira_costa"
+  },
+  "portraits": {
+    "neutral": {
+      "covered": "res://assets/characters/mira/neutral_covered.png",
+      "adult": "res://assets/characters/mira/neutral_adult.png"
+    },
+    "smile": {
+      "covered": "res://assets/characters/mira/smile_covered.png",
+      "adult": "res://assets/characters/mira/smile_adult.png"
+    },
+    "thoughtful": {
+      "covered": "res://assets/characters/mira/thoughtful_covered.png",
+      "adult": "res://assets/characters/mira/thoughtful_adult.png"
+    }
+  },
+  "clips": {
+    "idle": { "covered": "", "adult": "" }
+  },
+  "schedule": [
+    {"time": "morning", "location": "beach", "spot": [-2.6, 9.0]},
+    {"time": "midday", "location": "beach", "spot": [4.4, 10.0]},
+    {"time": "sunset", "location": "beach", "spot": [-7.4, 12.4]},
+    {"time": "night", "location": "beach", "spot": [4.0, 16.8]}
+  ]
+}

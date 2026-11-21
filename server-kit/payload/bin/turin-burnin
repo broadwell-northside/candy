@@ -1,0 +1,3 @@
+#!/bin/bash
+# GPU/CPU/RAM burn-in with thermal and fan limits: sudo turin-burnin --minutes 20
+exec /usr/bin/python3 /opt/turin/payload/turin-burnin.py "$@"

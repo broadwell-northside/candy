@@ -1,0 +1,171 @@
+{
+ "schema": "candy.lora_pairs/1",
+ "pairs": [
+  {
+   "model_id": 1307155,
+   "version_id": 2073605,
+   "half": "high",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 2083303,
+    "half": "low",
+    "sha256": "d6b783742f4d5fd63a0223ae1d5bf64fc995a6b408480ac2a00528ae0d4146db",
+    "size": 613516752,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 1811313,
+   "version_id": 2553271,
+   "half": "low",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 2553151,
+    "half": "high",
+    "sha256": "d9931756c202bd8d4946c0d163c1269231a6352b51bb4235f6a19894c9ad8c68",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 1331682,
+   "version_id": 2098405,
+   "half": "high",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 2098396,
+    "half": "low",
+    "sha256": "7adf32374c7b04724638155a274d38924bbab9386a134d466f034cb4af638540",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "allowlisted_exact_sha256_d_c_18"
+   }
+  },
+  {
+   "model_id": 1874811,
+   "version_id": 2325788,
+   "half": "high",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 2191446,
+    "half": "low",
+    "sha256": "fe91142668b2f09d429e86f5018001304202c491e79411f059e5bf59b03a36e0",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "allowlisted_exact_sha256_d_c_18"
+   }
+  },
+  {
+   "model_id": 1922973,
+   "version_id": 2178869,
+   "half": "low",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 2176450,
+    "half": "high",
+    "sha256": "a68ee10bb0f3162bf947a892591dfc65a111d7e85c3f73ff6db24887b79a0b05",
+    "size": 319116504,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "allowlisted_exact_sha256_d_c_18"
+   }
+  },
+  {
+   "model_id": 1962545,
+   "version_id": 3112727,
+   "half": "high",
+   "base": "Wan Video 2.2 I2V-A14B",
+   "sibling": {
+    "version_id": 3112726,
+    "half": "low",
+    "sha256": "27ed69bf37f32f37601ad13cc04c902b374ab20b56577dada5ded14c7b23cc7c",
+    "size": 613527264,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 1811313,
+   "version_id": 2303113,
+   "half": "low",
+   "base": "Wan Video 2.2 T2V-A14B",
+   "sibling": {
+    "version_id": 2303105,
+    "half": "high",
+    "sha256": "6b7c19958c79e8bc05236107afc9e58f8a7e2068c08cc8863b83720cbb3b0f51",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 1350447,
+   "version_id": 2077123,
+   "half": "high",
+   "base": "Wan Video 2.2 T2V-A14B",
+   "sibling": {
+    "version_id": 2077119,
+    "half": "low",
+    "sha256": "008f648bba6f9179b470f11c551e9e27af46ff4af2d0eca90afc1a58a658bb6d",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 2109996,
+   "version_id": 3034713,
+   "half": "low",
+   "base": "Wan Video 2.2 T2V-A14B",
+   "sibling": {
+    "version_id": 3034683,
+    "half": "high",
+    "sha256": "197ae152bca7576c598fa7f16d1fb5469d6426bd9d84efc1dab2f1d943640ff6",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  },
+  {
+   "model_id": 1331682,
+   "version_id": 2091870,
+   "half": "high",
+   "base": "Wan Video 2.2 T2V-A14B",
+   "sibling": {
+    "version_id": 2091879,
+    "half": "low",
+    "sha256": "4d4352959390eacfa4a5bfa883d7f5fd34f95aaf05d3236fd66ef614876fdc7c",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "allowlisted_exact_sha256_d_c_18"
+   }
+  },
+  {
+   "model_id": 1867280,
+   "version_id": 2113488,
+   "half": "high",
+   "base": "Wan Video 2.2 T2V-A14B",
+   "sibling": {
+    "version_id": 2113665,
+    "half": "low",
+    "sha256": "c20e4de0a022411db0d29a7489ecddb8c04e1410f6d7e2d1021910748e991ae9",
+    "size": 306807976,
+    "published": true,
+    "stem_match": true,
+    "repo_check": "pass"
+   }
+  }
+ ],
+ "note": "Wan 2.2 14B LoRAs need both halves (route_lora refuses an unpaired half). Siblings found by matching version names under the same Civitai model and base; each sibling ran the app's own civitai_check (2026-11-06). Four siblings (2098396, 2091879, 2191446, 2176450) pass only by Ak's exact allowlist (D-C-20). IDs and hashes only."
+}

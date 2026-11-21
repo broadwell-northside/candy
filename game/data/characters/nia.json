@@ -1,0 +1,33 @@
+{
+  "id": "nia",
+  "name": "Nia Sol",
+  "stated_age": 27,
+  "personality": "Curious and soft-spoken. She paints the same water until the light tells the truth, and she will share the shade if you ask.",
+  "look": {
+    "summary": "A fictional adult woman of 27, with deep brown skin, sun-lightened curls, a straw hat, and a sage linen dress.",
+    "lora_id": "easy_studio/nia_sol"
+  },
+  "portraits": {
+    "neutral": {
+      "covered": "res://assets/characters/nia/neutral_covered.png",
+      "adult": "res://assets/characters/nia/neutral_adult.png"
+    },
+    "smile": {
+      "covered": "res://assets/characters/nia/smile_covered.png",
+      "adult": "res://assets/characters/nia/smile_adult.png"
+    },
+    "thoughtful": {
+      "covered": "res://assets/characters/nia/thoughtful_covered.png",
+      "adult": "res://assets/characters/nia/thoughtful_adult.png"
+    }
+  },
+  "clips": {
+    "idle": { "covered": "", "adult": "" }
+  },
+  "schedule": [
+    {"time": "morning", "location": "beach", "spot": [2.8, 8.6]},
+    {"time": "midday", "location": "beach", "spot": [-4.6, 9.4]},
+    {"time": "sunset", "location": "beach", "spot": [8.2, 13.0]},
+    {"time": "night", "location": "beach", "spot": [-3.5, 17.4]}
+  ]
+}

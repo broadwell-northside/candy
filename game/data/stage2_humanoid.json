@@ -1,0 +1,12 @@
+{
+  "stage": 2,
+  "used_by_beach": false,
+  "gltf": "",
+  "blendshapes": [],
+  "ik": {
+    "enabled": false,
+    "chains": []
+  },
+  "navmesh": "",
+  "note": "Unused by the beach. A later rigged glTF humanoid with blendshapes, IK, and a navmesh can replace the plate. This file does not build a body."
+}

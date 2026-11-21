@@ -1,0 +1,398 @@
+{
+  "source_commit": "3773d4f05bd2037b19eb4d0084cc405665f4850d",
+  "source_message": "ES-RESEARCH-20261103-005",
+  "status": "NOT_RUN",
+  "finishing_order": [
+    "seedvr2_7b_int8_image",
+    "realesrgan_x4plus",
+    "z_image_refine_h2logs",
+    "no_enhancement"
+  ],
+  "candidates": [
+    {
+      "id": "realesrgan_x4plus",
+      "label": "RealESRGAN x4plus comparison",
+      "kind": "finish",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "realesrgan_x4plus",
+      "settings": {
+        "scale": 4,
+        "tile": 0,
+        "tile_pad": 10,
+        "pre_pad": 0,
+        "fp32": false,
+        "face_enhance": false
+      }
+    },
+    {
+      "id": "no_enhancement",
+      "label": "No enhancement control",
+      "kind": "finish",
+      "rank": 4,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "settings": {}
+    },
+    {
+      "id": "z_image_turbo_fast_still",
+      "label": "Z-Image Turbo fast keyframe",
+      "kind": "still",
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "z_image_turbo",
+      "settings": {
+        "steps": 8,
+        "cfg": 1,
+        "sampler": "res_multistep",
+        "scheduler": "simple",
+        "shift": 3,
+        "width": 1024,
+        "height": 1024
+      }
+    },
+    {
+      "id": "flux2_klein_4b_edit",
+      "label": "FLUX.2 Klein 4B distilled reference edit",
+      "kind": "outfit_edit",
+      "rank": 1,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "flux2_klein_4b",
+      "settings": {
+        "steps": 4,
+        "cfg": 1,
+        "sampler": "euler",
+        "scheduler": "flux2",
+        "reference_megapixels": 1,
+        "reference_scale": "nearest-exact",
+        "checkpoint": "flux-2-klein-4b-fp8.safetensors"
+      }
+    },
+    {
+      "id": "qwen_image_edit_2511",
+      "label": "Qwen-Image-Edit-2511",
+      "kind": "outfit_edit",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "qwen_image_edit_2511",
+      "settings": {
+        "steps": 40,
+        "cfg": 4,
+        "guidance": 1,
+        "turbo": false,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "shift": 3.1,
+        "denoise": 1
+      }
+    },
+    {
+      "id": "qwen_image_character_lora",
+      "label": "Character LoRA on approved fictional stills",
+      "kind": "character_lora",
+      "rank": 3,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "qwen_image",
+      "settings": {
+        "tool": "ai-toolkit",
+        "base": "Qwen/Qwen-Image",
+        "rank": 16,
+        "alpha": 16,
+        "steps": 2000,
+        "batch": 1,
+        "optimizer": "AdamW8bit",
+        "lr": 0.0001,
+        "dtype": "bf16",
+        "caption_dropout": 0.05,
+        "buckets": [
+          512,
+          768,
+          1024
+        ],
+        "training_images": "approved fictional in-app only"
+      }
+    },
+    {
+      "id": "wan22_14b_i2v_template",
+      "label": "Wan 2.2 A14B native image-to-video",
+      "kind": "video",
+      "rank": 1,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "wan22_14b",
+      "local_workflow": "video_wan22_i2v_fast_api.json",
+      "reference": "evidence/research/track02/workflows/video_wan2_2_14B_i2v.reference.json",
+      "settings": {
+        "steps": 20,
+        "split": 10,
+        "cfg": 3.5,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "shift": 5,
+        "width": 640,
+        "height": 640,
+        "frames": 81,
+        "fps": 16,
+        "four_step_switch": false,
+        "weights": "wan2.2_i2v high/low fp8 scaled"
+      },
+      "after": "still_qc"
+    },
+    {
+      "id": "wan22_14b_flf2v_template",
+      "label": "Wan 2.2 14B first and last frame",
+      "kind": "video",
+      "rank": 1,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "wan22_14b",
+      "local_workflow": "video_wan22_flf2v_fast_api.json",
+      "reference": "evidence/research/track02/workflows/video_wan2_2_14B_flf2v.reference.json",
+      "settings": {
+        "steps": 20,
+        "split": 10,
+        "cfg": 4,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "shift": 8,
+        "width": 640,
+        "height": 640,
+        "frames": 81,
+        "fps": 16,
+        "four_step_branch": "bypassed"
+      }
+    },
+    {
+      "id": "hunyuan_video_15_720p_i2v",
+      "label": "HunyuanVideo 1.5 720p I2V fallback",
+      "kind": "video",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "hunyuan_video_15",
+      "local_model": "hunyuan15_i2v"
+    },
+    {
+      "id": "ltx25_i2v_template",
+      "label": "LTX-2.5 distilled two-stage I2V fallback",
+      "kind": "video",
+      "rank": 3,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "ltx_2_5",
+      "local_model": "ltx25_i2v"
+    },
+    {
+      "id": "ltx25_flf2v_template",
+      "label": "LTX 2.5 first and last frame",
+      "kind": "video",
+      "rank": 3,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "ltx_2_5",
+      "local_model": "ltx25_flf2v"
+    },
+    {
+      "id": "wan22_5b_ti2v",
+      "label": "Wan 2.2 5B TI2V low-VRAM fallback",
+      "kind": "video",
+      "rank": 4,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "wan22_5b",
+      "settings": {
+        "steps": 20,
+        "cfg": 5,
+        "sampler": "uni_pc",
+        "scheduler": "simple",
+        "shift": 8,
+        "denoise": 1,
+        "width": 1280,
+        "height": 704,
+        "frames": 121,
+        "fps": 24
+      }
+    },
+    {
+      "id": "wan22_lightx2v_4step",
+      "label": "Wan 2.2 4-step LightX2V branch",
+      "kind": "video",
+      "rank": 9,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "after": "native_motion_passes",
+      "one_change_at_a_time": true,
+      "model_card": "wan22_14b",
+      "settings": {
+        "steps": 4,
+        "split": 2,
+        "cfg": 1,
+        "shift": 5,
+        "lora_strength": 1.0
+      }
+    },
+    {
+      "id": "endless_wan_svi2pro",
+      "label": "Endless Wan / SVI2Pro long clips",
+      "kind": "video",
+      "rank": 9,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "after": "native_motion_passes",
+      "one_change_at_a_time": true,
+      "model_card": "wan22_14b"
+    },
+    {
+      "id": "seedvr2_3b_video",
+      "label": "SeedVR2 3B INT8 video restoration",
+      "kind": "video_finish",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "seedvr2_3b",
+      "settings": {
+        "scale": 2,
+        "steps": 1,
+        "cfg": 1,
+        "sampler": "euler",
+        "scheduler": "simple",
+        "denoise": 1,
+        "color_correction": "none"
+      }
+    },
+    {
+      "id": "seedvr2_7b_video",
+      "label": "SeedVR2 7B video restoration comparison",
+      "kind": "video_finish",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "seedvr2_7b_int8",
+      "separate_from_still_recipe": true
+    },
+    {
+      "id": "color_match",
+      "label": "Color match after restoration",
+      "kind": "video_finish",
+      "rank": 3,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "settings": {
+        "method": "mkl",
+        "strength": 1
+      }
+    },
+    {
+      "id": "rife",
+      "label": "RIFE interpolation",
+      "kind": "video_finish",
+      "rank": 4,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "rife",
+      "only_after": "approved_motion",
+      "settings": {
+        "keep_native_frames": true,
+        "keep_native_fps": true
+      }
+    },
+    {
+      "id": "prompthmr_glb",
+      "label": "PromptHMR video to GLB",
+      "kind": "motion_3d",
+      "rank": 1,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "prompthmr",
+      "path": [
+        "prompt_hmr_video",
+        "inspect_source_skeleton",
+        "genesis9_retarget",
+        "bake",
+        "godot_gltf2"
+      ],
+      "hand_pose_default": false,
+      "body_rotations": 22,
+      "animated_fingers": false,
+      "pair_contact": "residual interpenetration reported; identity swap UNKNOWN",
+      "adapter": "app/g9_adapter.py",
+      "export_path_locked": false
+    },
+    {
+      "id": "wham",
+      "label": "WHAM per-person SMPL params",
+      "kind": "motion_3d",
+      "rank": 2,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "wham",
+      "pair_contact": "UNKNOWN; contact reasoning is feet only"
+    },
+    {
+      "id": "gvhmr",
+      "label": "GVHMR single track",
+      "kind": "motion_3d",
+      "rank": 3,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "gvhmr"
+    },
+    {
+      "id": "sam3d_body",
+      "label": "SAM 3D Body hand and body detail",
+      "kind": "motion_3d_experiment",
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "sam3d_body",
+      "role_in_finger_plan": "hand pass if PromptHMR hand pose is off"
+    },
+    {
+      "id": "gaussian_avatar",
+      "label": "GaussianAvatar appearance only",
+      "kind": "appearance_only",
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "gaussian_avatar"
+    },
+    {
+      "id": "hugs",
+      "label": "HUGS appearance only",
+      "kind": "appearance_only",
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "hugs"
+    },
+    {
+      "id": "flux3_klein",
+      "label": "FLUX 3 Image Klein",
+      "kind": "outfit_edit",
+      "rank": 9,
+      "tested_locally": false,
+      "status": "NOT_RUN",
+      "model_card": "flux3_klein",
+      "blocked_until": "license_read"
+    }
+  ],
+  "video_source_commit": "f5b74ad96f07e605b7766422ce1f376d7f26d004",
+  "video_source_messages": [
+    "ES-RESEARCH-20261103-006",
+    "ES-RESEARCH-20261103-007"
+  ],
+  "video_finishing_order": [
+    "native_frames",
+    "seedvr2_3b_video",
+    "seedvr2_7b_video",
+    "color_match",
+    "rife",
+    "encode"
+  ],
+  "motion_3d_order": [
+    "prompthmr_glb",
+    "wham",
+    "gvhmr"
+  ]
+}

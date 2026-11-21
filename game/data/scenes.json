@@ -1,0 +1,80 @@
+{
+  "scenes": [
+    {
+      "id": "beach_swim",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "swim",
+      "min_affection": 0,
+      "caption": "You swim out until your feet leave the sand. The water holds you up.",
+      "variants": {
+        "covered": {
+          "still": "res://assets/scenes/swim_covered.png",
+          "video": "res://assets/scenes/swim_covered.ogv"
+        },
+        "adult": {
+          "still": "res://assets/scenes/swim_adult.png",
+          "video": ""
+        }
+      }
+    },
+    {
+      "id": "beach_sun",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "sun",
+      "min_affection": 0,
+      "caption": "You lie in the sun and let the day go quiet.",
+      "variants": {
+        "covered": {
+          "still": "res://assets/scenes/sun_covered.png",
+          "video": ""
+        },
+        "adult": {
+          "still": "res://assets/scenes/sun_adult.png",
+          "video": ""
+        }
+      }
+    },
+    {
+      "id": "beach_sun_mira",
+      "location": "beach",
+      "character": "mira",
+      "time": "any",
+      "activity": "sun",
+      "min_affection": 2,
+      "caption": "Mira kept this stretch of sand quiet for you. You lie down and let the light do the rest.",
+      "variants": {
+        "covered": {
+          "still": "res://assets/scenes/sun_mira_close_covered.png",
+          "video": ""
+        },
+        "adult": {
+          "still": "res://assets/scenes/sun_mira_close_adult.png",
+          "video": ""
+        }
+      }
+    },
+    {
+      "id": "beach_walk",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "walk",
+      "min_affection": 0,
+      "caption": "You walk the shoreline. The sand is warm, and nothing asks you to hurry.",
+      "variants": {
+        "covered": {
+          "still": "res://assets/scenes/walk_covered.png",
+          "video": ""
+        },
+        "adult": {
+          "still": "res://assets/scenes/walk_adult.png",
+          "video": ""
+        }
+      }
+    }
+  ]
+}

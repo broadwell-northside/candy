@@ -1,0 +1,347 @@
+{
+  "source_commit": "3773d4f05bd2037b19eb4d0084cc405665f4850d",
+  "source_message": "ES-RESEARCH-20261103-005",
+  "note": "Private personal-use local evaluation only. A card is not a license grant and not a tested default.",
+  "cards": [
+    {
+      "id": "seedvr2_7b_int8",
+      "name": "SeedVR2 7B INT8",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "template_license": "MIT",
+      "tested_locally": false
+    },
+    {
+      "id": "realesrgan_x4plus",
+      "name": "RealESRGAN_x4plus",
+      "license": "BSD-3-Clause",
+      "commercial": "allowed",
+      "tested_locally": false
+    },
+    {
+      "id": "z_image",
+      "name": "Z-Image",
+      "job": "character_still",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://github.com/Tongyi-MAI/Z-Image",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": ["z_image_bf16.safetensors", "qwen_3_4b.safetensors", "ae.safetensors"]
+    },
+    {
+      "id": "z_image_turbo",
+      "name": "Z-Image Turbo",
+      "job": "character_still",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://github.com/Tongyi-MAI/Z-Image",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": ["z_image_turbo_bf16.safetensors", "qwen_3_4b.safetensors", "ae.safetensors"]
+    },
+    {
+      "id": "chroma1hd",
+      "name": "Chroma1-HD",
+      "job": "character_still",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/lodestones/Chroma1-HD",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": true,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": ["Chroma1-HD.safetensors", "t5xxl_fp16.safetensors", "ae.safetensors"]
+    },
+    {
+      "id": "supir",
+      "name": "SUPIR",
+      "license": "non-commercial",
+      "commercial": "no",
+      "tested_locally": false,
+      "note": "Repository restricts use to non-commercial purposes. The Juggernaut and Qwen files in that recipe need their own cards before a run."
+    },
+    {
+      "id": "flux1_dev_add_details",
+      "name": "FLUX.1-dev add-details LoRA",
+      "license": "FLUX.1-dev non-commercial",
+      "commercial": "no",
+      "tested_locally": false,
+      "note": "The model card example points at a different repository than the weight name. Do not run that example until the file is checked."
+    },
+    {
+      "id": "flux1_dev",
+      "name": "FLUX.1 [dev]",
+      "license": "FLUX.1-dev non-commercial",
+      "commercial": "no",
+      "tested_locally": false,
+      "gated": true,
+      "note": "Part of the owner's proven stack (D-10). Private use only; the weights need a Hugging Face login that accepted the licence."
+    },
+    {
+      "id": "flux2_klein_4b",
+      "name": "FLUX.2 Klein 4B distilled",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "template_license": "MIT",
+      "tested_locally": false
+    },
+    {
+      "id": "qwen_image_edit_2511",
+      "name": "Qwen-Image-Edit-2511",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "template_license": "MIT",
+      "tested_locally": false
+    },
+    {
+      "id": "qwen_image",
+      "name": "Qwen-Image",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "tested_locally": false
+    },
+    {
+      "id": "catvton",
+      "name": "CatVTON",
+      "license": "CC BY-NC-SA 4.0",
+      "commercial": "no",
+      "tested_locally": false
+    },
+    {
+      "id": "idm_vton",
+      "name": "IDM-VTON",
+      "license": "CC BY-NC-SA 4.0",
+      "commercial": "no",
+      "tested_locally": false
+    },
+    {
+      "id": "fitdit",
+      "name": "FitDiT",
+      "license": "CC BY-NC-SA 4.0",
+      "commercial": "no",
+      "tested_locally": false
+    },
+    {
+      "id": "wan22_14b",
+      "name": "Wan 2.2 14B",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "template_license": "MIT",
+      "tested_locally": false
+    },
+    {
+      "id": "wan22_i2v",
+      "name": "Wan 2.2 I2V-A14B",
+      "job": "video_cutscene",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/Wan-AI/Wan2.2-I2V-A14B",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": [
+        "wan2.2_i2v_high_noise_14B_fp8_scaled.safetensors",
+        "wan2.2_i2v_low_noise_14B_fp8_scaled.safetensors",
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan_2.1_vae.safetensors"
+      ],
+      "note": "The one film model. The text encoder and VAE are the files the quality workflow loads with these weights. The fast lightx2v LoRAs are not on this card."
+    },
+    {
+      "id": "hunyuan_video_15",
+      "name": "HunyuanVideo 1.5",
+      "license": "Tencent Hunyuan",
+      "commercial": "restricted",
+      "tested_locally": false,
+      "note": "Not valid in the EU, the UK, or South Korea."
+    },
+    {
+      "id": "ltx_2_5",
+      "name": "LTX 2.5",
+      "license": "LTX community",
+      "commercial": "restricted",
+      "tested_locally": false,
+      "note": "Free under $10M yearly revenue. Weights are gated on Hugging Face."
+    },
+    {
+      "id": "wan22_5b",
+      "name": "Wan 2.2 5B TI2V",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "tested_locally": false
+    },
+    {
+      "id": "seedvr2_3b",
+      "name": "SeedVR2 3B INT8 video",
+      "license": "Apache-2.0",
+      "commercial": "allowed",
+      "template_license": "MIT",
+      "tested_locally": false
+    },
+    {
+      "id": "rife",
+      "name": "RIFE",
+      "license": "MIT",
+      "commercial": "allowed",
+      "tested_locally": false,
+      "note": "Checkpoint terms for the chosen weight still need a pin. Interpolate only after motion is approved. Keep native frames and fps."
+    },
+    {
+      "id": "prompthmr",
+      "name": "PromptHMR",
+      "license": "non-commercial research",
+      "commercial": "no",
+      "tested_locally": false,
+      "note": "Private local evaluation is allowed. Genesis 9 retarget is not provided by the project."
+    },
+    {
+      "id": "wham",
+      "name": "WHAM",
+      "license": "MIT",
+      "commercial": "allowed",
+      "tested_locally": false,
+      "note": "SMPL body assets have separate terms."
+    },
+    {
+      "id": "gvhmr",
+      "name": "GVHMR",
+      "license": "research / nonprofit",
+      "commercial": "restricted",
+      "tested_locally": false
+    },
+    {
+      "id": "sam3d_body",
+      "name": "SAM 3D Body",
+      "license": "UNKNOWN",
+      "commercial": "unknown",
+      "tested_locally": false,
+      "note": "Separate body and hand experiment, not the motion path."
+    },
+    {
+      "id": "gaussian_avatar",
+      "name": "GaussianAvatar",
+      "license": "UNKNOWN",
+      "commercial": "unknown",
+      "tested_locally": false,
+      "note": "Appearance only."
+    },
+    {
+      "id": "hugs",
+      "name": "HUGS",
+      "license": "UNKNOWN",
+      "commercial": "unknown",
+      "tested_locally": false,
+      "note": "Appearance only."
+    },
+    {
+      "id": "flux3_klein",
+      "name": "FLUX 3 Image Klein",
+      "license": "unread",
+      "commercial": "unknown",
+      "tested_locally": false,
+      "note": "Do not substitute for the Apache FLUX.2 Klein 4B candidate until this license is read."
+    },
+    {
+      "id": "trellis2",
+      "name": "TRELLIS.2-4B",
+      "job": "prop",
+      "license": "MIT",
+      "license_name": "MIT",
+      "license_url": "https://huggingface.co/microsoft/TRELLIS.2-4B",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": [
+        "trellis_2_int8_convrot.safetensors",
+        "trellis_2_shape_vae_bf16.safetensors",
+        "trellis_2_texture_vae_bf16.safetensors"
+      ]
+    },
+    {
+      "id": "dinov3",
+      "name": "DINOv3 ViT-L",
+      "job": "prop",
+      "license": "dinov3-license",
+      "license_name": "dinov3-license",
+      "license_url": "https://ai.meta.com/resources/models-and-libraries/dinov3-license/",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "private_use_scope": "a machine you do not distribute",
+      "download": "gated",
+      "token_ref": "op://Easy-Studio/DINOv3/token",
+      "notice": "Built with DINOv3",
+      "adult_only": false,
+      "tested_locally": false,
+      "weights": ["dino_v3_vit_l.safetensors"]
+    },
+    {
+      "id": "birefnet",
+      "name": "BiRefNet",
+      "job": "prop",
+      "license": "MIT",
+      "license_name": "MIT",
+      "license_url": "https://github.com/ZhengPeng7/BiRefNet/blob/main/LICENSE",
+      "license_checked": "2026-11-05",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "weights": ["birefnet.safetensors"],
+      "note": "Background remover already used by the TRELLIS prop workflow."
+    },
+    {
+      "id": "face_yunet_2023mar",
+      "name": "YuNet face detector, 2023 March",
+      "job": "face_check",
+      "license": "MIT",
+      "license_name": "MIT",
+      "license_url": "https://huggingface.co/opencv/face_detection_yunet/blob/main/LICENSE",
+      "license_checked": "2026-11-20",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "note": "Finds one face and its five landmarks. The licence is the repository's LICENSE file; the Hugging Face card carries no licence tag."
+    },
+    {
+      "id": "face_sface_2021dec",
+      "name": "SFace face embedding, 2021 December",
+      "job": "face_check",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://huggingface.co/opencv/face_recognition_sface/blob/main/LICENSE",
+      "license_checked": "2026-11-20",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "note": "Turns a face into 128 numbers for matching. The licence is the repository's LICENSE file; the Hugging Face card carries no licence tag."
+    },
+    {
+      "id": "opencv_python_headless",
+      "name": "OpenCV (headless build) 4.14.0.94",
+      "job": "face_check",
+      "license": "Apache-2.0",
+      "license_name": "Apache-2.0",
+      "license_url": "https://pypi.org/project/opencv-python-headless/",
+      "license_checked": "2026-11-20",
+      "private_use": "yes",
+      "adult_only": false,
+      "commercial": "allowed",
+      "tested_locally": false,
+      "note": "The library that runs the two face models. Installed with --no-deps --require-hashes; older fallback 4.13.0.92."
+    }
+  ]
+}

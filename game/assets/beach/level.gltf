@@ -1,0 +1,489 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "stillwater export_beach_gltf.py",
+    "extras": {
+      "stillwater": "beach level",
+      "note": "Shared glTF. Godot plays this file. It is not a Godot-only scene."
+    }
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Beach",
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Terrain",
+      "mesh": 0
+    },
+    {
+      "name": "Ocean",
+      "mesh": 1
+    },
+    {
+      "name": "Navmesh",
+      "mesh": 2,
+      "extras": {
+        "walkable": true
+      }
+    },
+    {
+      "name": "PlayerStart",
+      "translation": [
+        0.0,
+        0.722589627818557,
+        14.0
+      ]
+    },
+    {
+      "name": "Plate",
+      "mesh": 3,
+      "translation": [
+        0.0,
+        0.722589627818557,
+        14.0
+      ],
+      "extras": {
+        "finished_look": false,
+        "stage": 1,
+        "sfw_mode": false
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Terrain",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "Ocean",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 4,
+            "NORMAL": 5,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1
+        }
+      ]
+    },
+    {
+      "name": "Navmesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 8,
+            "NORMAL": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 3
+        }
+      ]
+    },
+    {
+      "name": "Plate",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 12,
+            "NORMAL": 13,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 2
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "Sand",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.79,
+          0.67,
+          0.46,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.92
+      },
+      "doubleSided": false
+    },
+    {
+      "name": "Water",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.08,
+          0.35,
+          0.45,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.18
+      },
+      "doubleSided": true
+    },
+    {
+      "name": "Plate",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.72,
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "doubleSided": true,
+      "alphaMode": "MASK",
+      "alphaCutoff": 0.45,
+      "extras": {
+        "stillwater_stage": 1,
+        "finished_look": false,
+        "sfw_mode": false
+      }
+    },
+    {
+      "name": "Navmesh",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2,
+          0.55,
+          0.4,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 1.0
+      },
+      "doubleSided": false
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1517,
+      "type": "VEC3",
+      "min": [
+        -24.0,
+        -0.39844440117973,
+        -3.0
+      ],
+      "max": [
+        24.0,
+        1.3161218446024905,
+        33.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1517,
+      "type": "VEC3",
+      "min": [
+        -0.08509000333413295,
+        0.9871209549933901,
+        -0.13386112101209163
+      ],
+      "max": [
+        0.07963185991442531,
+        1.0,
+        0.1424594068346763
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1517,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5125,
+      "count": 8640,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 1421,
+      "type": "VEC3",
+      "min": [
+        -39.0,
+        0.13023544357297973,
+        -39.0
+      ],
+      "max": [
+        39.0,
+        0.26975048124503864,
+        7.0
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 1421,
+      "type": "VEC3",
+      "min": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 1421,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5125,
+      "count": 8064,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "min": [
+        -16.0,
+        0.43571545963589303,
+        6.0
+      ],
+      "max": [
+        16.0,
+        0.8679303759663228,
+        22.0
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "min": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "max": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 12,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "min": [
+        -0.36,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.36,
+        1.8,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 13,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "min": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "max": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bufferView": 14,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 15,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 18204,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18204,
+      "byteLength": 18204,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 36408,
+      "byteLength": 12136,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48544,
+      "byteLength": 34560,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 83104,
+      "byteLength": 17052,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 100156,
+      "byteLength": 17052,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 117208,
+      "byteLength": 11368,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 128576,
+      "byteLength": 32256,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160832,
+      "byteLength": 48,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160880,
+      "byteLength": 48,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160928,
+      "byteLength": 32,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160960,
+      "byteLength": 24,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160984,
+      "byteLength": 48,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 161032,
+      "byteLength": 48,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 161080,
+      "byteLength": 32,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 161112,
+      "byteLength": 24,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "level.buffer",
+      "byteLength": 161136
+    }
+  ],
+  "images": [
+    {
+      "uri": "../plates/stand_in.png"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ]
+}

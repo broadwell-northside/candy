@@ -1,0 +1,56 @@
+# The Candy server kit in server-kit/: offline tests (no network, GPU, root or real disk), shell checks, lint.
+# Separate from ci.yml so the app's checks and the kit's checks never block each other.
+
+name: Server kit
+
+on:
+  pull_request:
+    paths:
+      - "server-kit/**"
+      - ".github/workflows/server-kit.yml"
+  push:
+    branches: [main]
+    paths:
+      - "server-kit/**"
+      - ".github/workflows/server-kit.yml"
+
+jobs:
+  server-kit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lint (syntax errors and undefined names, as the repo's ruff settings)
+        run: |
+          python -m pip install --upgrade pip ruff
+          ruff check server-kit
+
+      - name: Shell checks
+        run: |
+          shopt -s nullglob
+          files=(server-kit/payload/*.sh server-kit/payload/bin/* server-kit/mac/*.sh server-kit/mac/*.command)
+          for f in "${files[@]}"; do bash -n "$f"; done
+          shellcheck -S warning "${files[@]}"
+
+      - name: Kit tests (everything mocked is listed at the top of run_tests.py)
+        run: python -I server-kit/tests/run_tests.py
+
+      - name: Builder dry run
+        run: |
+          ssh-keygen -q -t ed25519 -N '' -C ci-only -f /tmp/ci-key && rm /tmp/ci-key
+          python - <<'PY'
+          import json
+          c = json.load(open('server-kit/config/install.example.json'))
+          c.update(ssh_public_key_file='/tmp/ci-key.pub', approve_blank_disk_install=True, hardware_checklist_confirmed=True)
+          json.dump(c, open('/tmp/install.json', 'w'))
+          json.dump({'rows': [{'id': 'ci', 'wave': 1, 'url': 'https://example.org/x', 'dest': 'x/y.bin', 'size': 1, 'sha256': '0' * 64}]},
+                    open('/tmp/lock.json', 'w'))
+          PY
+          python server-kit/builder.py --dry-run --config /tmp/install.json --lock /tmp/lock.json

@@ -1,0 +1,51 @@
+{
+ "schema": 1,
+ "name": "Easy Studio chain evidence: text to image, image to video, video to longer video, picture to 3D",
+ "decision": "D-C-27 (orchestrator 18:14 ET 2026-11-06): the existing person path, one fictional adult with a stated age of 30, fully clothed, non-sexual, everyday section, no real person, no likeness. D-C-28: E2 takes Ak's own scores with --var qc=@file.json when he gives them, else the m5_max proof path (unscored, flagged as proof).",
+ "status": "draft: job kinds and params follow candy-main c6ccf42; the lead confirms them for candy-s4-chain",
+ "subject": "fictional_adult",
+ "rules": "D-C-27: one fictional adult, stated age 30, fully clothed, non-sexual, everyday section, no real person, no likeness. D-C-28: keyframe scores only from Ak's own file at T2/T3 (labelled ak_scores), mock scores only at T1, else the unscored proof path. Sessions never open the media; checks are numbers only.",
+ "seed": 20261106,
+ "vars": {},
+ "steps": [
+  {
+   "id": "E1", "title": "text to image",
+   "kind": "create",
+   "params": {
+    "dna": {"name": "Evidence", "gender": "man", "age": 30, "style": "photo"},
+    "outfit": "dressy:suit", "scene": "office", "lighting": "soft", "camera": "half", "aspect": "portrait",
+    "count": 2, "seed": "{seed}"
+   },
+   "pick": {"type": "image"},
+   "expect": {"type": "image", "templates": ["image_zimage_turbo_api.json", "image_chroma1hd_api.json"], "min_width": 512, "min_height": 512, "min_pixel_std": 8, "models_hashed": true}
+  },
+  {
+   "id": "E2", "title": "image to video (5B model on m5_max)",
+   "kind": "video",
+   "qc_gate": true,
+   "params": {"image": "{E1.results.0}", "qc": "{chain.qc?}", "motion": "look", "seconds": 4, "mode": "fast",
+              "quality": "480", "advanced": {"seed": "{seed}"}},
+   "pick": {"type": "video"},
+   "expect": {"type": "video", "templates": ["vm_wan22_5b_i2v_api.json"],
+              "min_duration_s": 2.0, "fps": 24, "fps_tolerance": 0.5, "min_frames": 48,
+              "min_mean_frame_diff": 0.3, "max_mean_frame_diff": 40, "min_pixel_std": 5, "models_hashed": true}
+  },
+  {
+   "id": "E3", "title": "video to longer video (extend from the last frame, joined)",
+   "kind": "extend",
+   "params": {"video": "{E2.id}", "segments": [{"motion": "walk", "seconds": 4}]},
+   "pick": {"type": "video"},
+   "expect": {"type": "video", "templates": ["vm_wan22_5b_i2v_api.json"],
+              "min_duration_ratio": {"of": "E2", "ratio": 1.8}, "same_size_as": "E2",
+              "join_after": "E2", "min_mean_frame_diff": 0.3, "max_mean_frame_diff": 40, "min_pixel_std": 5,
+              "models_hashed": true}
+  },
+  {
+   "id": "E4", "title": "picture to 3D (Hunyuan3D 2.1 shape on m5_max)",
+   "kind": "model3d",
+   "params": {"image": "{E1.results.0}", "engine": "hunyuan"},
+   "pick": {"type": "model"},
+   "expect": {"type": "model", "templates": ["3d_hunyuan21_shape_api.json"], "min_vertices": 1000, "min_faces": 1000, "bbox_nonzero": true, "models_hashed": true}
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "schema": "candy.placement/1",
+ "notice": "PRIVATE BUILD — NOT FOR DISTRIBUTION",
+ "measured": false,
+ "note": "Estimates from weight sizes in config/server_model_lock.json plus working memory at the default sizes. Every number is hardware_pending until the bake-off measures it; outputs/hardware_map.json can move a family without code.",
+ "plan_gb_per_card": 88,
+ "lanes": {
+  "gpu0": {"port": 8188, "gpu": 0, "role": "image, edit and 3D (one family resident at a time)"},
+  "gpu1": {"port": 8189, "gpu": 1, "role": "video (one family resident at a time)"}
+ },
+ "families": {
+  "zimage": {"lane": "gpu0", "vram_est_gb": 30},
+  "chroma": {"lane": "gpu0", "vram_est_gb": 36},
+  "flux": {"lane": "gpu0", "vram_est_gb": 42},
+  "qwen_edit": {"lane": "gpu0", "vram_est_gb": 40},
+  "flux2": {"lane": "gpu0", "vram_est_gb": 20},
+  "krea2": {"lane": "gpu0", "vram_est_gb": 26},
+  "sdxl": {"lane": "gpu0", "vram_est_gb": 12},
+  "trellis2": {"lane": "gpu0", "vram_est_gb": 16},
+  "hunyuan3d": {"lane": "gpu0", "vram_est_gb": 14},
+  "other": {"lane": "gpu0", "vram_est_gb": 30},
+  "wan14b": {"lane": "gpu1", "vram_est_gb": 70},
+  "wan5b": {"lane": "gpu1", "vram_est_gb": 30},
+  "hunyuan15": {"lane": "gpu1", "vram_est_gb": 60},
+  "ltx25": {"lane": "gpu1", "vram_est_gb": 65},
+  "kandinsky5": {"lane": "gpu1", "vram_est_gb": 30}
+ },
+ "director": {"lane": "gpu0", "port": 8000, "mode": "hybrid", "vram_est_gb": 8, "full_gpu_est_gb": 46,
+              "why": "default profile is a 3B-active MoE: attention and KV cache on GPU0, experts in the 256 GB RAM; the video lane keeps a whole card",
+              "profiles": {
+               "qwen36_35b_a3b_abliterated_q8": {"lane": "gpu0", "mode": "hybrid", "vram_est_gb": 8, "ram_est_gb": 38,
+                                                 "launch_adds": "-ot exps=CPU", "why": "3B-active MoE; weights 37.8 GB"}
+              },
+              "unlisted_profiles": "exclusive_gpu1",
+              "unlisted_why": "only profiles listed here share GPU0 beside the image lane; any other profile, whatever its size, takes GPU1 exclusively and the video lane pauses while it is loaded. The registry's own placement and CUDA_VISIBLE_DEVICES are ignored."},
+ "scorer": {"lane": "gpu0", "port": 8004, "mode": "on_demand", "vram_est_gb": 17,
+            "runtime": "not wired yet: S4 plate QA adds it (llama-server with a pinned GGUF and mmproj of the locked scorer model); until then no scorer unit",
+            "why_port": "8000-8003 are the Director profiles' ports (8001 is Strata DeepSeek)"},
+ "exclusive_profiles": {"above_gb": 70, "pauses_lane": "gpu1",
+                        "why": "a Director profile above 70 GB (wave 4) takes GPU1; the video lane pauses while it is loaded"}
+}

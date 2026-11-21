@@ -1,0 +1,174 @@
+{
+ "11": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "filename_prefix": "easy_studio/video",
+   "format": "mp4",
+   "format.codec": "h264",
+   "video": [
+    "100009",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "SaveVideo"
+  }
+ },
+ "100001": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "",
+   "clip": [
+    "100002",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Negative Prompt)"
+  }
+ },
+ "100002": {
+  "class_type": "DualCLIPLoader",
+  "inputs": {
+   "clip_name1": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+   "clip_name2": "clip_l.safetensors",
+   "type": "kandinsky5",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "DualCLIPLoader"
+  }
+ },
+ "100003": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "hunyuan_video_vae_bf16.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader"
+  }
+ },
+ "100004": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "text": "an adult woman turns toward the camera and smiles, natural motion, cinematic lighting",
+   "clip": [
+    "100002",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CLIP Text Encode (Positive Prompt)"
+  }
+ },
+ "100005": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "100007",
+    0
+   ],
+   "vae": [
+    "100003",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecode"
+  }
+ },
+ "100006": {
+  "class_type": "ModelSamplingSD3",
+  "inputs": {
+   "shift": 5,
+   "model": [
+    "100010",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "ModelSamplingSD3"
+  }
+ },
+ "100007": {
+  "class_type": "KSampler",
+  "inputs": {
+   "seed": 102704842425568,
+   "steps": 50,
+   "cfg": 5,
+   "sampler_name": "euler_ancestral",
+   "scheduler": "beta",
+   "denoise": 1,
+   "model": [
+    "100006",
+    0
+   ],
+   "positive": [
+    "100008",
+    0
+   ],
+   "negative": [
+    "100008",
+    1
+   ],
+   "latent_image": [
+    "100008",
+    2
+   ]
+  },
+  "_meta": {
+   "title": "KSampler"
+  }
+ },
+ "100008": {
+  "class_type": "Kandinsky5ImageToVideo",
+  "inputs": {
+   "width": 768,
+   "height": 512,
+   "length": 121,
+   "batch_size": 1,
+   "positive": [
+    "100004",
+    0
+   ],
+   "negative": [
+    "100001",
+    0
+   ],
+   "vae": [
+    "100003",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "Kandinsky5ImageToVideo"
+  }
+ },
+ "100009": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "fps": 24,
+   "bit_depth": "auto",
+   "color_space": "sRGB",
+   "chroma_subsampling": "auto",
+   "codec": "none",
+   "images": [
+    "100005",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "CreateVideo"
+  }
+ },
+ "100010": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "kandinsky5lite_t2v_sft_5s.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader"
+  }
+ }
+}

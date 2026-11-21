@@ -1,0 +1,70 @@
+{
+  "conversations": [
+    {
+      "id": "leo_nets",
+      "character": "leo",
+      "title": "The net",
+      "min_affection": 0,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "neutral",
+          "text": "Leo. I was just finishing this net. You can sit, or not. Both are fine.",
+          "choices": [
+            {
+              "label": "What are you mending?",
+              "to": "mend",
+              "affection": 1,
+              "flag": "leo_nets_ask"
+            },
+            {
+              "label": "I won't keep you.",
+              "to": "company",
+              "affection": 0
+            },
+            {
+              "label": "Say something of your own",
+              "free_talk": true
+            }
+          ]
+        },
+        "mend": {
+          "mood": "thoughtful",
+          "text": "A hole the rocks made. The lagoon and the cliffs can wait. They're not ready for company yet.",
+          "end": true
+        },
+        "company": {
+          "mood": "smile",
+          "text": "You aren't keeping me. The work likes a bit of company.",
+          "end": true
+        }
+      }
+    },
+    {
+      "id": "leo_gold",
+      "character": "leo",
+      "title": "Gold on the water",
+      "min_affection": 2,
+      "start": "start",
+      "nodes": {
+        "start": {
+          "mood": "smile",
+          "text": "Sunset again. If you ever want the long version of how this island stays so calm, ask me when the hut is finished. For now, the gold on the water is enough.",
+          "choices": [
+            {
+              "label": "The gold is enough.",
+              "to": "enough",
+              "affection": 1,
+              "flag": "leo_gold_yes"
+            }
+          ]
+        },
+        "enough": {
+          "mood": "smile",
+          "text": "Good. Sit until it fades. I'll keep mending.",
+          "end": true
+        }
+      }
+    }
+  ]
+}

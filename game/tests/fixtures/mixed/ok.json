@@ -1,0 +1,9 @@
+{
+  "id": "ok_adult",
+  "name": "Adult Example",
+  "stated_age": 21,
+  "personality": "A fictional adult used by the age test.",
+  "look": { "summary": "Placeholder.", "lora_id": "easy_studio/ok_adult" },
+  "portraits": {},
+  "clips": {}
+}

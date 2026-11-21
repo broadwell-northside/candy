@@ -1,0 +1,48 @@
+{
+ "1": {
+  "class_type": "UNETLoader",
+  "inputs": {"unet_name": "z_image_turbo_bf16.safetensors", "weight_dtype": "default"},
+  "_meta": {"title": "Image model (Z-Image Turbo)"}
+ },
+ "2": {
+  "class_type": "CLIPLoader",
+  "inputs": {"clip_name": "qwen_3_4b.safetensors", "type": "lumina2", "device": "default"},
+  "_meta": {"title": "Text encoder"}
+ },
+ "3": {"class_type": "VAELoader", "inputs": {"vae_name": "ae.safetensors"}},
+ "4": {"class_type": "ModelSamplingAuraFlow", "inputs": {"model": ["1", 0], "shift": 2.0}},
+ "5": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {"text": "", "clip": ["2", 0]},
+  "_meta": {"title": "POSITIVE"}
+ },
+ "6": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {"text": "", "clip": ["2", 0]},
+  "_meta": {"title": "NEGATIVE"}
+ },
+ "7": {
+  "class_type": "LoadImage",
+  "inputs": {"image": ""},
+  "_meta": {"title": "IMAGE 1"}
+ },
+ "8": {
+  "class_type": "LoadImageMask",
+  "inputs": {"image": "", "channel": "red"},
+  "_meta": {"title": "MASK"}
+ },
+ "9": {
+  "class_type": "VAEEncodeForInpaint",
+  "inputs": {"pixels": ["7", 0], "vae": ["3", 0], "mask": ["8", 0], "grow_mask_by": 6}
+ },
+ "10": {
+  "class_type": "KSampler",
+  "inputs": {
+   "model": ["4", 0], "positive": ["5", 0], "negative": ["6", 0], "latent_image": ["9", 0],
+   "seed": 0, "steps": 9, "cfg": 1.0, "sampler_name": "res_multistep", "scheduler": "simple", "denoise": 0.75
+  },
+  "_meta": {"title": "SEED"}
+ },
+ "11": {"class_type": "VAEDecode", "inputs": {"samples": ["10", 0], "vae": ["3", 0]}},
+ "12": {"class_type": "SaveImage", "inputs": {"images": ["11", 0], "filename_prefix": "easy-studio/outfit"}}
+}

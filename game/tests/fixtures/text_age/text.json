@@ -1,0 +1,9 @@
+{
+  "id": "bad_text",
+  "name": "Text Age",
+  "stated_age": "twenty one",
+  "personality": "The age is words, not a number.",
+  "look": {},
+  "portraits": {},
+  "clips": {}
+}

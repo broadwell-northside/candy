@@ -1,0 +1,16 @@
+{
+  "scenes": [
+    {
+      "id": "adult_only_sun",
+      "location": "beach",
+      "character": "any",
+      "time": "any",
+      "activity": "sun",
+      "min_affection": 0,
+      "caption": "Only a full 21+ version was rendered.",
+      "variants": {
+        "adult": { "still": "res://assets/scenes/sun_adult.png", "video": "" }
+      }
+    }
+  ]
+}

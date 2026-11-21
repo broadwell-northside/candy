@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "stillwater-dare-deck/1",
+  "title": "Stillwater dare and forfeit deck (empty until M3)",
+  "description": "PRIVATE BUILD — NOT FOR DISTRIBUTION. Cards point at already-rendered plates. This milestone ships the shape only: the deck holds no cards, and game/tools/puzzle_level.py refuses any card. Each future card must carry sfw_safe, requires_full_21_mode, actors[] and consent \"mutual\" per actor, and may not include Me until the M3 player_in_scene flag and its tests exist.",
+  "type": "object",
+  "required": ["schema", "cards"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "stillwater-dare-deck/1"},
+    "cards": {"type": "array", "maxItems": 0}
+  },
+  "example": {"schema": "stillwater-dare-deck/1", "cards": []}
+}

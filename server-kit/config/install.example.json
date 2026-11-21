@@ -1,0 +1,13 @@
+{
+  "_comment": "Example only. server-kit/mac/configure.py writes config/install.json from this after four questions. No secret goes in this file: the SSH key is only the path to its PUBLIC half (the private key stays in 1Password).",
+  "hostname": "epyc-studio",
+  "username": "andrew",
+  "timezone": "America/New_York",
+  "os_disk_mode": "auto_single_blank_nvme",
+  "os_disk_serial": "",
+  "approve_blank_disk_install": false,
+  "hardware_checklist_confirmed": false,
+  "ssh_public_key_file": "~/.candy-server-kit/epyc-studio.pub",
+  "app_start": ["/srv/ai/app/.venv/bin/python", "-m", "uvicorn", "server:app", "--app-dir", "/srv/ai/app/app", "--host", "127.0.0.1", "--port", "7860"],
+  "app_env": {"PYTHONPATH": "/srv/ai/app:/srv/ai/app/app"}
+}

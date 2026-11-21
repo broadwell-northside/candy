@@ -1,0 +1,3 @@
+#!/bin/bash
+# Hardware health report (real readings): sudo turin-health [--write FILE]
+exec /usr/bin/python3 /opt/turin/payload/turin-health.py "$@"
