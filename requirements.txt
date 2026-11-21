@@ -2,7 +2,7 @@
 fastapi>=0.115
 uvicorn>=0.30
 python-multipart>=0.0.9
-pillow>=10
+pillow>=13.0.0
 numpy>=1.26
 requests>=2.31
 websocket-client>=1.8
