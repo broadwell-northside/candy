@@ -128,6 +128,8 @@ def unit_tests():
     models_tests.unit(check)
     import trainer_safe_tests
     trainer_safe_tests.unit(check)
+    import library_gate_tests
+    library_gate_tests.unit(check)
     import providers_tests
     providers_tests.unit(check)
     providers_tests.tool_override_unit(check)
