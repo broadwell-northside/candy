@@ -227,6 +227,12 @@ class AreaView:
     def get(self, iid):
         return self._ok(self.lib.get(iid))
 
+    def checked(self, iid):
+        """get(), and an item the age check held or flagged is refused too. The gate for a route that reads a library item by id."""
+        it = self.get(iid)
+        self.lib._not_flagged(it)
+        return it
+
     def person_image(self, iid):
         return self._ok(self.lib.person_image(iid))
 

@@ -534,11 +534,15 @@ def register(server):
             return text.replace(secret, "[redacted]")
         return text
 
-    def _lora_or_404(name):
+    def _lora_or_404(name, request):
+        """A LoRA record by name. An 18+ LoRA answers as missing unless this device holds the 18+ unlock, like lora_edit and lora_delete."""
         try:
-            return S.LORAS.get(str(name))
+            record = S.LORAS.get(str(name))
         except (ValueError, OSError) as exc:
             S.err(str(exc), 404)
+        if record.get("area") == "adult" and not adult_unlocked(request):
+            S.err("Not found", 404)
+        return record
 
     @app.get("/api/loras/workshop/limits")
     def workshop_limits():
@@ -578,7 +582,8 @@ def register(server):
         return lora_json(rec, None)
 
     @app.post("/api/loras/workshop/upload")
-    async def workshop_upload(request: Request, file: UploadFile = File(...), confirm: str = Form("")):
+    async def workshop_upload(request: Request, file: UploadFile = File(...), confirm: str = Form(""), area: str = Form("")):
+        a = want_area(request, area)
         if confirm != "yes":
             S.err("Download weights only after you confirm. Tick the box first.")
         if not S.LORAS.available():
@@ -586,13 +591,18 @@ def register(server):
         name = os.path.basename(file.filename or "")
         tmp = os.path.join(S.LORAS.dir, ".workshop_upload_%s.part" % uuid.uuid4().hex)
         try:
-            data = await file.read()
-            if len(data) > S.MAX_LORA_UPLOAD:
-                S.err("That file is bigger than 4 GB -- not a normal LoRA.")
-            with open(tmp, "wb") as handle:
-                handle.write(data)
+            size = 0
+            with open(tmp, "wb") as handle:  # streamed, and stopped at the cap, like the plain LoRA upload
+                while True:
+                    chunk = await file.read(1 << 20)
+                    if not chunk:
+                        break
+                    size += len(chunk)
+                    if size > S.MAX_LORA_UPLOAD:
+                        S.err("That file is bigger than 4 GB -- not a normal LoRA.")
+                    handle.write(chunk)
             try:
-                rec = S.LORAS.add_file(tmp, name, source="upload",
+                rec = S.LORAS.add_file(tmp, name, source="upload", **({"area": "adult"} if a == "adult" else {}),
                                        usage={"author_notes": "", "trained_words": [], "trained_words_listed": False,
                                               "strength_model": None, "strength_clip": None, "hash_status": "UNKNOWN",
                                               "sha256": "", "role": "", "authorship": "unverified", "examples": []},
@@ -606,12 +616,12 @@ def register(server):
         return lora_json(rec, request)
 
     @app.get("/api/loras/workshop/card")
-    def workshop_card(name: str = ""):
-        return W.usage_card(_lora_or_404(name))
+    def workshop_card(request: Request, name: str = ""):
+        return W.usage_card(_lora_or_404(name, request))
 
     @app.post("/api/loras/workshop/prompt")
-    def workshop_prompt(body: dict = Body(...)):
-        record = _lora_or_404(body.get("name"))
+    def workshop_prompt(request: Request, body: dict = Body(...)):
+        record = _lora_or_404(body.get("name"), request)
         card = W.usage_card(record)
         action = body.get("action") or "triggers"
         if action == "sample":
@@ -631,20 +641,29 @@ def register(server):
         area = want_area(request, body.get("area"))
         items = []
         for name in body.get("names") or []:
-            items.append(W.stack_item(_lora_or_404(name)))
+            items.append(W.stack_item(_lora_or_404(name, request)))
         try:
             report = W.stack_report(items, str(body.get("engine") or "zimage_turbo"), area)
         except ValueError as exc:
             S.err(str(exc))
         return report
 
-    @app.post("/api/loras/workshop/preset")
-    def workshop_preset(body: dict = Body(...)):
-        record = _lora_or_404(body.get("name"))
+    def _gated_item(request, body, field):
+        """A library item for a request, through the same gate as the other library reads: 18+ items only in the 18+ section, and an item the
+        age check held or flagged is refused."""
+        area = want_area(request, body.get("area"))
         try:
-            item = S.LIB.get(str(body.get("item") or ""))
+            item = S.AreaView(S.LIB, area).checked(str(body.get(field) or ""))
         except KeyError as exc:
             S.err(str(exc), 404)
+        except PermissionError as exc:
+            S.err(str(exc), 403)
+        return item
+
+    @app.post("/api/loras/workshop/preset")
+    def workshop_preset(request: Request, body: dict = Body(...)):
+        record = _lora_or_404(body.get("name"), request)
+        item = _gated_item(request, body, "item")
         try:
             usage = W.save_preset(record, item)
         except ValueError as exc:
@@ -805,14 +824,11 @@ def register(server):
         return C.pack_status(character, item, state.get("face"), state.get("reviews") or [])
 
     @app.post("/api/loras/workshop/face-check")
-    def workshop_face_check(body: dict = Body(...)):
+    def workshop_face_check(request: Request, body: dict = Body(...)):
         C.set_root(S.OUT)
-        record = _lora_or_404(body.get("name"))
-        try:
-            reference = S.LIB.get(str(body.get("reference") or ""))
-            result = S.LIB.get(str(body.get("result") or ""))
-        except KeyError as exc:
-            S.err(str(exc), 404)
+        record = _lora_or_404(body.get("name"), request)
+        reference = _gated_item(request, body, "reference")
+        result = _gated_item(request, body, "result")
         row = C.face_check(reference, result)
         row["lora"] = record["name"]
         row["reference_url"] = S.LIB.url(reference)
@@ -824,9 +840,9 @@ def register(server):
         return row
 
     @app.post("/api/loras/workshop/accept")
-    def workshop_accept(body: dict = Body(...)):
+    def workshop_accept(request: Request, body: dict = Body(...)):
         C.set_root(S.OUT)
-        record = _lora_or_404(body.get("name"))
+        record = _lora_or_404(body.get("name"), request)
         state = C.load_state(S.OUT)
         check = state.get("face") if isinstance(state.get("face"), dict) else None
         if check and check.get("lora") != record["name"]:
