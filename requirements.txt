@@ -1,6 +1,6 @@
 # Easy Studio app (the web page + its small server). ComfyUI has its own requirements.
 fastapi>=0.115
-uvicorn>=0.30
+uvicorn>=0.54.0
 python-multipart>=0.0.9
 pillow>=10
 numpy>=1.26
