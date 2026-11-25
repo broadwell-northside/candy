@@ -1,0 +1,3 @@
+# Default for new Codex sessions opened in this trusted Candy project.
+model = "gpt-6.1-sol"
+model_reasoning_effort = "medium"

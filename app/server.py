@@ -938,6 +938,8 @@ def status(request: Request):
             version = st.get("system", {}).get("comfyui_version")
         except Exception:
             pass
+    # An unavailable inventory yields no known missing files. Keep readiness false
+    # until the engine has actually reported which model files it can see.
     files = comfy_files()[0] if up else None
     feats = []
     for fid, label, wfs in FEATURES:

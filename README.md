@@ -2,6 +2,8 @@
 
 PRIVATE BUILD — NOT FOR DISTRIBUTION
 
+**Maintainers and contributors:** This repository contains Candy’s browser studio, called Easy Studio in the interface. Start with the [contributor handoff](docs/CONTRIBUTOR-HANDOFF.md) for setup, verified milestones, current work and a file-by-file reference for the separate native Mac app.
+
 Easy Studio is a private web app that runs on your RTX PRO 6000 PC. You open it in the browser on
 your MacBook. Everything works by clicking pictures and chips, the same way character-creator
 sites do. You never see nodes. Behind the scenes it drives **ComfyUI** (the engine). Everything
