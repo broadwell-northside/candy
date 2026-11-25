@@ -3,6 +3,8 @@
 Easy Studio is a private, personal-use app. The owner is the reviewer that matters.
 Write pull requests in plain language.
 
+Use the [contributor handoff](docs/CONTRIBUTOR-HANDOFF.md) to locate the right implementation and its tests. For a user-facing change, include what changed, the affected workflow, the exact checks run and any remaining hardware or user verification. Update the matching tutorial when its steps change.
+
 ## One small change per pull request
 
 - One feature, one bug fix, or one docs change.

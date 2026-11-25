@@ -1,9 +1,5 @@
-# Checks that run on every pull request.
-#
-# CodeQL is not included. This private repository does not have code scanning
-# turned on (the GitHub API returns 403, "Code scanning is not enabled").
-# Code scanning on a private personal repo is a paid GitHub feature, so this
-# workflow skips it instead of adding a check that would fail.
+# Browser studio checks. The mock engine exercises job handling. Real GPU renders
+# and tests for the separate native Mac application have their own evidence.
 
 name: CI
 

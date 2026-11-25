@@ -4,7 +4,7 @@ Nothing real has run yet. Everything here was built and tested on stand-ins (a p
 
 ## 1. Start it
 
-1. Open the folder `/Users/dfuuu/candy/worktrees/next` in Finder and double-click **start_mac.command**. (In Terminal: `./start_mac.sh`.)
+1. Open the repository folder containing `start_mac.command` in Finder and double-click **start_mac.command**. (In Terminal: `./start_mac.sh`.)
 2. It starts the picture engine and the app, both on this Mac only, and opens your browser at `http://127.0.0.1:7860`. Leave the window open.
 3. To stop: press Ctrl-C in that window, or run `./stop_mac.sh`.
 
