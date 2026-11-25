@@ -43,6 +43,8 @@ A user picks an original in the native PySide6 app. FFprobe inspects the open fi
 
 In the native checkout, launch with `.venv/bin/python -m candy` and run synthetic tests with `QT_QPA_PLATFORM=offscreen .venv/bin/python -m pytest`. Apple media import uses Swift and Apple frameworks. Native picker, playback and bundle checks require macOS. The local package uses host FFmpeg and FFprobe. The [file reference](NATIVE-FILE-REFERENCE.md) covers setup, data contracts, all 109 tracked files, test coverage and local evidence. [Developer notes](DEVELOPER-NOTES.md) explain when each capability landed and what its verification established.
 
+For the normal build path, model assignments and novice usability checks, see the [development workflow](DEVELOPMENT-WORKFLOW.md).
+
 ## Current priorities and useful first contributions
 
 | Task | A public-only contributor can deliver | A maintainer can verify |

@@ -4,6 +4,7 @@
 
 | Change | What changed for a contributor | How to check |
 | --- | --- | --- |
+| Development workflow | Added a single-user build and review workflow, first-run and recovery acceptance examples, and a Sol Medium default for new trusted Codex project sessions. | Read the [workflow](DEVELOPMENT-WORKFLOW.md) and inspect the [two project settings](../.codex/config.toml). |
 | Project entry points | The README and contribution guide now link to the public browser architecture and the separately versioned macOS application. Each has its own start command and test baseline. | Follow the links from the [README](../README.md) and [contributing guide](../CONTRIBUTING.md). |
 | Native implementation reference | Added an annotated inventory of the 109 tracked files at the reviewed native revision. It identifies inputs, outputs, storage, integration surfaces, tests and the meaning of the local evidence. | Use the [file reference](NATIVE-FILE-REFERENCE.md) to trace one feature from the UI through persistence or media verification to its regression tests. |
 | First-run tutorial | The Mac launch step now locates the launcher relative to the user's checkout. An absolute path to a developer worktree previously made the instructions unusable on a fresh clone. | From the public checkout, locate `start_mac.command` or run `./start_mac.sh --check`. [Tutorial](FIRST_RUN.md) |
